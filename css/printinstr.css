@@ -1,0 +1,10 @@
+
+
+
+@media print {
+	*:not(.printOmit) {
+		background-color: white !important;
+		color: black !important;
+	}
+
+}
