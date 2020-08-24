@@ -1,64 +1,64 @@
 ID,Type,Name,Cost,Traits,Strength,Health,Restore,Effect,Notes,Color,,,,,,,,
 ,,,,,,,,,,,,,,Overall,,,,
 1,Artifact,Retrospective Mirror,7P,Item | Wonder,-,9,-,"Play: Remove all counters from a card in play. Discard all stockpiled cards under the same card.
-Action: 1P. If a card you expended to cast this matches a card in play, draw 3 cards.",,Purple,Artifact,11,,Artifact,56,,Item | Wonder,8
+Action: 1P. If a card you expended to cast this matches a card in play, draw 3 cards.",,Purple,Artifact,12,,Artifact,58,,Item | Wonder,8
 2,Artifact,Funeral Pyre,5P,Location,-,3,-,"Play: Search for a card in your library, and stockpile it under this card. Shuffle your library. 
 End of Phase: You may stockpile a card from your hand or top of your library under the other cards in this stack. 
-Action: You may cast the top card in this stockpile at +2 its cost, reduced by each card in this stockpile (excluding itself). Shuffle each card in this stockpile back into your library",,Purple,Creature,25,,Creature,143,,Location,28
-3,Artifact,The Night's Gale,5P,Item,-,7,-,"Action: Choose a summoned creature. Give that creature subtle until the end of this phase. If that creature already has subtle, give it +1 | +1 | + 0",,Purple,Instant,15,,Instant,85,,Item,8
+Action: You may cast the top card in this stockpile at +2 its cost, reduced by each card in this stockpile (excluding itself). Shuffle each card in this stockpile back into your library",,Purple,Creature,25,,Creature,144,,Location,29
+3,Artifact,The Night's Gale,5P,Item,-,7,-,"Action: Choose a summoned creature. Give that creature subtle until the end of this phase. If that creature already has subtle, give it +1 | +1 | + 0",,Purple,Instant,14,,Instant,86,,Item,8
 4,Artifact,Igvyr's Passageway,6P,Location,-,12,-,"Play: You may Provoke two enemy creatures.
-Action: Choose 1 allied deployed creature and 1 enemy deployed creature. Return them to the Barracks.",,Purple,Total:,51,,Battlefield,31,,Location | Ancient,2
-5,Artifact,War Drum,4P,Item,-,7,-,Action: Redeploy up to three allied creatures.,,Purple,,,,"TOTAL
-",315,,Ritual,2
-6,Artifact,Ancestral Grove,5P,Location | Ancient,-,3,-,"Action: 1P. Give a friendly creature ""Deploy: Give each Apparition in this zone +1 | +0 | +0.""  until end of phase",,Purple,,,,,,,Summoner,6
-7,Artifact,Malevolent Scroll,6P,Item | Wonder,-,3,-,"Action: 2P. Give a deployed creature ""Trap: Destroy the trapped creature."" until end of phase.",,Purple,,,,,,,Apparition,6
-8,Artifact,Lineate Palaquin,6P,Location,-,5,-,"Action: 1P. Deploy or redeploy a creature. This creature cannot be dealt damage until the end of the phase, but cannot capture battlefields. 
-Witness: Draw a card.",,Purple,,,,,,,Apparition | Horror,2
-9,Artifact,Cult of Control,7P,Ritual,-,3,-,"Summoner creatures have +0|+2|+0 while Cult of Control is in play.
-Action: 1A. Perfom the ""Bloodied/Deploy/Action/Destroyed"" effect of a Summoner in play. ",,Purple,,,,,,,Apparition | Leader,1
-10,Artifact,Pandor's Case,5P,Item,-,9,-,"Destroyed: Destroy each creature.
-Action: Deploy an enemy creature to this artifact.",,Purple,,,,,,,Human,5
-11,Artifact,Empowered Vessel,6P,Item,-,3,-,"When a friendly Apparition is destroyed, you may sacrifice this artifact. If you do, resummon Apparition at no cost and give it +3 | +1 | +0",(This card would auto-generate--it attaches to a random apparition in the pack and gains its name in the place of the [Apparition] tag),Purple,,,,,,,Demon | Hunter,1
-12,Creature,Traveling Charlatan,2P,Summoner,2,2,2,,,Purple,,,,,,,Human | Location,1
-13,Creature,"Vidant, Otherseer",4P,Summoner,1,4,1,Bloodied: Reveal cards from the top of your library until you find a creature with trait Apparition or Beast. Place it in your hand.,Might be WAY too powerful,Purple,,,,,,,Summoner | Apparition,1
-14,Creature,"Bitter Haunt
-",1P,Apparition,1,1,0,Subtle (This creature may ignore the battleline when deploying),,Purple,,,,,,,Demon,1
-15,Creature,Shade,1P,Apparition | Horror,3,1,0,End of Phase: Sacrifice this creature.,,Purple,,,,,,,Human | Summoner,3
-16,Creature,Diviner of Bones,2P,Summoner,1,2,1,Idle: Draw a card.,,Purple,,,,,,,Priest | Horror,1
-17,Creature,Leader of the March,3P,Apparition | Leader,1,3,0,Idle: Redeploy another friendly creature,,Purple,,,,,,,Horror | Summoner,1
-18,Creature,Vengeful Witness,2P,Human,1,1,0,Witness: Draw 1 card.,,Purple,,,,,,,-,109
-19,Creature,Lingering Malice,2P,Apparition,3,1,0,"Witness: If Lingering Malice was in the Battleline and all creatures were destroyed, capture the current Battlefield.",,Purple,,,,,,"Commando benefits from being in enemy territory
-Sentry does not reset to the barracks at end of phase",Location | Anomaly,1
-20,Creature,Hunter of the Claimant,4P,Demon | Hunter,4,2,1,Witness: Deal 2 damage to an enemy creature.,,Purple,,,,,,,Location | Workshop,1
-21,Creature,Repentent Guide,4P,Apparition,2,2,0,"Witness: You may sacrifice Repentent Guide to begin the action phase again, keep the battlefield in play and ready each creature. ",,Purple,,,,,,,Location | Ritual,2
-22,Creature,"Visant, Gravekeeper",3P,Human,2,2,2,Destroyed: Give a friendly Apparition +2 | +2 | +0.,,Purple,,,,,,,Construct | Anomaly,3
-23,Creature,Necronomican,4P ,Summoner,4,2,0,"Destroyed: You may sacrifice a friendly creature. If you do, heal Necronomican 2 HP and place him back in your Barracks.",,Purple,,,,,,,Construct,12
-24,Creature,Heart of the March,4P,Human,2,3,0,"Deploy: Give this creature +1 | +0 | +0. 
+Action: Choose 1 allied deployed creature and 1 enemy deployed creature. Return them to the Barracks.",,Purple,Total:,51,,Battlefield,31,,Ritual,3
+5,Artifact,Ritual of Banishment,4P,Ritual,-,8,-,Play: Stockpile 3 creatures under Ritual of Banishment.,,Purple,,,,,,,Location | Ancient,
+6,Artifact,War Drum,4P,Item,-,7,-,Action: Redeploy up to three allied creatures.,,Purple,,,,"TOTAL
+",319,,Summoner,6
+7,Artifact,Ancestral Grove,5P,Location | Ancient,-,3,-,"Action: 1P. Give a friendly creature ""Deploy: Give each Apparition in this zone +1 | +0 | +0.""  until end of phase",,Purple,,,,,,,Apparition,6
+8,Artifact,Malevolent Scroll,6P,Item | Wonder,-,3,-,"Action: 2P. Give a deployed creature ""Trap: Destroy the trapped creature."" until end of phase.",,Purple,,,,,,,Apparition | Horror,2
+9,Artifact,Lineate Palaquin,6P,Location,-,5,-,"Action: 1P. Deploy or redeploy a creature. This creature cannot be dealt damage until the end of the phase, but cannot capture battlefields. 
+Witness: Draw a card.",,Purple,,,,,,,Apparition | Leader,1
+10,Artifact,Cult of Control,7P,Ritual,-,3,-,"Summoner creatures have +0|+2|+0 while Cult of Control is in play.
+Action: 1A. Perfom the ""Bloodied/Deploy/Action/Destroyed"" effect of a Summoner in play. ",,Purple,,,,,,,Human,5
+11,Artifact,Pandor's Case,5P,Item,-,9,-,"Destroyed: Destroy each creature.
+Action: Deploy an enemy creature to this artifact.",,Purple,,,,,,,Demon | Hunter,1
+12,Artifact,Empowered Vessel,6P,Item,-,3,-,"When a friendly Apparition is destroyed, you may sacrifice this artifact. If you do, resummon Apparition at no cost and give it +3 | +1 | +0",(This card would auto-generate--it attaches to a random apparition in the pack and gains its name in the place of the [Apparition] tag),Purple,,,,,,,Human | Location,1
+13,Creature,Traveling Charlatan,2P,Summoner,2,2,2,,,Purple,,,,,,,Summoner | Apparition,1
+14,Creature,"Vidant, Otherseer",4P,Summoner,1,4,1,Bloodied: Reveal cards from the top of your library until you find a creature with trait Apparition or Beast. Place it in your hand.,Might be WAY too powerful,Purple,,,,,,,Demon,1
+15,Creature,"Bitter Haunt
+",1P,Apparition,1,1,0,Subtle (This creature may ignore the battleline when deploying),,Purple,,,,,,,Human | Summoner,3
+16,Creature,Shade,1P,Apparition | Horror,3,1,0,End of Phase: Sacrifice this creature.,,Purple,,,,,,,Priest | Horror,1
+17,Creature,Diviner of Bones,2P,Summoner,1,2,1,Idle: Draw a card.,,Purple,,,,,,,Horror | Summoner,1
+18,Creature,Leader of the March,3P,Apparition | Leader,1,3,0,Idle: Redeploy another friendly creature,,Purple,,,,,,,-,110
+19,Creature,Vengeful Witness,2P,Human,1,1,0,Witness: Draw 1 card.,,Purple,,,,,,,Location | Anomaly,1
+20,Creature,Lingering Malice,2P,Apparition,3,1,0,"Witness: If Lingering Malice was in the Battleline and all creatures were destroyed, capture the current Battlefield.",,Purple,,,,,,"Commando benefits from being in enemy territory
+Sentry does not reset to the barracks at end of phase",Location | Workshop,1
+21,Creature,Hunter of the Claimant,4P,Demon | Hunter,4,2,1,Witness: Deal 2 damage to an enemy creature.,,Purple,,,,,,,Location | Ritual,2
+22,Creature,Repentent Guide,4P,Apparition,2,2,0,"Witness: You may sacrifice Repentent Guide to begin the action phase again, keep the battlefield in play and ready each creature. ",,Purple,,,,,,,Construct | Anomaly,3
+23,Creature,"Visant, Gravekeeper",3P,Human,2,2,2,Destroyed: Give a friendly Apparition +2 | +2 | +0.,,Purple,,,,,,,Construct,12
+24,Creature,Necronomican,4P ,Summoner,4,2,0,"Destroyed: You may sacrifice a friendly creature. If you do, heal Necronomican 2 HP and place him back in your Barracks.",,Purple,,,,,,,Construct | Drone,2
+25,Creature,Heart of the March,4P,Human,2,3,0,"Deploy: Give this creature +1 | +0 | +0. 
 At the end of the phase, remove all counters on Heart of the March.","""Pick it up! Let's go! Pick it up!"" - Heart of the March",Purple,,,,,,,Human | Scholar,5
-25,Creature,Pointman,4P,Human | Location,1,2,2,"Deploy: If Pointman is the first to a zone, Pointman readies.
+26,Creature,Pointman,4P,Human | Location,1,2,2,"Deploy: If Pointman is the first to a zone, Pointman readies.
 Action: Deploy a creature to the zone Pointman is in and ready them.",,Purple,,,,,,,"Data | Anomaly
 ",1
-26,Creature,Composite of Shadows,2P,Summoner | Apparition,1,1,1,"If there are 2 or more other apparitions in play, Composite of Shadows gains +3|+3|+0.",,Purple,,,,,,,Construct | Leader,2
-27,Creature,"Yindír, Pit-builder",3P,Demon,1,1,1,Trap: Reduce trapped creatures power to 0.,,Purple,,,,,,,Data,3
-28,Creature,Liminal Mage,5P,Summoner,2,3,0,Trap: Play an Apparition from your hand to this zone at no cost.,,Purple,,,,,,,Construct | Module,5
-29,Creature,"Pietr Kivala, Gate's Warden",5P,Human | Summoner,2,2,1,"Each time your opponent discards or recycles cards, draw a card.","""Every deal passes through the warden..."" - Vidant, Otherseer",Purple,,,,,,,Cyborg |Scholar,1
-30,Creature,"T. Taylor, Spirit Spy",4P,Apparition,3,2,0,"Subtle (This creature may ignore the battleline when deploying).
+27,Creature,Composite of Shadows,2P,Summoner | Apparition,1,1,1,"If there are 2 or more other apparitions in play, Composite of Shadows gains +3|+3|+0.",,Purple,,,,,,,Construct | Leader,2
+28,Creature,"Yindír, Pit-builder",3P,Demon,1,1,1,Trap: Reduce trapped creatures power to 0.,,Purple,,,,,,,Data,3
+29,Creature,Liminal Mage,5P,Summoner,2,3,0,Trap: Play an Apparition from your hand to this zone at no cost.,,Purple,,,,,,,Construct | Module,5
+30,Creature,"Pietr Kivala, Gate's Warden",5P,Human | Summoner,2,2,1,"Each time your opponent discards or recycles cards, draw a card.","""Every deal passes through the warden..."" - Vidant, Otherseer",Purple,,,,,,,Cyborg |Scholar,1
+31,Creature,"T. Taylor, Spirit Spy",4P,Apparition,3,2,0,"Subtle (This creature may ignore the battleline when deploying).
 When this creature is deployed to the enemy Barracks, deploy a creature in their Barracks to another zone.",,Purple,,,,,,,Construct | Weapon,1
-31,Creature,"Aylki, the Hunger",3P,Apparition,1,3,0,"When a creature is destroyed by Aylki, search your library for ""Consume Spirit.""",,Purple,,,,,,,Cyborg | Anomaly,2
-32,Creature,"Ischdil, The Consumed",6P,Priest | Horror,4,2,0,"Deploy: Give all other horrors in this zone +0|-1|+0.
-Subtle (This creature may ignore the batteline when deploying)","""Gods know what Ischdil has seen... Or perhaps, they don't."" -  Uenva, Ruinspeaker",Purple,,,,,,,Construct | Drone,1
-33,Creature,Eclissi,3P,Apparition | Horror,0,8,0,Dauntless ,,Purple,,,,,,,Plant,2
-34,Creature,"Mirk, Runein",4P,Summoner,3,1,1,"Deploy: Search your Library for a ""Mirkin Space."" Place it in your hand, then shuffle your library.
-Destroyed: Gain 1P.",,Purple,,,,,,,"-
+32,Creature,"Aylki, the Hunger",3P,Apparition,1,3,0,"When a creature is destroyed by Aylki, search your library for ""Consume Spirit.""",,Purple,,,,,,,Cyborg | Anomaly,2
+33,Creature,"Ischdil, The Consumed",6P,Priest | Horror,4,2,0,"Deploy: Give all other horrors in this zone +0|-1|+0.
+Subtle (This creature may ignore the batteline when deploying)","""Gods know what Ischdil has seen... Or perhaps, they don't."" -  Uenva, Ruinspeaker",Purple,,,,,,,Plant,2
+34,Creature,Eclissi,3P,Apparition | Horror,0,8,0,Dauntless ,,Purple,,,,,,,"-
 ",2
-35,Creature,Terrat Ward,1P,Location,0,2,1,"Guard: An allied artifact gains ""Trap: If the trapped creature is an Apparition or Horror, destroy it"" until end of phase",,Purple,,,,,,,Ancient | Item,1
-36,Creature,Masked Salesman,5P,Horror | Summoner,1,4,0,"Trap: Stockpile the trapped creature under Masked Salesman.
+35,Creature,"Mirk, Runein",4P,Summoner,3,1,1,"Deploy: Search your Library for a ""Mirkin Space."" Place it in your hand, then shuffle your library.
+Destroyed: Gain 1P.",,Purple,,,,,,,Ancient | Item,1
+36,Creature,Terrat Ward,1P,Location,0,2,1,"Guard: An allied artifact gains ""Trap: If the trapped creature is an Apparition or Horror, destroy it"" until end of phase",,Purple,,,,,,,Titan,4
+37,Creature,Masked Salesman,5P,Horror | Summoner,1,4,0,"Trap: Stockpile the trapped creature under Masked Salesman.
 Destroyed: Play the stockpiled cards under Masked Salesman as if they belonged to their original owner.
-Masked Salesman has access to it's own effects, as well as that of any stockpiled card underneath it. ","Wording is way janky, but its a cool card",Purple,,,,,,,Titan,4
-37,Instant,Pace of Progress,1P,-,-,-,-,Play: The next deploy effect triggers twice.,,Purple,,,,,,,Human | Scrap,1
-38,Instant,Blessing of the Spectre,1P,-,-,-,-,Play: The next creature you summon this turn has subtle until end of phase.,,Purple,,,,,,,Cyborg,6
-39,Instant,The Igvryic Process,2P,-,-,-,-,Play: Redeploy any summoned creature.,,Purple,,,,,,,Scholar | Cyborg,1
-40,Instant,Ambush,3P,-,-,-,-,Play: Choose two friendly creatures that do not share a zone with an enemy creature. Give these creatures shroud and or redeploy them.,,Purple,,,,,,,Scrap | Titan,1
+Masked Salesman has access to it's own effects, as well as that of any stockpiled card underneath it. ","Wording is way janky, but its a cool card",Purple,,,,,,,Human | Scrap,1
+38,Instant,Pace of Progress,1P,-,-,-,-,Play: The next deploy effect triggers twice.,,Purple,,,,,,,Cyborg,6
+39,Instant,Blessing of the Spectre,1P,-,-,-,-,Play: The next creature you summon this turn has subtle until end of phase.,,Purple,,,,,,,Scholar | Cyborg,1
+40,Instant,The Igvryic Process,2P,-,-,-,-,Play: Redeploy any summoned creature.,,Purple,,,,,,,Scrap | Titan,1
 41,Instant,Mirkin Space,1P,-,-,-,-,"Play: Deal 1 damage to a friendly creature. If this destroys that creature, gain 2P mana.",,Purple,,,,,,,Experiment,1
 42,Instant,On the Move,3P,-,-,-,-,"Play: Until the end of phase, friendly creature with Idle effects have Idle/Deploy effects.",,Purple,,,,,,,Scrap,3
 43,Instant,The Haunt,4P,-,-,-,-,Play: Apparitions gain +2 | +0 | + 0 until the end of this phase.,,Purple,,,,,,,Cyborg | Scholar,2
@@ -74,15 +74,15 @@ The creature this is stockpiled under has ""End of Phase: Give this creature +1 
 ,,,,,,,,, ,,,,,,,,Human | Plant,2
 52,Artifact,Tower of Rabble,7O,Location | Anomaly,-,9,-,"Play: Until the end of this phase, every Construct is also considered an Anomaly.
 Action: Give a creature +0 | +1 | +1 for each card stashed under Tower of Rabble. Shuffle the stashed cards into your deck.
-Whenever summoning/constructing anything that requires Gold mana, stash one of the cards expended under Tower of Rabble.",,Gold,Artifact,11,,,,,Construct | Plant,1
-53,Artifact,Swarm Construction Chip,8O,Item | Wonder,-,4,-,"Each Construct in play gains ""Action: This card counts as 2 gold mana this turn.""",,Gold,Creature,28,,,,,Beast | Elemental,1
+Whenever summoning/constructing anything that requires Gold mana, stash one of the cards expended under Tower of Rabble.",,Gold,Artifact,12,,,,,Construct | Plant,1
+53,Artifact,Swarm Construction Chip,8O,Item | Wonder,-,4,-,"Each Construct in play gains ""Action: This card counts as 2 gold mana this turn.""",,Gold,Creature,29,,,,,Beast | Elemental,1
 54,Artifact,Oracle's Eye,"6O
-",Location,-,7,-,"Play: Your opponent must reveal a card in their hand for each friendly artifact in play.
-Action: 2G. Look at the next X number of cards in your library, where X is  the number of artifacts in play. Put those cards back in any order, then draw one card.",,Gold,Instant,13,,,,,Beast | Warden,1
+",Location,-,7,-,"Play: Your opponent must reveal a card in their hand for each artifact in play.
+Action: 1G. Look at the next X number of cards in your library, where X is  the number of artifacts in play. Put those cards back in any order, then draw one card.",,Gold,Instant,13,,,,,Beast | Warden,1
 55,Artifact,"Crucible of Progress
 ",5O,Location | Workshop,-,5,-,"Play: Reveal from the top of your deck until you find an artifact. Place this artifact in your hand and shuffle your library. Fully heal all other Artifacts.
 Action: Sacrifice a creature. If you do, reveal from the top of your deck until you find an artifact. Place this artifact in your hand and shuffle your library.","""It is from the Crucible that the greatest civilizations are sprung"" -
- Daidon, Light's Representative",Gold,Total:,52,,,,,Faerie,1
+ Daidon, Light's Representative",Gold,Total:,54,,,,,Faerie,1
 56,Artifact,"Ningaipodos, Purifier
 ","6O
 ",Item,-,5,-,"Play: Discard all tokens on a summoned creature.
@@ -93,352 +93,357 @@ Action: Deal 2 damage to a creature. If this destroys that creature, gain 1 gold
 59,Artifact,Neural Web,7O,Item,-,3,-,"When a friendly creature would be destroyed instead ready it, retreat it, and give it ""End of Phase: Sacrifice this creature.""","
 ""Power in perfection!"" - Exaltate Idiom",Gold,,,,,,,Conjuration,5
 60,Artifact,Key Ite Elevatus,6O,Location,-,3,-,"Friendly non-Leader, non-Scholar creatures in the same zone as a Leader or Scholar gain Sturdy and are considered to have X toughness, where X is the number of friendly creatures in play.",,Gold,,,,,,,Location | Ship,1
-61,Artifact,Reta Galvari,8O,Location | Ritual,-,8,-,"End of Phase: Deal 1 damage to Reta Galvari. 
-Action: 2O. For each point of damage on Reta Galvari, ready an allied creature. Fully heal Reta Galvari.",,Gold,,,,,,,Item | Horror,1
-62,Artifact,Reta Anioch,5O,Location | Ritual,-,3,-,"When you summon a creature, if there is not already a card stockpiled under Reta Anioch, you may instead stockpile that creature under Reta Anioch.
-End of Phase: Summon the creature under Reta Anioch at no cost and give it +2 | +2 | +0.",,Gold,,,,,,,Item | Ritual,1
-63,Creature,Fugitive Junker,3O,Construct | Anomaly,1,5,1,Fugitive Junker gains +1 | -1 | +0 for each non Anomaly Construct controlled by the active player,,Gold,,,,,,,Pillager,9
-64,Creature,Drifter Prophet,3O,Construct | Anomaly,2,3,2,Action: Draw a card for each other card you control with the Anomaly trait. Discard one card.,,Gold,,,,,,,Horror,3
-65,Creature,Clockwork Enforcer,"2O
-",Construct,2,3,1,,"""It'll do, for an evening's work."" - Tink, Tinkerer",Gold,,,,,,,"Pillager | Martyr
+61,Artifact,Ministry of Corrections,6O,Location,-,3,-,"Action: Select an enemy creature and pay its cost (in gold mana). If you do, place this creature at the bottom of its owner's deck.",,Gold,,,,,,,Item | Horror,
+62,Artifact,Reta Galvari,8O,Location | Ritual,-,8,-,"End of Phase: Deal 1 damage to Reta Galvari. 
+Action: 2O. For each point of damage on Reta Galvari, ready an allied creature. Fully heal Reta Galvari.",,Gold,,,,,,,Item | Ritual,1
+63,Artifact,Reta Anioch,5O,Location | Ritual,-,3,-,"When you summon a creature, if there is not already a card stockpiled under Reta Anioch, you may instead stockpile that creature under Reta Anioch.
+End of Phase: Summon the creature under Reta Anioch at no cost and give it +2 | +2 | +0.",,Gold,,,,,,,Pillager,9
+64,Creature,Fugitive Junker,3O,Construct | Anomaly,1,5,1,Fugitive Junker gains +1 | -1 | +0 for each non Anomaly Construct controlled by the active player,,Gold,,,,,,,Horror,3
+65,Creature,Drifter Prophet,3O,Construct | Anomaly,2,3,2,Action: Draw a card for each other card you control with the Anomaly trait. Discard one card.,,Gold,,,,,,,"Pillager | Martyr
 ",1
-66,Creature,Quality Control,2O,Construct,1,1,3,Guard: Discard the top card of your library,,Gold,,,,,,,Apparition | Martyr,1
-67,Creature,Version Control,2O,Construct,1,3,1,"Guard: Reveal the top card of your library. If that card matches a friendly card in play, ready the card in play and fully heal it.",,Gold,,,,,,,Titan | Beast,1
-68,Creature,Branch Control,3O,Construct,3,1,1,"Guard: If there is a creature in play that shares no traits with any other creature, destroy it.",,Gold,,,,,,,Pillager | Horror,2
-69,Creature,"Tink, Tinkerer",4O,Human | Scholar,1,1,0,This creature gains +1 | +1 | +0 for each artifact in play.,,Gold,,,,,,,Beast | Horror,1
-70,Creature,Replicating Widget,2O,Construct,1,1,0,"Idle: 1O. Search your library for a Replicating Widget and place it in hand. Shuffle your library. If a Replicating Widget is in play, this card costs 1 less to summon.","""1, 2, 4, 8, double and exterminate!"" - Replicating Widget",Gold,,,,,,,Scrap | Horror,1
-71,Creature,Malignant Virus,2O,"Data | Anomaly
-",1,2,1,"Idle: Place Malignant Virus in your opponents Discard. When it leaves their discard, it returns to it's original owners library.
-Recyled: Sacrifice a creature.
-Malignant Virus counts as a A mana, and must be recyled before any other card in the discard.","""I'm happy enough to avoid war, if their decay is an option"" - The Architect",Gold,,,,,,,Pillager | Ship,1
-72,Creature,"Daidon, Light's Representative",4O,Construct | Leader,1,4,2,Idle: Draw two cards.,,Gold,,,,,,,Elemental | Horror,1
-73,Creature,Selfish Automata ,6O,Construct,5,2,,"Action: Shuffle each stockpiled card into your library. Sacrifice this creature.
-When the Selfish Automata would take damage, instead stockpile a number of cards equivalent to the intended damage (first from your hand, then from your library) under the Selfish Automata.",,Gold,,,,,,,Pillager | Leader,1
-74,Creature,The Distributor,3O,Data,1,1,0,Action: 2O. Summon a creature from a friendly stockpile. Sacrifice the card the creature was stockpiled under.,,Gold,,,,,,,Human | Seer,1
-75,Creature,Architect's Core,5O,Construct | Module,0,5,0,"Action: Sacrifice an allied creature. If that creature is a Module, add its power to this one, then gain its ability.",,Gold,,,,,,,Human | Thief,1
-76,Creature,Targeteer-1,2O,Construct | Module,2,1,0,,,Gold,,,,,,,Kyr | [Trait],1
-77,Creature,Viseer-2,3O,Construct | Module,0,2,0,Idle: Your opponent reveals a random card in their hand.,,Gold,,,,,,,Kyr,2
-78,Creature,Traveleer-3,2O,Construct | Module,1,1,0,"Idle effects on this creature are ""Idle/Deploy"" effects.",,Gold,,,,,,,,0
-79,Creature,Disadeer-4,4O,Construct | Module,0,2,0,Idle: This creature gains +0 | +2 | + 0 until end of phase.,,Gold,,,,,,,,0
-80,Creature,Sanitation Bot,2O,Construct,0,2,1,"Idle: Draw 2 cards, then discard 1.",,Gold,,,,,,,,
-81,Creature,"Akillas, Maximate Design",6O,Construct | Leader,7,3,1,You may only play Akillas if you already control 2 other Constructs,"""Haha! Akillas, my greatest creation. Built to win a thousand battles!"" Tink, Tinkerer",Gold,,,,,,,,
-82,Creature,The Architect,3O,Cyborg |Scholar,1,2,1,Idle: Give a creature +1 | +1 | +0.,,Gold,,,,,,,,
-83,Creature,Evolved Coherence,3O,Data,1,1,0,Witness: Give this creature +1 | +1 | +1.,,Gold,,,,,,,,
-84,Creature,Trikeri Spearbot,5O,Construct | Weapon,3,1,0,"Deploy: Deal 1 damage to a creature in this zone.
+66,Creature,Clockwork Enforcer,"2O
+",Construct,2,3,1,,"""It'll do, for an evening's work."" - Tink, Tinkerer",Gold,,,,,,,Apparition | Martyr,1
+67,Creature,Quality Control,2O,Construct,1,1,3,Guard: Discard the top card of your library,,Gold,,,,,,,Titan | Beast,1
+68,Creature,Version Control,2O,Construct,1,3,1,"Guard: Reveal the top card of your library. If that card matches a friendly card in play, ready the card in play and fully heal it.",,Gold,,,,,,,Pillager | Horror,2
+69,Creature,Branch Control,3O,Construct,3,1,1,"Guard: If there is a creature in play that shares no traits with any other creature, destroy it.",,Gold,,,,,,,Beast | Horror,1
+70,Creature,Historical Corrections Bot,4O,Construct | Drone,1,2,0,Action: 3O. Return an enemy creature in this zone to it's owners hand.,,Gold,,,,,,,Scrap | Horror,
+71,Creature,"Tink, Tinkerer",4O,Human | Scholar,1,1,0,This creature gains +1 | +1 | +0 for each artifact in play.,,Gold,,,,,,,Pillager | Ship,1
+72,Creature,Replicating Widget,2O,Construct,1,1,0,"Idle: 1O. Search your library for a Replicating Widget and place it in hand. Shuffle your library. If a Replicating Widget is in play, this card costs 1 less to summon.","""1, 2, 4, 8, double and exterminate!"" - Replicating Widget",Gold,,,,,,,Elemental | Horror,1
+73,Creature,Malignant Virus,2O,"Data | Anomaly
+",1,2,1,"Idle: Discard Malignant Virus.
+Recyled: Destroy an enemy creature of power 3 or lower.
+","""I'm happy enough to avoid war, if their decay is an option"" - The Architect",Gold,,,,,,,Pillager | Leader,1
+74,Creature,"Daidon, Light's Representative",4O,Construct | Leader,1,4,2,Idle: Draw two cards.,,Gold,,,,,,,Human | Seer,1
+75,Creature,Selfish Automata ,6O,Construct,5,2,,"Action: Shuffle each stockpiled card into its owner's deck. Sacrifice this creature.
+When the Selfish Automata would take damage, instead stockpile a number of cards equivalent to the intended damage (first from your hand, then from your library) under the Selfish Automata.",,Gold,,,,,,,Human | Thief,1
+76,Creature,The Distributor,3O,Data,1,1,0,Action: 2O. Summon a creature from a friendly stockpile. Sacrifice the card the creature was stockpiled under.,,Gold,,,,,,,Kyr | [Trait],1
+77,Creature,Architect's Core,5O,Construct | Module,0,5,0,"Action: Sacrifice an allied creature. If that creature is a Module, add its power to this one, then gain its ability.",,Gold,,,,,,,Kyr,2
+78,Creature,Targeteer-1,2O,Construct | Module,2,1,0,,,Gold,,,,,,,,0
+79,Creature,Viseer-2,3O,Construct | Module,0,2,0,Idle: Your opponent reveals a random card in their hand.,,Gold,,,,,,,,0
+80,Creature,Traveleer-3,2O,Construct | Module,1,1,0,"Idle effects on this creature are ""Idle/Deploy"" effects.",,Gold,,,,,,,,0
+81,Creature,Disadeer-4,4O,Construct | Module,0,2,0,Idle: This creature gains +0 | +2 | + 0 until end of phase.,,Gold,,,,,,,,0
+82,Creature,Sanitation Bot,2O,Construct,0,2,1,"Idle: Draw 2 cards, then discard 1.",,Gold,,,,,,,,
+83,Creature,"Akillas, Maximate Design",6O,Construct | Leader,7,3,1,You may only play Akillas if you already control 2 other Constructs,"""Haha! Akillas, my greatest creation. Built to win a thousand battles!"" Tink, Tinkerer",Gold,,,,,,,,
+84,Creature,The Architect,3O,Cyborg |Scholar,1,2,1,Idle: Give a creature +1 | +1 | +0.,,Gold,,,,,,,,
+85,Creature,Evolved Coherence,3O,Data,1,1,0,Witness: Give this creature +1 | +1 | +1.,,Gold,,,,,,,,
+86,Creature,Trikeri Spearbot,5O,Construct | Weapon,3,1,0,"Deploy: Deal 1 damage to a creature in this zone.
 Action: Heal 1 damage from a creature in this zone.
 Idle: Sacrifice Trikeri Spearbot. Give a creature in this zone +3 | +0 | +0.",,Gold,,,,,,,,
-85,Creature,0x43616e617279,4O,Data,0,1,1,Destroyed: Redeploy all friendly creatures in this zone to your Barracks. The Battlefield may not be captured in this combat.,,Gold,,,,,,,,
-86,Creature,Master of the Swarm,7O,Construct,3,7,2,"Drone Master can only be played if you control 3 or more creatures.
+87,Creature,0x43616e617279,4O,Data,0,1,1,Destroyed: Redeploy all friendly creatures in this zone to your Barracks. The Battlefield may not be captured in this combat.,,Gold,,,,,,,,
+88,Creature,Master of the Swarm,7O,Construct,3,7,2,"Drone Master can only be played if you control 3 or more creatures.
 Deploy: Search your library for a Drone. Play it at no cost, in this zone.",,Gold,,,,,,,,
-87,Creature,"Yatoris, the Avaricious",3O,Cyborg | Anomaly,4,2,0,"Sturdy (This creature does not take damage, unless that damage would be enough to destroy it.) 
+89,Creature,"Yatoris, the Avaricious",3O,Cyborg | Anomaly,4,2,0,"Sturdy (This creature does not take damage, unless that damage would be enough to destroy it.) 
 Destroyed: You may sacrifice a friendly creature in the same zone as Yatoris. If you do, instead of discarding it exhaust Yatoris, fully heal it, and move it into your barracks.",,Gold,,,,,,,,
-88,Creature,Reco,4O,Construct | Drone,1,2,0,Destroyed: Fully heal all other allied creatures in this zone.,,Gold,,,,,,,,
-89,Creature,Apostate of Light,4O,Cyborg | Anomaly,2,4,1,"Subtle (This creature may ignore the battleline when deploying).
+90,Creature,Reco,4O,Construct | Drone,1,2,0,Destroyed: Fully heal all other allied creatures in this zone.,,Gold,,,,,,,,
+91,Creature,Apostate of Light,4O,Cyborg | Anomaly,2,4,1,"Subtle (This creature may ignore the battleline when deploying).
 Deploy: Destroy a creature of toughness less than 2 in this zone.",,Gold,,,,,,,,
-90,Creature,"Kliotise, Evolutionary Test",3O,Plant,2,1,0,Idle: Give this creature +0|+1|+0,,Gold,,,,,,,,
-91,Instant,Light's Favor,2O,-,-,-,-,"Play: If you control a Leader, stockpile this card under a friendly creature. That creature gains Sturdy and ""Deploy: You may exhaust a friendly Construct. If you do, give this creature  +0 | +1| +0"" ",,Gold,,,,,,,,
-92,Instant,Exploit Vulnerability,2O,-,-,-,-,"Play: Tap an enemy artifact. If you do, deal 3 damage to it",,Gold,,,,,,,,
-93,Instant,"
+92,Creature,"Kliotise, Evolutionary Test",3O,Plant,2,1,0,Idle: Give this creature +0|+1|+0,,Gold,,,,,,,,
+93,Instant,Light's Favor,2O,-,-,-,-,"Play: If you control a Leader, stockpile this card under a friendly creature. That creature gains Sturdy and ""Deploy: You may exhaust a friendly Construct. If you do, give this creature  +0 | +1| +0"" ",,Gold,,,,,,,,
+94,Instant,Exploit Vulnerability,2O,-,-,-,-,"Play: Tap an enemy artifact. If you do, deal 3 damage to it",,Gold,,,,,,,,
+95,Instant,"
 Principle of Locality","2O
 ","-
 ",-,-,-,"Play: Choose a creature in the battleline. For each friendly creature in the Battleline, give that creature +1 | +0 | +0.",,Gold,,,,,,,,
-94,Instant,Midaic Touch,5O,-,-,-,-,"Play: All cards in every discard are considered to be Gold until the start of the next phase. Play one card out of hand, then end the phase.",,Gold,,,,,,,,
-95,Instant,Reset to Factory Default,2O,-,-,-,-,Play: Return a creature to their owner's hand.,,Gold,,,,,,,,
-96,Instant,Gilded Ideal,3O,-,-,-,-,Play: Choose a creature. This creature may not be dealt damage until the start of the next phase.,,Gold,,,,,,,,
-97,Instant,Holographic Trick,2O,-,-,-,-,"Play: Return a creature from your discard to the Frontline. This creature has 0 power and cannot capture a battlefield. At the end of the phase, sacrifice this creature.","Some idea of ""distraction."" IE, creatures only fight what is in front of them, so you could use this to disable their strongest creature.",Gold,,,,,,,,
-98,Instant,Value Drift,4O,-,-,-,-,"Play: Every Construct creature is considered an Anomaly until End of Phase. Give every Anomaly, Scrap, and Scholar creature +2 | +0 | +0.",,Gold,,,,,,,,
-99,Instant,Cost of Perfection,2O,-,-,-,-,Play: Sacrifice an allied creature. Deal damage equal to half that creature's toughness to each other creature in this zone.,,Gold,,,,,,,,
-100,Instant,Model of Excellence,3O,-,-,-,-,Play: Your opponent discards a random card in their hand.,,Gold,,,,,,,,
-101,Instant,Community Service,3O,-,-,-,-,Play: Deal 1 damage to an enemy creature for each creature you control.,,Gold,,,,,,,,
-102,Instant,Stabilize,4O,-,-,-,-,Play: Your opponent may not recycle cards until the start of the next phase.,,Gold,,,,,,,,
-103,Instant,Repurpose,2O,-,-,-,-,Play: Sacrifice up to three creatures to summon a creature at regular cost - the toughness of the sacrificed creatures.,,Gold,,,,,,,,
-104,Instant,Cull Imperfection,6O,-,-,-,-,Play: Destroy a creature.,,Gold,,,,,,,,
-105,Instant,Controlled Supply Lines,2O,-,-,-,-,"Play: Until the end of phase, the next player to recycle from their discard must exhaust two ready friendly creatures.",,Gold,,,,,,,,
+96,Instant,Midaic Touch,5O,-,-,-,-,"Play: All cards in every discard are considered to be Gold until the start of the next phase. Play one card out of hand, then end the phase.",,Gold,,,,,,,,
+97,Instant,Reset to Factory Default,3O,-,-,-,-,Play: Return a creature to their owner's hand.,,Gold,,,,,,,,
+98,Instant,Gilded Ideal,3O,-,-,-,-,Play: Choose a creature. This creature may not be dealt damage until the start of the next phase.,,Gold,,,,,,,,
+99,Instant,Holographic Trick,2O,-,-,-,-,"Play: Return a creature from your discard to the Frontline. This creature has 0 power and cannot capture a battlefield. At the end of the phase, sacrifice this creature.","Some idea of ""distraction."" IE, creatures only fight what is in front of them, so you could use this to disable their strongest creature.",Gold,,,,,,,,
+100,Instant,Value Drift,4O,-,-,-,-,"Play: Every Construct creature is considered an Anomaly until End of Phase. Give every Anomaly, Scrap, and Scholar creature +2 | +0 | +0.",,Gold,,,,,,,,
+101,Instant,Cost of Perfection,2O,-,-,-,-,Play: Sacrifice an allied creature. Deal damage equal to half that creature's toughness to each other creature in this zone.,,Gold,,,,,,,,
+102,Instant,Model of Excellence,3O,-,-,-,-,Play: Your opponent discards a random card in their hand.,,Gold,,,,,,,,
+103,Instant,Community Service,3O,-,-,-,-,Play: Deal 1 damage to an enemy creature for each creature you control.,,Gold,,,,,,,,
+104,Instant,Stabilize,4O,-,-,-,-,Play: Your opponent may not recycle cards until the start of the next phase.,,Gold,,,,,,,,
+105,Instant,Repurpose,2O,-,-,-,-,Play: Sacrifice up to three creatures to summon a creature at regular cost - the toughness of the sacrificed creatures.,,Gold,,,,,,,,
+106,Instant,Cull Imperfection,6O,-,-,-,-,Play: Destroy a creature.,,Gold,,,,,,,,
+107,Instant,Controlled Supply Lines,2O,-,-,-,-,"Play: Until the end of phase, the next player to recycle from their discard must exhaust two ready friendly creatures.",,Gold,,,,,,,,
 ,,,,,,,,,,,,,,,,,,
-106,Artifact,"Recyling Plant
+108,Artifact,"Recyling Plant
 ",6S,Location,-,8,"-
 ","Play: Return an instant from your discard into your hand.
 While this is in play, any time a creature dies in combat, give a friendly creature +0 | +1 | +0",,Grey,Artifact,11,,,,,,
-107,Artifact,Monument to the Ages,5S,Location,-,2,-,"Action: Sacrifice a creature. If you do, give this Artifact +0 | +2 | +0.
+109,Artifact,Monument to the Ages,5S,Location,-,2,-,"Action: Sacrifice a creature. If you do, give this Artifact +0 | +2 | +0.
 When a creature dies defending Monument to the ages, instead of discarding it, return it to your hand.",,Grey,Creature,28,,,,,,
-108,Artifact,Hanging Gardens,6S,Location,"-
-",6,-,"Action: For each Steel creature in the discard, deal 1 to Hanging Gardens. If this damage would destroy the Hanging Gardens, instead fully heal this artifact and destroy an ally and enemy creature. If you don't, sacrfice Hanging Gardens.",,Grey,Instant,12,,,,,,
-109,Artifact,The Reminiscence,7S,Location,-,4,-,"Start of Phase: Choose and enemy creature. It gains, ""Destroyed: Shuffle the top two cards from your discard into your deck"" until end of phase.",,Grey,Total:,51,,,,,,
-110,Artifact,Tower of Scrap ,4S,Location,-,9,-,Play: Destroy all creatures.,"""Only the steelmongers could worship a simple pile of garbage"" - Daidon, Light's Representative",Grey,,,,,,,,
-111,Artifact,"Yliochos, Judgment's Point",6S,Location,-,4,-,"Play: You may sacrifice a friendly creature to discard 2 cards.
+110,Artifact,Hanging Gardens,6S,Location,"-
+",6,-,"Action: For each Steel creature in the discard, deal 1 to Hanging Gardens. If this damage would destroy the Hanging Gardens, instead fully heal this artifact and destroy an ally and enemy creature. If you don't, sacrfice Hanging Gardens.",,Grey,Instant,13,,,,,,
+111,Artifact,The Reminiscence,7S,Location,-,4,-,"Start of Phase: Choose and enemy creature. It gains, ""Destroyed: Shuffle the top two cards from your discard into your deck"" until end of phase.",,Grey,Total:,52,,,,,,
+112,Artifact,Tower of Scrap ,4S,Location,-,9,-,Play: Destroy all creatures.,"""Only the steelmongers could worship a simple pile of garbage"" - Daidon, Light's Representative",Grey,,,,,,,,
+113,Artifact,"Yliochos, Judgment's Point",6S,Location,-,4,-,"Play: You may sacrifice a friendly creature to discard 2 cards.
 Action: Deal 1 damage to a creature. If this damage kills that creature, exhaust an enemy creature.",,Grey,,,,,,,,
-112,Artifact,The Chop Shop,5S,Location,-,2,-,"The first time The Chop Shop would take damage in a phase, it takes none. 
+114,Artifact,The Chop Shop,5S,Location,-,2,-,"The first time The Chop Shop would take damage in a phase, it takes none. 
 Action: If a Scrap creature has been destroyed this turn, give a friendly Cyborg +2 | +0 | +0""",,Grey,,,,,,,,
-113,Artifact,Scattering Relic,6S,Ancient | Item,-,-,-,"Destroyed: Gain 4 steel mana.
-Action: Move a creature to any zone, ignoring the battleline, then destroy it. ",,Grey,,,,,,,,
-114,Artifact,Etched Cavern,7S,Location,-,7,-,"Every time you recycle from your discard, you may deal 3 damage to a friendly creature to draw two cards.",,Grey,,,,,,,,
-115,Artifact,Valley of the Damned,6S,Location,-,5,-,"Trap: Ready each other friendly artifact.
+115,Artifact,Scattering Relic,6S,Ancient | Item,-,-,-,"Destroyed: Gain 4 steel mana.
+Action: Move a friendly creature to any zone, ignoring the battleline, then destroy it. ",,Grey,,,,,,,,
+116,Artifact,Etched Cavern,7S,Location,-,7,-,"Every time you recycle from your discard, you may deal 3 damage to a friendly creature to draw two cards.",,Grey,,,,,,,,
+117,Artifact,Valley of the Damned,6S,Location,-,5,-,"Trap: Ready each other friendly artifact.
 When attacking Valley of the Damned, creatures deal 2 less damage.",,Grey,,,,,,,,
-116,Artifact,Historical of War,5S,Location,-,7,-,"Recycled: Deal 2 damage to a friendly artifact.
+118,Artifact,Historical of War,5S,Location,-,7,-,"Recycled: Deal 2 damage to a friendly artifact.
 Play: Search your library for a creature of cost equal to the amount of damage on all your artifacts. Summon that creature, readied.",,Grey,,,,,,,,
-117,Creature,Reassembled Monstrosity,6S,Titan,7,7,2,,,Grey,,,,,,,,
-118,Creature,"Rezyx, Hoarder",1S,Human | Scrap,1,1,1,Destroyed: Gain 2 steel mana at the beginning of next phase.,,Grey,,,,,,,,
-119,Creature,Insef Rider,3S,Cyborg,1,2,2,"Each other ""Cyborg"" creature in play has ""Dauntless""",,Grey,,,,,,,,
-120,Creature,Insef Protector,5S,Cyborg,3,3,3,,,Grey,,,,,,,,
-121,Creature,Insef Barrelmin,2S,Scholar | Cyborg,1,2,1,"Recycled: Ready a ""Cyborg"" creature.
+119,Creature,Reassembled Monstrosity,6S,Titan,7,7,2,,,Grey,,,,,,,,
+120,Creature,"Rezyx, Hoarder",1S,Human | Scrap,1,1,1,Destroyed: Gain 2 steel mana at the beginning of next phase.,,Grey,,,,,,,,
+121,Creature,Insef Rider,3S,Cyborg,1,2,2,"Each other ""Cyborg"" creature in play has ""Dauntless""",,Grey,,,,,,,,
+122,Creature,Insef Protector,5S,Cyborg,3,3,3,,,Grey,,,,,,,,
+123,Creature,Insef Barrelmin,2S,Scholar | Cyborg,1,2,1,"Recycled: Ready a ""Cyborg"" creature.
 Play: Ready Insef Barrelmin and another ""Cyborg"" creature.",,Grey,,,,,,,,
-122,Creature,"Ylin, Insef Executioner",7S,Cyborg,4,6,3,"Deploy: Select a creature in this zone. If Ylin has 3 or more toughness greater than that creature, destroy it.",,Grey,,,,,,,,
-123,Creature,Volate Tanker,5S,Scrap | Titan,2,5,0,Destroyed: Destroy all creatures in this zone.,"""What we can spare... we share!"" -  Dyllis, Scrapmaker",Grey,,,,,,,,
-124,Creature,Mammothine Driver,6S,Titan,5,8,2,Dauntless,,Grey,,,,,,,,
-125,Creature,"Uenva, Ruinspeaker",5S,Titan,2,6,2,"Uenva, Ruinspeaker deals double damage to ""Wonder"" and ""Ancient"" cards.",,Grey,,,,,,,,
-126,Creature,Scattered Parts,2S,Construct,2,1,0,Recycled: Give a friendly creature +0 | +1 | +0,,Grey,,,,,,,,
-127,Creature,Manic Collector,4S,Human | Scholar,1,2,1,"Idle: At the end of the phase, choose one friendly creature dead this turn and return it to your hand.",,Grey,,,,,,,,
-128,Creature,Mismatched Coagulate,1S,Experiment,0,1,0,"Recycled: Shuffle 2 cards from your discard into your deck. If you do, Place Mismatched Coagulate and another Recycled card on the top of your deck.
+124,Creature,"Ylin, Insef Executioner",7S,Cyborg,4,6,3,"Deploy: Select a creature in this zone. If Ylin has 3 or more toughness greater than that creature, destroy it.",,Grey,,,,,,,,
+125,Creature,Volate Tanker,5S,Scrap | Titan,2,5,0,Destroyed: Destroy all creatures in this zone.,"""What we can spare... we share!"" -  Dyllis, Scrapmaker",Grey,,,,,,,,
+126,Creature,Mammothine Driver,6S,Titan,5,8,2,Dauntless,,Grey,,,,,,,,
+127,Creature,"Uenva, Ruinspeaker",5S,Titan,2,6,2,"Uenva, Ruinspeaker deals double damage to ""Wonder"" and ""Ancient"" cards.",,Grey,,,,,,,,
+128,Creature,Scattered Parts,2S,Construct,2,1,0,Recycled: Give a friendly creature +0 | +1 | +0,,Grey,,,,,,,,
+129,Creature,Manic Collector,4S,Human | Scholar,1,2,1,"Idle: At the end of the phase, choose one friendly creature dead this turn and return it to your hand.",,Grey,,,,,,,,
+130,Creature,Mismatched Coagulate,1S,Experiment,0,1,0,"Recycled: Shuffle 2 cards from your discard into your deck. If you do, Place Mismatched Coagulate and another Recycled card on the top of your deck.
 Destroyed: Discard a card.",,Grey,,,,,,,,
-129,Creature,Mechromancer,4S,Cyborg,3,2,1,Guard: Deal 1 damage to an enemy creature in this zone for each Artifact you control.,,Grey,,,,,,,,
-130,Creature,Reassemblant,3S,Scrap,0,1,0,Trap: Draw a card and gain 2 Steel mana. Sacrifice Reassemblant. ,"
+131,Creature,Mechromancer,4S,Cyborg,3,2,1,Guard: Deal 1 damage to an enemy creature in this zone for each Artifact you control.,,Grey,,,,,,,,
+132,Creature,Reassemblant,3S,Scrap,0,1,0,Trap: Draw a card and gain 2 Steel mana. Sacrifice Reassemblant. ,"
 ",Grey,,,,,,,,
-131,Creature,Spontaneous Product,3S,Scrap,3,2,1,Destroyed: Discard the bottom three cards of your deck.,"""This is... not what I intended..."" - Dyllis, Scrapmaker",Grey,,,,,,,,
-132,Creature,"Itiviti, Wasteland Queen",6S,Cyborg | Scholar,2,8,0,Bloodied: Select a card recycled this phase. Place that card on the top of your library. ,"""Bow, and be remade!"" - Itiviti, Wasteland Queen",Grey,,,,,,,,
-133,Creature,Modi-Junker,5S,Cyborg | Scrap,0,4,3,"Friendly creatures in the same zone as Modi-Junker have ""Destroyed: Give a Modi-Junker in this zone +1 | +0 | +0.""",,Grey,,,,,,,,
-134,Creature,Repurposing Caravan,4S,Construct,3,2,1,"Enemy creatures in the same zone as Repurposing Caravan have ""Destroyed: Put this card on the bottom of your library""","""Thanks for your contribution!"" - Repurposing Caravan""",Grey,,,,,,,,
-135,Creature,Virtesian Maw,4S,Beast | Scrap,2,2,1,"Deploy: Redeploy an enemy creature in this zone to their barracks, and exhaust them.",,Grey,,,,,,,,
-136,Creature,"Kalkavat, Iron's Sight",5S,Cyborg,1,2,1,"Action: Search your discard for a ""Locked Shot"" and place it in your hand.",,Grey,,,,,,,,
-137,Creature,"Dyllis, Scrapmaker",5S,Human | Summoner,5,2,2,"End of Phase: If a creature was destroyed by Dyllis, Scrapmaker this phase, draw 2 cards and discard 3 cards.",,Grey,,,,,,,,
-138,Creature,"Tivyr, Bio-Engineer",2S,Cyborg | Scholar,2,2,0,"Sturdy (This creature does not take damage, unless that damage would destroy it). 
+133,Creature,Spontaneous Product,3S,Scrap,3,2,1,Destroyed: Discard the bottom three cards of your deck.,"""This is... not what I intended..."" - Dyllis, Scrapmaker",Grey,,,,,,,,
+134,Creature,"Itiviti, Wasteland Queen",6S,Cyborg | Scholar,2,8,0,Bloodied: Select a card recycled this phase. Place that card on the top of your library. ,"""Bow, and be remade!"" - Itiviti, Wasteland Queen",Grey,,,,,,,,
+135,Creature,Modi-Junker,5S,Cyborg | Scrap,0,4,3,"Friendly creatures in the same zone as Modi-Junker have ""Destroyed: Give a Modi-Junker in this zone +1 | +0 | +0.""",,Grey,,,,,,,,
+136,Creature,Repurposing Caravan,4S,Construct,3,2,1,"Enemy creatures in the same zone as Repurposing Caravan have ""Destroyed: Put this card on the bottom of your library""","""Thanks for your contribution!"" - Repurposing Caravan""",Grey,,,,,,,,
+137,Creature,Virtesian Maw,4S,Beast | Scrap,2,2,1,"Deploy: Redeploy an enemy creature in this zone to their barracks, and exhaust them.",,Grey,,,,,,,,
+138,Creature,"Kalkavat, Iron's Sight",5S,Cyborg,1,2,1,"Action: Search your discard for a ""Locked Shot"" and place it in your hand.",,Grey,,,,,,,,
+139,Creature,"Dyllis, Scrapmaker",5S,Human | Summoner,5,2,2,"End of Phase: If a creature was destroyed by Dyllis, Scrapmaker this phase, draw 2 cards and discard 3 cards.",,Grey,,,,,,,,
+140,Creature,"Tivyr, Bio-Engineer",2S,Cyborg | Scholar,2,2,0,"Sturdy (This creature does not take damage, unless that damage would destroy it). 
 When Tivyr destroys a creature, give it +1 | +1 | +0.",,Grey,,,,,,,,
-139,Creature,"Fenrir, Forgotten Horror",11S,Titan | Location,9,7,3,Play: Exhaust all enemy creatures.,"""A thousand cities fell to Fenrir. Only I refused"" - Yria, Spear Maiden",Grey,,,,,,,,
-140,Creature,Fallen Exalt,4S,Construct | Anomaly,1,2,1,"Guard: If there is another Construct in this zone, give Fallen Exalt +3|+0|+0 until the end of phase.","""We offer freedom from their burning light"" - Itiviti, Wasteland Queen.",Grey,,,,,,,,
-141,Creature,Flamit Madman,"4S
+141,Creature,"Fenrir, Forgotten Horror",11S,Titan | Location,9,7,3,Play: Exhaust all enemy creatures.,"""A thousand cities fell to Fenrir. Only I refused"" - Yria, Spear Maiden",Grey,,,,,,,,
+142,Creature,Fallen Exalt,4S,Construct | Anomaly,1,2,1,"Guard: If there is another Construct in this zone, give Fallen Exalt +3|+0|+0 until the end of phase.","""We offer freedom from their burning light"" - Itiviti, Wasteland Queen.",Grey,,,,,,,,
+143,Creature,Flamit Madman,"4S
 ",Cyborg | Scrap,1,3,1,"Destroyed: Destroy a battlefield, artifact, or creature in this zone.",,Grey,,,,,,,,
-142,Creature,Resupplier,4S,Human | Summoner,1,2,1,"Witness: You may expend 1 steel mana. If you do, resummon a friendly creature destroyed this turn.",,Grey,,,,,,,,
-143,Creature,The Feed,5S,Scrap,3,2,1,"Play: Destroy an enemy creature.
+144,Creature,Resupplier,4S,Human | Summoner,1,2,1,"Witness: You may expend 1 steel mana. If you do, resummon a friendly creature destroyed this turn.",,Grey,,,,,,,,
+145,Creature,The Feed,5S,Scrap,3,2,1,"Play: Destroy an enemy creature.
 Recycled: Sacrifice an allied creature. If you do, destroy an enemy creature.",,Grey,,,,,,,,
-144,Creature,Student of Scrap,3S,Scrap | Scholar,2,4,1,"Play: Instead of summoning this creature to your barracks, you may instead stockpile it under another Steel creature.
+146,Creature,Student of Scrap,3S,Scrap | Scholar,2,4,1,"Play: Instead of summoning this creature to your barracks, you may instead stockpile it under another Steel creature.
 Idle: Choose a friendly creature. Heal 2 points from that creature. 
 The creature this is stockpiled under gains +0|+3|+1",,Grey,,,,,,,,
-145,Instant,Cruel Imitation,4S,-,-,-,-,"Play: Pick an enemy creature destroyed this phase. Summon and deploy it under your control. At the end of this phase, sacrifice this creature.",,Grey,,,,,,,,
-146,Instant,Taste of Loss,2S,-,-,-,-,"Play: Destroy a friendly creature, then resummon it.",,Grey,,,,,,,,
-147,Instant,Careful Execution,2S,-,-,-,-,"Play: Deal 2 damage to a creature. If this damage destroys that creature, gain 2 steel mana till end of phase.",,Grey,,,,,,,,
-148,Instant,Scrapapult,XS,-,-,-,-,"Play: Deal X damage to a creature, where X is the number of cards you choose to recycle for this effect, up to a maximum of 4. ",,Grey,,,,,,,,
-149,Instant,Memory of War,3S,-,-,-,-,"Play: Summon a creature from your discard. At the end of this phase, sacrifice it.",,Grey,,,,,,,,
-150,Instant,Locked Shot,"2S
+147,Instant,Cruel Imitation,4S,-,-,-,-,"Play: Pick an enemy creature destroyed this phase. Summon and deploy it under your control. At the end of this phase, sacrifice this creature.",,Grey,,,,,,,,
+148,Instant,Taste of Loss,2S,-,-,-,-,"Play: Destroy a friendly creature, then resummon it.",,Grey,,,,,,,,
+149,Instant,Careful Execution,2S,-,-,-,-,"Play: Deal 2 damage to a creature. If this damage destroys that creature, gain 2 steel mana till end of phase.",,Grey,,,,,,,,
+150,Instant,Scrapapult,XS,-,-,-,-,"Play: Deal X damage to a creature, where X is the number of cards you choose to recycle for this effect, up to a maximum of 4. ",,Grey,,,,,,,,
+151,Instant,Memory of War,3S,-,-,-,-,"Play: Summon a creature from your discard. At the end of this phase, sacrifice it.",,Grey,,,,,,,,
+152,Instant,Locked Shot,"2S
 ",-,-,-,-,"Play: If you control a ready ""Kalkavat, Iron's Sight"" deal 4 damage to an enemy creature. If you do not, destroy a friendly creature.",,Grey,,,,,,,,
-151,Instant,Badge of Rust,2S,-,-,-,-,Play: Exhaust an enemy creature.,,Grey,,,,,,,,
-152,Instant,Entrench,4S,-,-,-,-,Play: Destroy each creature in the battleline not directly fighting another creature.,Weird wording,Grey,,,,,,,,
-153,Instant,Principle of Decay,3S,-,-,-,-,"Play: Every creature gains ""Deploy: Give this creature -1 | -1 | -1"" until End of Phase.",,Grey,,,,,,,,
-154,Instant,Lurid Sacrifice,3S,-,-,-,-,"Play: Discard your hand. If you discarded 4 or more cards, play the top card of your library at no cost.",,Grey,,,,,,,,
-155,Instant,Touch of the Wastelanders,2S,-,-,-,-,"Play: Flip over the battlefield until the end of phase. Until the end of this phase, the battlefield's effects do not occur, but the battlefield is also uncapturable.",,Grey,,,,,,,,
-156,Instant,"Single Combat
+153,Instant,Badge of Rust,2S,-,-,-,-,Play: Exhaust an enemy creature.,,Grey,,,,,,,,
+154,Instant,Entrench,4S,-,-,-,-,Play: Destroy each creature in the battleline not directly fighting another creature.,Weird wording,Grey,,,,,,,,
+155,Instant,Disarmor,3S,-,-,-,-,"Play: Stockpile this under a chosen creature. The creature this is stockpiled under loses Subtle, Sturdy and Dauntless.",,Grey,,,,,,,,
+156,Instant,Principle of Decay,3S,-,-,-,-,"Play: Every creature gains ""Deploy: Give this creature -1 | -1 | -1"" until End of Phase.",,Grey,,,,,,,,
+157,Instant,Lurid Sacrifice,3S,-,-,-,-,"Play: Discard your hand. If you discarded 4 or more cards, play the top card of your library at no cost.",,Grey,,,,,,,,
+158,Instant,Touch of the Wastelanders,2S,-,-,-,-,"Play: Flip over the battlefield until the end of phase. Until the end of this phase, the battlefield's effects do not occur, but the battlefield is also uncapturable.",,Grey,,,,,,,,
+159,Instant,"Single Combat
 ",2S,-,-,-,-,Play: Retreat and exhaust each friendly creature in the Battleline but one and each enemy creature in the Battleline but one. ,,Grey,,,,,,,,
 ,,,,,,,,,,,,,,,,,,
-157,Artifact,Jungle Throne,5G,Location,-,6,-,"Play: Reveal cards from the top of your library until you reveal a creature card. Summon the creature. Shuffle the revealed cards into your library
+160,Artifact,Jungle Throne,5G,Location,-,6,-,"Play: Reveal cards from the top of your library until you reveal a creature card. Summon the creature. Shuffle the revealed cards into your library
 Action: Heal all damage from target creature",,Green,Artifact,10,,,,,,
-158,Artifact,Wellspring of Life,"7G
+161,Artifact,Wellspring of Life,"7G
 ",Location,"-
 ",17,-,"Play: Give all Beast creatures +1 | +0 | +0
 All damage done to friendly creatures is instead done to Wellspring of Life.",Be careful about how we mark the +1,Green,Creature,23,,,,,,
-159,Artifact,Faëdir,5G,Location,"-
+162,Artifact,Faëdir,5G,Location,"-
 ",5,-,"All friendly creatures gain ""Guard: Heal this creature 2 points.""
 Action: Give a creature +0 | +0 | +1",,Green,Instant,18,,,,,,
-160,Artifact,Reclaimed Graveyard,7G,Location,-,7,-,"When summoning creatures, you may expend one of the cards in your enemy's discard as a green mana.
+163,Artifact,Reclaimed Graveyard,7G,Location,-,7,-,"When summoning creatures, you may expend one of the cards in your enemy's discard as a green mana.
 Action: Sacrifice a Creature. Gain G mana equal to the cost of that creature.",,Green,Total:,51,,,,,,
-161,Artifact,Earth Throne,"7G
+164,Artifact,Earth Throne,"7G
 ",Location,-,5,-,"Play: Heal up to 5 damage from a friendly creature
 Action: 1G. Target friendly creature deals damage according to it's toughness until end of turn.",,Green,,,,,,,,
-162,Artifact,Gaerd Village,8G,Location,-,5,-,Action: Gain control of an enemy creature with toughness less than 3 until End of Phase.,"""Gaerd is an example. There is always space if you submit to the wild peacefully..."" - Yllioc, Salvaged Castaway",Green,,,,,,,,
-163,Artifact,The True Root,6G,Plant | Wonder,-,8,-,"Play: Fully heal all allied creatures.
+165,Artifact,Gaerd Village,8G,Location,-,5,-,Action: Gain control of an enemy creature with toughness less than 3 until End of Phase.,"""Gaerd is an example. There is always space if you submit to the wild peacefully..."" - Yllioc, Salvaged Castaway",Green,,,,,,,,
+166,Artifact,The True Root,6G,Plant | Wonder,-,8,-,"Play: Fully heal all allied creatures.
 Action: Ready a deployed creature.",,Green,,,,,,,,
-164,Artifact,Gaiec Salve,5G,Item | Wonder,-,5,-,"Action: Fully heal a friendly creature
+167,Artifact,Gaiec Salve,5G,Item | Wonder,-,5,-,"Action: Fully heal a friendly creature
 Creatures can't heal friendly artifacts
 Creatures you control get +0| +0| +1",,Green,,,,,,,,
-165,Artifact,"Kayl, Wood's Memory",7G,Location,-,2,-,"Witness: Give Kayl, Wood's Memory +0 | +4 | +0.
+168,Artifact,"Kayl, Wood's Memory",7G,Location,-,2,-,"Witness: Give Kayl, Wood's Memory +0 | +4 | +0.
 End of Phase: If any creature has taken damage while defending Kayl, Wood's Memory, fully heal that creature.",,Green,,,,,,,,
-166,Artifact,Beast's Den,4G,Location,-,7,-,"While Beast's Den is in play, friendly Beasts gain ""Guard: Fully heal this creature."" 
+169,Artifact,Beast's Den,4G,Location,-,7,-,"While Beast's Den is in play, friendly Beasts gain ""Guard: Fully heal this creature."" 
 Action: If you control a ready Beast provoke an enemy creature to the battleline.",,Green,,,,,,,,
-167,Creature,Jungle Tiger,2G,Beast,3,2,0,,,Green,,,,,,,,
-168,Creature,"Kastivetz, Protector",4G,Plant | Ancient,1,8,1,"Any time a friendly creature would take damage, deal that damage to Kastivetz, Protector instead.",,Green,,,,,,,,
-169,Creature,Tangle Witch,2G,Human,0,1,3,,"""The toughest trunks can still use tending..."" -Tangle Witch",Green,,,,,,,,
-170,Creature,King,4G,Beast,1,3,1,Bloodied: Give this creature +2 | +2 | +0,,Green,,,,,,,,
-171,Creature,Den Mother,4G,Beast,1,3,1,Idle: Heal 1 from all other friendly creatures in this zone.,,Green,,,,,,,,
-172,Creature,Tall Steve,3G,Titan,*,*,0,Tall Steve's Power and Health are equal to the cost of the friendly creature with the highest cost ,,Green,,,,,,,,
-173,Creature,Earth Spirit,9G,Elemental,3,11,3,Guard: Enemy creatures in this zone gain -2 | +0 | +0 until End of Phase.,,Green,,,,,,,,
-174,Creature,Air Spirit,"5G
+170,Creature,Jungle Tiger,2G,Beast,3,2,0,,,Green,,,,,,,,
+171,Creature,"Kastivetz, Protector",4G,Plant | Ancient,1,8,1,"Any time a friendly creature would take damage, deal that damage to Kastivetz, Protector instead.",,Green,,,,,,,,
+172,Creature,Tangle Witch,2G,Human,0,1,3,,"""The toughest trunks can still use tending..."" -Tangle Witch",Green,,,,,,,,
+173,Creature,King,4G,Beast,1,3,1,Bloodied: Give this creature +2 | +2 | +0,,Green,,,,,,,,
+174,Creature,Den Mother,4G,Beast,1,3,1,Idle: Heal 1 from all other friendly creatures in this zone.,,Green,,,,,,,,
+175,Creature,Tall Steve,3G,Titan,*,*,0,Tall Steve's Power and Health are equal to the cost of the friendly creature with the highest cost ,,Green,,,,,,,,
+176,Creature,Earth Spirit,9G,Elemental,3,11,3,Guard: Enemy creatures in this zone gain -2 | +0 | +0 until End of Phase.,,Green,,,,,,,,
+177,Creature,Air Spirit,"5G
 ",Elemental,5,3,0,Deploy: Deploy two other friendly creatures to the same zone as the Air Spirit. Air Spirit and the creature it deploys ignore trap effects.,,Green,,,,,,,,
-175,Creature,Fire Spirit,7G,Elemental,5,1,0,Play: Fire Spirit does 2 damage to each artifact in play,,Green,,,,,,,,
-176,Creature,Water Spirit,9G,Elemental,3,2,3,"Idle: Give Water Spirit +0 | +2 | +0. If The Water Spirit's toughness is at least 7, instead destroy all creatures in play.",,Green,,,,,,,,
-177,Creature,Quilaphant,3G,Beast,1,5,0,Action: 1G. Choose a creature. Deal 2 damage to that creature and 1 damage to Quilaphant.,,Green,,,,,,,,
-178,Creature,Stubborn Weed,2G,Plant,0,1,0,"Destroyed: Instead of destroying Stubborn Weed, fully heal it, exhaust it, and return it to the barracks. If you do, give Stubborn Weed +1 | +1 | +0",,Green,,,,,,,,
-179,Creature,Vineyard Shaman,6G,Human | Plant,2,6,1,Bloodied: Exhaust each creature in this zone.,"""Real growth only takes a little coaxing...' - Vineyard Shaman",Green,,,,,,,,
-180,Creature,"Yllioc, Salvaged Castaway",4G,Construct | Plant,2,2,0,Idle: Ready and heal another Plant creature.,"""Power in everything."" - Yllioc, Salvaged Castaway",Green,,,,,,,,
-181,Creature,Valloch Nymph,2G,Beast | Elemental,0,3,0,Idle: Fully heal an allied Elemental creature.,,Green,,,,,,,,
-182,Creature,Swampit,3G,Beast,0,2,1,"Witness: You may stockpile a friendly creature destroyed this turn under Swampit. If you do, give Swampit +2 | +2 | +0",,Green,,,,,,,,
-183,Creature,Enraged Protector,5G,Beast | Warden,2,7,1,Witness: Enraged Protector gains Dauntless and +3| +0 | +0 until the end of the next phase.,,Green,,,,,,,,
-184,Creature,Deepwood Folk,2G,Faerie,1,1,0,"Trap: If the trapped creature has a toughness smaller than 3, return it to its barracks.",,Green,,,,,,,,
-185,Creature,"Ba'a Embi, Treespeaker",5G,Human | Beast,2,5,1,"Witness: Search your library for a Plant creature, then place it in your hand. Shuffle your library",,Green,,,,,,,,
-186,Creature,Watcher,3G,Ancient,0,6,0,"End of Phase: Deal 2 damage to this creature. Search your library for a ""Living History"" and place it in your hand.",,Green,,,,,,,,
-187,Creature,Tiriri Flock,1G,Beast,2,1,1,"For each Tiriri Flock in play, Tiri Flock gains +0 | + 2 | + 0.","""And there came day when those creatures blocked out the sun..."" - Keeper of Stories",Green,,,,,,,,
-188,Creature,Corpse Flower,4G,Beast | Plant,2,4,4,"Trap: The trapped creature gains ""Destroyed: Your opponent gains 2G mana."" until End of Phase. ",,Green,,,,,,,,
-189,Creature,"I'di I'di, Conjurer",6G,Human | Plant,3,5,2,"Whenever I'di I'di destroys an enemy creature, search your deck for a Conjuration and place it in your hand. Shuffle your library.",,Green,,,,,,,,
-190,Instant,Terra Forming,3G,-,-,-,-,Play: Select a battlefield in your battlefield deck. Replace the current battlefield with that battlefield.,,Green,,,,,,,,
-191,Instant,Living History,3G,-,-,-,-,"Play: Your opponent must reveal random card in their hand. If you control a ""Watcher,"" they must discard the card they revealed.",,Green,,,,,,,,
-192,Instant,Natural Vigor,2G,-,-,-,-,"Play: This creature gains ""Deploy: Ready this creature."" until end of phase.",,Green,,,,,,,,
-193,Instant,Cult of the Mammoth,3G,-,-,-,-,Play: Choose a friendly creature. Reduce its power to 0 and give it +0 | +8 | +1,,Green,,,,,,,,
-194,Instant,Voice of Land,2G,Conjuration,-,-,-,"Play: Heal an allied creature up to 3 points. If you heal more than 2 points with this card, gain 2 standing green mana until end of phase.",,Green,,,,,,,,
-195,Instant,Voice of Flame,1G,Conjuration,-,-,-,"Play: Deal 2 damage to a creature. If this destroys that creature, deal 1 damage to 2 other creatures.",,Green,,,,,,,,
-196,Instant,Voice of Flight,3G,Conjuration,-,-,-,Play: Ready an allied creature.,,Green,,,,,,,,
-197,Instant,Voice of Tempest,3G,Conjuration,-,-,-,"Play: Shuffle 2 allied creatures back into your deck. If you do, shuffle 3 enemy creatures back into their owner's deck.",,Green,,,,,,,,
-198,Instant,Voice of Void,7G,Conjuration,-,-,-,Play: Destroy each undamaged creature.,,Green,,,,,,,,
-199,Instant,Bearheart,2G,-,-,-,-,Play: Give a creature +0 | + 3 | + 3,,Green,,,,,,,,
-200,Instant,Overgrowth,2G,-,-,-,-,Play: Exhaust a creature in your enemies Barracks.,,Green,,,,,,,,
-201,Instant,Cult of the Quill,2G,-,-,-,-,"Play: Stockpile this card under a creature. This creature gains ""Action: 1G. Choose a creature. Deal 2 damage to that creature and 1 damage to this creature""",,Green,,,,,,,,
-202,Instant,Intimidation,2G,-,-,-,-,"Play: If you have a creature of toughness 3 or greater in play, return an enemy creature to its owner's hand.",,Green,,,,,,,,
-203,Instant,Thin the Gap,4G,-,-,-,-,"Play: Give an enemy creature ""End of Phase: Destroy this creature."" until end of phase.",,Green,,,,,,,,
-204,Instant,Lean Winter,3G,-,-,-,-,Play: Each ready creature gains + 0 | - 2 | + 0.,,Green,,,,,,,,
-205,Instant,Hibernate,2G,-, ,-,-,Play: You may exhaust up to three friendly creatures. Fully heal those creatures.,,Green,,,,,,,,
-206,Instant,Cost of Power,3G,-,-,-,-,Play: Choose a creature. That creature deals damage to itself equal to its power.,,Green,,,,,,,,
-207,Instant,Faerie Song,2G,-,-,-,-,Play: Exhaust 2 enemy creatures.,,Green,,,,,,,,
+178,Creature,Fire Spirit,7G,Elemental,5,1,0,Play: Fire Spirit does 2 damage to each artifact in play,,Green,,,,,,,,
+179,Creature,Water Spirit,9G,Elemental,3,2,3,"Idle: Give Water Spirit +0 | +2 | +0. If The Water Spirit's toughness is at least 7, instead destroy all creatures in play.",,Green,,,,,,,,
+180,Creature,Quilaphant,3G,Beast,1,5,0,Action: 1G. Choose a creature. Deal 2 damage to that creature and 1 damage to Quilaphant.,,Green,,,,,,,,
+181,Creature,Stubborn Weed,2G,Plant,0,1,0,"Destroyed: Instead of destroying Stubborn Weed, fully heal it, exhaust it, and return it to the barracks. If you do, give Stubborn Weed +1 | +1 | +0",,Green,,,,,,,,
+182,Creature,Vineyard Shaman,6G,Human | Plant,2,6,1,Bloodied: Exhaust each creature in this zone.,"""Real growth only takes a little coaxing...' - Vineyard Shaman",Green,,,,,,,,
+183,Creature,"Yllioc, Salvaged Castaway",4G,Construct | Plant,2,2,0,Idle: Ready and heal another Plant creature.,"""Power in everything."" - Yllioc, Salvaged Castaway",Green,,,,,,,,
+184,Creature,Valloch Nymph,2G,Beast | Elemental,0,3,0,Idle: Fully heal an allied Elemental creature.,,Green,,,,,,,,
+185,Creature,Swampit,3G,Beast,0,2,1,"Witness: You may stockpile a friendly creature destroyed this turn under Swampit. If you do, give Swampit +2 | +2 | +0",,Green,,,,,,,,
+186,Creature,Enraged Protector,5G,Beast | Warden,2,7,1,Witness: Enraged Protector gains Dauntless and +3| +0 | +0 until the end of the next phase.,,Green,,,,,,,,
+187,Creature,Deepwood Folk,2G,Faerie,1,1,0,"Trap: If the trapped creature has a toughness smaller than 3, return it to its barracks.",,Green,,,,,,,,
+188,Creature,"Ba'a Embi, Treespeaker",5G,Human | Beast,2,5,1,"Witness: Search your library for a Plant creature, then place it in your hand. Shuffle your library",,Green,,,,,,,,
+189,Creature,Watcher,3G,Ancient,0,6,0,"End of Phase: Deal 2 damage to this creature. Search your library for a ""Living History"" and place it in your hand.",,Green,,,,,,,,
+190,Creature,Tiriri Flock,1G,Beast,2,1,1,"For each Tiriri Flock in play, Tiri Flock gains +0 | + 2 | + 0.","""And there came day when those creatures blocked out the sun..."" - Keeper of Stories",Green,,,,,,,,
+191,Creature,Corpse Flower,4G,Beast | Plant,2,4,4,"Trap: The trapped creature gains ""Destroyed: Your opponent gains 2G mana."" until End of Phase. ",,Green,,,,,,,,
+192,Creature,"I'di I'di, Conjurer",6G,Human | Plant,3,5,2,"Whenever I'di I'di destroys an enemy creature, search your deck for a Conjuration and place it in your hand. Shuffle your library.",,Green,,,,,,,,
+193,Instant,Terra Forming,3G,-,-,-,-,Play: Select a battlefield in your battlefield deck. Replace the current battlefield with that battlefield.,,Green,,,,,,,,
+194,Instant,Living History,3G,-,-,-,-,"Play: Your opponent must reveal random card in their hand. If you control a ""Watcher,"" they must discard the card they revealed.",,Green,,,,,,,,
+195,Instant,Natural Vigor,2G,-,-,-,-,"Play: This creature gains ""Deploy: Ready this creature."" until end of phase.",,Green,,,,,,,,
+196,Instant,Cult of the Mammoth,3G,-,-,-,-,Play: Choose a friendly creature. Reduce its power to 0 and give it +0 | +8 | +1,,Green,,,,,,,,
+197,Instant,Voice of Land,2G,Conjuration,-,-,-,"Play: Heal an allied creature up to 3 points. If you heal more than 2 points with this card, gain 2 standing green mana until end of phase.",,Green,,,,,,,,
+198,Instant,Voice of Flame,1G,Conjuration,-,-,-,"Play: Deal 2 damage to a creature. If this destroys that creature, deal 1 damage to 2 other creatures.",,Green,,,,,,,,
+199,Instant,Voice of Flight,3G,Conjuration,-,-,-,Play: Ready an allied creature.,,Green,,,,,,,,
+200,Instant,Voice of Tempest,3G,Conjuration,-,-,-,"Play: Shuffle 2 allied creatures back into your deck. If you do, shuffle 3 enemy creatures back into their owner's deck.",,Green,,,,,,,,
+201,Instant,Voice of Void,7G,Conjuration,-,-,-,Play: Destroy each undamaged creature.,,Green,,,,,,,,
+202,Instant,Bearheart,2G,-,-,-,-,Play: Give a creature +0 | + 3 | + 3,,Green,,,,,,,,
+203,Instant,Overgrowth,2G,-,-,-,-,Play: Exhaust a creature in your enemies Barracks.,,Green,,,,,,,,
+204,Instant,Cult of the Quill,2G,-,-,-,-,"Play: Stockpile this card under a creature. This creature gains ""Action: 1G. Choose a creature. Deal 2 damage to that creature and 1 damage to this creature""",,Green,,,,,,,,
+205,Instant,Intimidation,2G,-,-,-,-,"Play: If you have a creature of toughness 3 or greater in play, return an enemy creature to its owner's hand.",,Green,,,,,,,,
+206,Instant,Thin the Gap,4G,-,-,-,-,"Play: Give an enemy creature ""End of Phase: Destroy this creature."" until end of phase.",,Green,,,,,,,,
+207,Instant,Lean Winter,3G,-,-,-,-,Play: Each ready creature gains + 0 | - 2 | + 0.,,Green,,,,,,,,
+208,Instant,Hibernate,2G,-, ,-,-,Play: You may exhaust up to three friendly creatures. Fully heal those creatures.,,Green,,,,,,,,
+209,Instant,Cost of Power,3G,-,-,-,-,Play: Choose a creature. That creature deals damage to itself equal to its power.,,Green,,,,,,,,
+210,Instant,Faerie Song,2G,-,-,-,-,Play: Exhaust 2 enemy creatures.,,Green,,,,,,,,
 ,,,,,,,,,,,,,,,,,,
-208,Artifact,"Rignafen, Venturing Citadel",6B,Location | Ship,-,13,-,"Action: 1B -  Rignafen is deployed to your Barracks as a 4 | 9 | 0 and can be used as a creature.
+211,Artifact,"Rignafen, Venturing Citadel",6B,Location | Ship,-,13,-,"Action: 1B -  Rignafen is deployed to your Barracks as a 4 | 9 | 0 and can be used as a creature.
 Creatures that die defending Rignafen are worth 2B in discard during the next phase.",,Blue,Artifact,10,,,,,,
-209,Artifact,Battered Colossus,7B,Location,-,7,-,"Bloodied: Shuffle half your enemy's Discard back into their Deck.
+212,Artifact,Battered Colossus,7B,Location,-,7,-,"Bloodied: Shuffle half your enemy's Discard back into their Deck.
 Pillager creatures gain +1 | +1 | +0",,Blue,Creature,27,,,,,,
-210,Artifact,"Aksÿva, Sea Spire",6B,Location | Ancient,-,5,-,"Action: 1B. For each two creatures in your discard, deal 1 damage to an enemy creature of your choice.",,Blue,Instant,13,,,,,,
-211,Artifact,Essence of the Bjïrkir,6B,Item | Wonder,-,4,-,"Action: 1B. Give an allied creature +2 | +0 | +0 until the end of the phase. At the end of the phase, deal 2 damage to that creature.
+213,Artifact,"Aksÿva, Sea Spire",6B,Location | Ancient,-,5,-,"Action: 1B. For each two creatures in your discard, deal 1 damage to an enemy creature of your choice.",,Blue,Instant,13,,,,,,
+214,Artifact,Essence of the Bjïrkir,6B,Item | Wonder,-,4,-,"Action: 1B. Give an allied creature +2 | +0 | +0 until the end of the phase. At the end of the phase, deal 2 damage to that creature.
 When a Martyr creature is destroyed, give Essence of the Bjïrkir +0 | +1 | +0.",Idk if the second effect is needed. Felt a little boring with just the action,Blue,Total:,50,,,,,,
-212,Artifact,Frigid Altar,5B,Location,-,9,-,Action: Sacrifice a friendly creature in the Battleline. If you do return two enemy creatures to their Barracks and tap them.,Makes me think we might want a few more keywords--things like status effects,Blue,,,,,,,,
-213,Artifact,Favored Waters,4B,Location,-,2,-,"When an enemy captures a battlefield, they must sacrifice a creature",,Blue,,,,,,,,
-214,Artifact,Kvolmer,5B,Item | Wonder,-,3,-,"Start of Phase: If Kvolmer has 3 or more counters on it, sacrifice Kvolmer and summon three Horror creatures from your discard at no cost. 
+215,Artifact,Frigid Altar,5B,Location,-,9,-,Action: Sacrifice a friendly creature in the Battleline. If you do return two enemy creatures to their Barracks and tap them.,Makes me think we might want a few more keywords--things like status effects,Blue,,,,,,,,
+216,Artifact,Favored Waters,4B,Location,-,2,-,"When an enemy captures a battlefield, they must sacrifice a creature",,Blue,,,,,,,,
+217,Artifact,Kvolmer,5B,Item | Wonder,-,3,-,"Start of Phase: If Kvolmer has 3 or more counters on it, sacrifice Kvolmer and summon three Horror creatures from your discard at no cost. 
 Action: Place a counter on Kvolmer.","""...the book, it fell to the bottom of the sea. Better it stay there..."" - Keeper of Stories",Blue,,,,,,,,
-215,Artifact,Serpent's Halberd,7B,Item | Horror,-,7,-,"Recycled: Deal 2 damage to a friendly creature.
+218,Artifact,Serpent's Halberd,7B,Item | Horror,-,7,-,"Recycled: Deal 2 damage to a friendly creature.
 Play: Each creature gains +2|+2|+0 for each point of damage they have sustained.",,Blue,,,,,,,,
-216,Artifact,Voyager's Chant,5B,Ritual,-,6,-,"Each time a friendly martyr creature is destroyed, you may stockpile it under Voyager's Chant instead of discarding it.
+219,Artifact,Voyager's Chant,5B,Ritual,-,6,-,"Each time a friendly martyr creature is destroyed, you may stockpile it under Voyager's Chant instead of discarding it.
 Action: Discard one of the cards under Voyager's Chant. If you do, then draw cards equal to the number of cards under Voyager's Chant.",,Blue,,,,,,,,
-217,Artifact,Crimson Glyphs,7B,Item | Ritual,-,4,-,"Action: You may stockpile a friendly creature under Crimson Glyphs. If you do, deal damage equal to that creature's power to a creature.
+220,Artifact,Crimson Glyphs,7B,Item | Ritual,-,4,-,"Action: You may stockpile a friendly creature under Crimson Glyphs. If you do, deal damage equal to that creature's power to a creature.
 Witness: You may sacrifice a friendly creature. If you do, summon each creature under Crimson Glyph's at no cost.",,Blue,,,,,,,,
-218,Creature,Seasoned Marauder,2B,Pillager,1,3,0,Bloodied: Seasoned Marauder gains +1 | +1 | +0,,Blue,,,,,,,,
-219,Creature,"Vïlaac, Protector",4B,Pillager,2,5,3,"Bloodied: Fully heal an allied creature.
+221,Creature,Seasoned Marauder,2B,Pillager,1,3,0,Bloodied: Seasoned Marauder gains +1 | +1 | +0,,Blue,,,,,,,,
+222,Creature,"Vïlaac, Protector",4B,Pillager,2,5,3,"Bloodied: Fully heal an allied creature.
 Revealed: Your opponent sacrifices a creature.",Complete/Normalize wording,Blue,,,,,,,,
-220,Creature,Desperate Finale,8B,Horror,*,3,1,"Play: Stockpile each creature in your discard under this creature. Desperate Finale's power is equal to the number of creatures stockpiled under it.
+223,Creature,Desperate Finale,8B,Horror,*,3,1,"Play: Stockpile each creature in your discard under this creature. Desperate Finale's power is equal to the number of creatures stockpiled under it.
 Sturdy (This creature does not take damage, unless that damage would be enough to destroy it)",,Blue,,,,,,,,
-221,Creature,Corpse-Eater,3B,Horror,5,2,0,"Sturdy (This creature does not take damage, unless that damage would be enough to destroy it) 
+224,Creature,Corpse-Eater,3B,Horror,5,2,0,"Sturdy (This creature does not take damage, unless that damage would be enough to destroy it) 
 Whenever Corpse-Eater destroys a creature, stockpile it under this creature.",,Blue,,,,,,,,
-222,Creature,Battering Party,3B,Pillager,2,3,1,Deploy: Deal 1 damage to every creature in the zone where this is deployed.,,Blue,,,,,,,,
-223,Creature,Shield Urchin,3B,Beast,0,5,2,Bloodied: Shield Urchin deals 1 damage to every creature in the zone where this is deployed,,Blue,,,,,,,,
-224,Creature,Valhallan Martyr,-,"Pillager | Martyr
-",2,1,0,Recycled: Summon Valhallan Martyr and deal 1 damage to an allied creature.,,Blue,,,,,,,,
-225,Creature,Keeper of Stories,2B,Human | Scholar,1,1,0,Discarded: Idle an allied creature and draw a card.,,Blue,,,,,,,,
-226,Creature,Sheepskin Traitor,3B,Pillager,3,2,0,Subtle (This creature may ignore the battleline when deploying),,Blue,,,,,,,,
-227,Creature,"Yria, Spear Maiden",5B,Apparition | Martyr,5,3,1,Deploy: Deal 2 damage to a creature in the zone this creature is deployed to.,,Blue,,,,,,,,
-228,Creature,"Lopha, Inheritor",5B,Pillager,1,2,1,Idle: Lopha's effects are replaced with the effect of a creature in your discard.,Not sure how to word this. Also not sure if its worth anything.,Blue,,,,,,,,
-229,Creature,"Wylla, Brine Chosen",6B,Pillager,1,4,1,"Deploy: Give each Pillager in this zone ""Destroyed: Deal 1 damage to each creature in this zone"" Until end of phase.","""Those who would forget our oceans... be purged!"" Wylla, Brine Chosen",Blue,,,,,,,,
-230,Creature,Oldrasen,1B,Beast,4,1,0,"Oldrasen comes in ready.
+225,Creature,Battering Party,3B,Pillager,2,3,1,Deploy: Deal 1 damage to every creature in the zone where this is deployed.,,Blue,,,,,,,,
+226,Creature,Shield Urchin,3B,Beast,0,5,2,Bloodied: Shield Urchin deals 1 damage to every creature in the zone where this is deployed,,Blue,,,,,,,,
+227,Creature,Valhallan Martyr,-,"Pillager | Martyr
+",2,1,0,"Recycled: You may deal 2 damage to an allied non-martyr creature. If you do, summon Valhallan Martyr",,Blue,,,,,,,,
+228,Creature,Keeper of Stories,2B,Human | Scholar,1,1,0,Discarded: Idle an allied creature and draw a card.,,Blue,,,,,,,,
+229,Creature,Sheepskin Traitor,3B,Pillager,3,2,0,Subtle (This creature may ignore the battleline when deploying),,Blue,,,,,,,,
+230,Creature,"Yria, Spear Maiden",5B,Apparition | Martyr,5,3,1,Deploy: Deal 2 damage to a creature in the zone this creature is deployed to.,,Blue,,,,,,,,
+231,Creature,"Lopha, Inheritor",5B,Pillager,1,2,1,Idle: Lopha's effects are replaced with the effect of a creature in your discard.,Not sure how to word this. Also not sure if its worth anything.,Blue,,,,,,,,
+232,Creature,"Wylla, Brine Chosen",6B,Pillager,1,4,1,"Deploy: Give each Pillager in this zone ""Destroyed: Deal 1 damage to each creature in this zone"" Until end of phase.","""Those who would forget our oceans... be purged!"" Wylla, Brine Chosen",Blue,,,,,,,,
+233,Creature,Oldrasen,1B,Beast,4,1,0,"Oldrasen comes in ready.
 End of Phase: Sacrifice this creature.",,Blue,,,,,,,,
-231,Creature,Kraken,"6B
+234,Creature,Kraken,"6B
 ",Titan | Beast,2,4,1,"Action: 1B. Destroy a creature of toughness lower than Kraken's toughness. If you do, give the Kraken + 0 | +1 | +0",,Blue,,,,,,,,
-232,Creature,Draguk Shambler,4B,Pillager | Horror,X,3,2,Draguk Shambler's base power is equal to half the number of cards in your discard pile.,,Blue,,,,,,,,
-233,Creature,Maré,4B,Beast | Horror,0,2,1,"Destroyed: Stockpile the Maré under an enemy creature. That creature gains ""Destroyed: Shuffle your discard back into your library.""",,Blue,,,,,,,,
-234,Creature,Katek Shaman,4B,Horror,1,1,1,"Idle: You may stockpile a card from your discard under a friendly creature. If you do, give that creature Sturdy until end of turn.",,Blue,,,,,,,,
-235,Creature,"Rav, The Unfelled",5B,Pillager | Horror,4,1,0,"Destroyed: If Rav is the only friendly creature in this zone, resummon it in the barracks at no cost.","""I knew Ravet long ago. This thing... it is not him."" - Yria, Spear Maiden",Blue,,,,,,,,
-236,Creature,"Allya, Mapmaker",4B,Human | Scholar,1,2,1,Action: Ready a friendly Wonder.,,Blue,,,,,,,,
-237,Creature,"Iui, Spirit of the Wreck",5B,Scrap | Horror,2,4,2,"Bloodied: Shuffle a number of cards equal to the damage on Iui from your enemy's discard back into their deck, ",,Blue,,,,,,,,
-238,Creature,Connoiseur of Rage,3B,Pillager,2,4,1,Bloodied: Ready Connoiseur of Rage.,,Blue,,,,,,,,
-239,Creature,Nighthunter,2B,Beast,2,2,0,Trap: Deal 2 damage to the trapped creature.,,Blue,,,,,,,,
-240,Creature,Dauntless Marauder,4B,Pillager,3,2,1,"Destroyed: Deal 3 damage to an enemy creature and 3 damage to an enemy artifact.
+235,Creature,Draguk Shambler,4B,Pillager | Horror,X,3,2,Draguk Shambler's base power is equal to half the number of cards in your discard pile.,,Blue,,,,,,,,
+236,Creature,Maré,4B,Beast | Horror,0,2,1,"Destroyed: Stockpile the Maré under an enemy creature. That creature gains ""Destroyed: Shuffle your discard back into your library.""",,Blue,,,,,,,,
+237,Creature,Katek Shaman,4B,Horror,1,1,1,"Idle: You may stockpile a card from your discard under a friendly creature. If you do, give that creature Sturdy until end of turn.",,Blue,,,,,,,,
+238,Creature,"Rav, The Unfelled",5B,Pillager | Horror,4,1,0,"Destroyed: If Rav is the only friendly creature in this zone, resummon it in the barracks at no cost.","""I knew Ravet long ago. This thing... it is not him."" - Yria, Spear Maiden",Blue,,,,,,,,
+239,Creature,"Allya, Mapmaker",4B,Human | Scholar,1,2,1,Action: Ready a friendly Wonder.,,Blue,,,,,,,,
+240,Creature,"Iui, Spirit of the Wreck",5B,Scrap | Horror,2,4,2,"Bloodied: Shuffle a number of cards equal to the damage on Iui from your enemy's discard back into their deck, ",,Blue,,,,,,,,
+241,Creature,Connoiseur of Rage,3B,Pillager,2,4,1,Bloodied: Ready Connoiseur of Rage.,,Blue,,,,,,,,
+242,Creature,Nighthunter,2B,Beast,2,2,0,Trap: Deal 2 damage to the trapped creature.,,Blue,,,,,,,,
+243,Creature,Dauntless Marauder,4B,Pillager,3,2,1,"Destroyed: Deal 3 damage to an enemy creature and 3 damage to an enemy artifact.
 Trap: Destroy Dauntless Marauder. Gain 1 mana.",,Blue,,,,,,,,
-241,Creature,Leviathan Crew,3B,Pillager | Ship,3,2,1,Leviathan crew deals double damage to creatures with toughness greater than or equal to 5,,Blue,,,,,,,,
-242,Creature,Eye of the Storm,5B,Elemental | Horror,0,5,0,"Trap: Deal one damage to each creature in this zone.
+244,Creature,Leviathan Crew,3B,Pillager | Ship,3,2,1,Leviathan crew deals double damage to creatures with toughness greater than or equal to 5,,Blue,,,,,,,,
+245,Creature,Eye of the Storm,5B,Elemental | Horror,0,5,0,"Trap: Deal one damage to each creature in this zone.
 Sturdy (This creature does not take damage, unless that damage would be enough to destroy it)","""Like the ride of your life! Hold on, Bjïrkirs!"" - Cpt. Sekir",Blue,,,,,,,,
-243,Creature,"Sekir, Captain of the Leviathan",5B,Pillager | Leader,4,3,0,"Sekir deals double damage to creatures with toughness greater than or equal to 5.  
+246,Creature,"Sekir, Captain of the Leviathan",5B,Pillager | Leader,4,3,0,"Sekir deals double damage to creatures with toughness greater than or equal to 5.  
 Sturdy (This creature does not take damage, unless that damage would be enough to destroy it.)",,Blue,,,,,,,,
-244,Creature,Ragtooth,4B,Pillager,1,4,3,"Dauntless
+247,Creature,Ragtooth,4B,Pillager,1,4,3,"Dauntless
 While this creature has exactly 3 damage on it, cards with the trait Horror cost 1 less to summon.",,Blue,,,,,,,,
-245,Instant,Horrifying Visions,2B,-,-,-,-,"Play: Exhaust a friendly Horror. If you do, exhaust 2 enemy creatures and deal 2 damage to them.",,Blue,,,,,,,,
-246,Instant,Spearfishing,2B,-,-,-,-,"Play: Choose an enemy creature and an allied creature. Move the enemy creature to the same zone as the allied creature, and deal 2 damage to it.",,Blue,,,,,,,,
-247,Instant,Roughhousing,1B,-,-,-,-,Play: Do 1 damage to a creature. Then give it +1|+1|+0.,,Blue,,,,,,,,
-248,Instant,Burn the Remains,3B,-,-,-,-,Play: Enemy creatures destroyed this turn are placed at the bottom of their owner's deck.,,Blue,,,,,,,,
-249,Instant,Bloodrush,2B,-,-,-,-,"Play: An allied creature gains ""Destroyed: Resummon this creature to your barracks and give it +1 | +0 | +0"" until the end of phase.",,Blue,,,,,,,,
-250,Instant,Burning Path,3B,-,-,-,-,"Play: Sacrifice a creature in the Battleline. If you do, replace the current Battlefield with the next Battlefield",,Blue,,,,,,,,
-251,Instant,Gift of the Blood,"2B
+248,Instant,Horrifying Visions,2B,-,-,-,-,"Play: Exhaust a friendly Horror. If you do, exhaust 2 enemy creatures and deal 2 damage to them.",,Blue,,,,,,,,
+249,Instant,Spearfishing,2B,-,-,-,-,"Play: Choose an enemy creature and an allied creature. Move the enemy creature to the same zone as the allied creature, and deal 2 damage to it.",,Blue,,,,,,,,
+250,Instant,Roughhousing,1B,-,-,-,-,Play: Do 1 damage to a creature. Then give it +1|+1|+0.,,Blue,,,,,,,,
+251,Instant,Burn the Remains,3B,-,-,-,-,Play: Enemy creatures destroyed this turn are placed at the bottom of their owner's deck.,,Blue,,,,,,,,
+252,Instant,Bloodrush,2B,-,-,-,-,"Play: An allied creature gains ""Destroyed: Resummon this creature to your barracks and give it +1 | +0 | +0"" until the end of phase.",,Blue,,,,,,,,
+253,Instant,Burning Path,3B,-,-,-,-,"Play: Sacrifice a creature in the Battleline. If you do, replace the current Battlefield with the next Battlefield",,Blue,,,,,,,,
+254,Instant,Gift of the Blood,"2B
 ",-,-,-,-,"Play: Give a creature +2 | +0 | +0 and ""End of Phase: If this creature is not in the Battleline, sacrifice it.""",,Blue,,,,,,,,
-252,Instant,Skylight Ceremony,2B,-,-,-,-,"Play: If a friendly creature has died this turn, deal 4 damage to an enemy creature.","
+255,Instant,Skylight Ceremony,2B,-,-,-,-,"Play: If a friendly creature has died this turn, deal 4 damage to an enemy creature.","
 ",Blue,,,,,,,,
-253,Instant,Raiding Party,2B,-,-,-,-,Play: Deal 1 damage to an artifact for each ready friendly creature you control.,,Blue,,,,,,,,
-254,Instant,Symbiosis,2B,-,-,-,-,"Play: Sacrifice up to three friendly Pillager creatures. For each Pillager creature you sacrifice, give a friendly Horror +1| +1| +0",,Blue,,,,,,,,
-255,Instant,Hunger of the Deep,6B,-,-,-,-,"Play: Give each creature ""End of Phase: Sacrifice this creature.""",,Blue,,,,,,,,
-256,Instant,Bloodforged,2B,-,-,-,-,"Play: Sacrifice any number of friendly creatures. For each sacrifice creature, give a friendly creature +1 | +0 | +0.",,Blue,,,,,,,,
-257,Instant,Friendly Winds,3B,-,-,-,-,"Play: Deploy all friendly creatures to the Battleline. Resolve combat in the Battleline, but do not end the phase.",,Blue,,,,,,,,
+256,Instant,Raiding Party,2B,-,-,-,-,Play: Deal 1 damage to an artifact for each ready friendly creature you control.,,Blue,,,,,,,,
+257,Instant,Symbiosis,2B,-,-,-,-,"Play: Sacrifice up to three friendly Pillager creatures. For each Pillager creature you sacrifice, give a friendly Horror +1| +1| +0",,Blue,,,,,,,,
+258,Instant,Hunger of the Deep,6B,-,-,-,-,"Play: Give each creature ""End of Phase: Sacrifice this creature.""",,Blue,,,,,,,,
+259,Instant,Bloodforged,2B,-,-,-,-,"Play: Sacrifice any number of friendly creatures. For each sacrifice creature, give a friendly creature +1 | +0 | +0.",,Blue,,,,,,,,
+260,Instant,Friendly Winds,3B,-,-,-,-,"Play: Deploy all friendly creatures to the Battleline. Resolve combat in the Battleline, but do not end the phase.",,Blue,,,,,,,,
 ,,,,,,,,,,,,,,,,,,
-258,Battlefield,Valhalla,Location,-,-,-,-,"If a creature would be deployed, deploy it to the battlefield","Whenever you deploy three or more creatures to the battlefield, provoke an enemy creature.",Brown,Battlefield,30,,,,,,
-259,Battlefield,Burning Crags,Location,"-
+261,Battlefield,Valhalla,Location,-,-,-,-,"If a creature would be deployed, deploy it to the battlefield","Whenever you deploy three or more creatures to the battlefield, provoke an enemy creature.",Brown,Battlefield,30,,,,,,
+262,Battlefield,Burning Crags,Location,"-
 ",-,-,-,"Any time a creature is deployed, deal 1 damage to it.",Creatures that attack an artifact on Burning Crags take 1 damage.,Brown,,,,,,,,
-260,Battlefield,New Cambria,Location,-,-,-,-,Creatures with power 2 or less gain +1 | +1 | +1. Creatures with power 4 or greater gain -1 | -1 | -1,"Whenever a creature you control with power 2 or less dies, draw a card.",Brown,,,,,,,,
-261,Battlefield,Hyperbolic Fields,Location,-,-,-,-,Summoned creatures come in ready.,You can deploy one more creature at a time.,Brown,,,,,,,,
-262,Battlefield,River Morphea,Location,-,-,-,-,Creatures trigger Idle effects when deployed to the battlefield.,"Whenever a friendly creature with an Idle effect is destroyed, trigger its idle effect.",Brown,,,,,,,,
-263,Battlefield,Scr4P-T0wN,Location,-,-,-,-,"Each player may discard up to six cards at the beggining of phase, rather than 3.",You may discard one more card during your draw/discard phase.,Brown,,,,,,,,
-264,Battlefield,Irradiated Waste,Location,-,-,-,-,End of Phase: Each player sacrifices a creature.,End of Phase: Deal 1 damage to a friendly creature and 2 damage to an enemy creature.,Brown,,,,,,,,
-265,Battlefield,New Moon,State,-,-,-,-,"All creatures gain ""Subtle (This creature may ignore the battleline when being deployed).""",The first subtle creature you summon this phase comes in ready.,Brown,May be way strong once captured.,,,,,,,
-266,Battlefield,Watering Hole,Location,-,-,-,-,"Whenever a creature would be deployed, flip a coin. If the coin is heads, deploy it to the intended zone. Otherwise, idle it.","Start of Phase: Choose two creatures. Heal each creature 1 points of damage. If this removes 2 damage from creatures in play, gain 1A. ",Brown,,,,,,,,
-267,Battlefield,Plot of Champions,"Location
+263,Battlefield,New Cambria,Location,-,-,-,-,Creatures with power 2 or less gain +1 | +1 | +1. Creatures with power 4 or greater gain -1 | -1 | -1,"Whenever a creature you control with power 2 or less dies, draw a card.",Brown,,,,,,,,
+264,Battlefield,Hyperbolic Fields,Location,-,-,-,-,Summoned creatures come in ready.,You can deploy one more creature at a time.,Brown,,,,,,,,
+265,Battlefield,River Morphea,Location,-,-,-,-,Creatures trigger Idle effects when deployed to the battlefield.,"Whenever a friendly creature with an Idle effect is destroyed, trigger its idle effect.",Brown,,,,,,,,
+266,Battlefield,Scr4P-T0wN,Location,-,-,-,-,"Each player may discard up to six cards at the beggining of phase, rather than 3.",You may discard one more card during your draw/discard phase.,Brown,,,,,,,,
+267,Battlefield,Irradiated Waste,Location,-,-,-,-,End of Phase: Each player sacrifices a creature.,End of Phase: Deal 1 damage to a friendly creature and 2 damage to an enemy creature.,Brown,,,,,,,,
+268,Battlefield,New Moon,State,-,-,-,-,"All creatures gain ""Subtle (This creature may ignore the battleline when being deployed).""",The first subtle creature you summon this phase comes in ready.,Brown,May be way strong once captured.,,,,,,,
+269,Battlefield,Watering Hole,Location,-,-,-,-,"Whenever a creature would be deployed, flip a coin. If the coin is heads, deploy it to the intended zone. Otherwise, idle it.","Start of Phase: Choose two creatures. Heal each creature 1 points of damage. If this removes 2 damage from creatures in play, gain 1A. ",Brown,,,,,,,,
+270,Battlefield,Plot of Champions,"Location
 ",-,-,-,-,"Whenever a friendly creature is destroyed, give a friendly creature + 1| + 1| + 0","Whenever a friendly creature is destroyed, heal the artifact 
 on Plot of Champions 2 points.",Brown,,,,,,,,
-268,Battlefield,"Yol, Stomping Ground",Location,-,-,-,-,"Start of Phase: Each player who controls 2 or more creatures sacrifices their creature with least toughness, then gives their creature with greatest toughness +1 | +0 | +0.",Start of Phase: 1A. Provoke the enemy creature with least toughness. ,Brown,,,,,,,,
-269,Battlefield,Crashed Meteor,Location,-,-,-,-,"Revealed: Each Player discards every card in their hand, then draws 6.",End of Phase: Discard a card.,Brown,,,,,,,,
-270,Battlefield,Glowing Cavern,Location,-,-,-,-,End of Phase: Fully heal all creatures.,Damaged friendly creatures have +0| +0 | +,Brown,,,,,,,,
-271,Battlefield,Abandoned Battleground,Location,-,-,-,-,"Horror, Apparition, and Scrap creatures gain +1 | +1 | +0 while this is in play.","Friendly Horror, Apparition, and Scrap creatures have +0 | +1 | +0.",Brown,,,,,,,,
-272,Battlefield,Focus,State,-,-,-,-,Each player may only play one card this turn,Start of Phase: Draw an additional card.,Brown,,,,,,,,
-273,Battlefield,Clarity,State,-,-,-,-,Each player may only discard one card this turn,Start of Phase: You may discard 1 additional card this turn.,Brown,,,,,,,,
-274,Battlefield,Aural Plane,Location,-,-,-,-,"Any damage done to artifacts is divided evenly amongst artifacts in play, rounding up","Damage done to the artifact on Aural Plane is halved, rounding up.",Brown,,,,,,,,
-275,Battlefield,Haste,State,-,-,-,-,The first creature each player summons this phase comes in ready.,The first creature you summon this phase comes in ready.,Brown,,,,,,,,
-276,Battlefield,Colisa Invictum,Location,-,-,-,-,"Each time a creature you control is destroyed, deal 3 damage to a friendly creature.","Each time an enemy creature is destroyed, draw a card.",Brown,,,,,,,,
-277,Battlefield,Unease,State,-,-,-,-,Start of Phase: Each player reveals a random card in their hand. If a player plays the card they revealed that card's play effect doubles and each opponent must discard the card they revealed.,Your opponent must discard a random card in their hand.,Brown,,,,,,,,
-278,Battlefield,Primordial Garden,Location,-,-,-,-,Each creature takes 1 less damage from all sources.,Start of Phase: Give a creature you control +0|+0|+1.,Brown,,,,,,,,
-279,Battlefield,The Gate,Location,-,-,-,-,Revealed: Destroy each creature.,"The artifact built on The Gate gains ""Destroyed: Destroy each creature.""",Brown,,,,,,,,
-280,Battlefield,The Altar,Location,-,-,-,-,"Whenever a player summons a creature, they must sacrifice another friendly creature.","The first time you sacrifice a creature this phase, gain 2 A mana.",Brown,,,,,,,,
-281,Battlefield,Correcting Facility,Location,-,-,-,-,End of Phase: Destroy each damaged creature.,End of Phase: Fully heal a damaged creature.,Brown,,,,,,,,
-282,Battlefield,Volcanic Archipelago,Location,-,-,-,-,Revealed: Each Player shuffles their discard back into their deck. You may discard as many cards as you want this phase.,"Each time you summon something of cost 4 or greater, recycle one less card than is required.
+271,Battlefield,"Yol, Stomping Ground",Location,-,-,-,-,"Start of Phase: Each player who controls 2 or more creatures sacrifices their creature with least toughness, then gives their creature with greatest toughness +1 | +0 | +0.",Start of Phase: 1A. Provoke the enemy creature with least toughness. ,Brown,,,,,,,,
+272,Battlefield,Crashed Meteor,Location,-,-,-,-,"Revealed: Each Player discards every card in their hand, then draws 6.",End of Phase: Discard a card.,Brown,,,,,,,,
+273,Battlefield,Glowing Cavern,Location,-,-,-,-,End of Phase: Fully heal all creatures.,Damaged friendly creatures have +0| +0 | +,Brown,,,,,,,,
+274,Battlefield,Abandoned Battleground,Location,-,-,-,-,"Horror, Apparition, and Scrap creatures gain +1 | +1 | +0 while this is in play.","Friendly Horror, Apparition, and Scrap creatures have +0 | +1 | +0.",Brown,,,,,,,,
+275,Battlefield,Focus,State,-,-,-,-,Each player may only play one card this turn,Start of Phase: Draw an additional card.,Brown,,,,,,,,
+276,Battlefield,Clarity,State,-,-,-,-,Each player may only discard one card this turn,Start of Phase: You may discard 1 additional card this turn.,Brown,,,,,,,,
+277,Battlefield,Aural Plane,Location,-,-,-,-,"Any damage done to artifacts is divided evenly amongst artifacts in play, rounding up","Damage done to the artifact on Aural Plane is halved, rounding up.",Brown,,,,,,,,
+278,Battlefield,Haste,State,-,-,-,-,The first creature each player summons this phase comes in ready.,The first creature you summon this phase comes in ready.,Brown,,,,,,,,
+279,Battlefield,Colisa Invictum,Location,-,-,-,-,"Each time a creature you control is destroyed, deal 3 damage to a friendly creature.","Each time an enemy creature is destroyed, draw a card.",Brown,,,,,,,,
+280,Battlefield,Unease,State,-,-,-,-,Start of Phase: Each player reveals a random card in their hand. If a player plays the card they revealed that card's play effect doubles and each opponent must discard the card they revealed.,Your opponent must discard a random card in their hand.,Brown,,,,,,,,
+281,Battlefield,Primordial Garden,Location,-,-,-,-,Each creature takes 1 less damage from all sources.,Start of Phase: Give a creature you control +0|+0|+1.,Brown,,,,,,,,
+282,Battlefield,The Gate,Location,-,-,-,-,Revealed: Destroy each creature.,"The artifact built on The Gate gains ""Destroyed: Destroy each creature.""",Brown,,,,,,,,
+283,Battlefield,The Altar,Location,-,-,-,-,"Whenever a player summons a creature, they must sacrifice another friendly creature.","The first time you sacrifice a creature this phase, gain 2 A mana.",Brown,,,,,,,,
+284,Battlefield,Correcting Facility,Location,-,-,-,-,End of Phase: Destroy each damaged creature.,End of Phase: Fully heal a damaged creature.,Brown,,,,,,,,
+285,Battlefield,Volcanic Archipelago,Location,-,-,-,-,Revealed: Each Player shuffles their discard back into their deck. You may discard as many cards as you want this phase.,"Each time you summon something of cost 4 or greater, recycle one less card than is required.
 ",Brown,,,,,,,,
-283,Battlefield,Remote Temple,Location,-,-,-,-,"Creatures may not be deployed to this battlefield. Each creature gains ""Action: Sacrifice this creature."" 
+286,Battlefield,Remote Temple,Location,-,-,-,-,"Creatures may not be deployed to this battlefield. Each creature gains ""Action: Sacrifice this creature."" 
 End of Phase: The player that has sacrificed the most creatures this phase captures this Battlefield.","The artifact built on Common Ground gains ""Action: You may sacrifice a creature to exhaust an enemy creature of your choice.""",Brown,,,,,,,,
-284,Battlefield,Common Ground,Location,-,-,-,-,"Combat does not occur on this battlefield. 
+287,Battlefield,Common Ground,Location,-,-,-,-,"Combat does not occur on this battlefield. 
 End of Phase: The player with the most creatures deployed to this battlefield captures it.","If you have more creatures deployed to the battlefield than your opponent, friendly creatures in the battlefield gain +0|+1|+0 until the end of phase.",Brown,,,,,,,,
-285,Battlefield,The Fog,State,-,-,-,-,"Revealed: Exhaust each creature.
+288,Battlefield,The Fog,State,-,-,-,-,"Revealed: Exhaust each creature.
 End of Phase: Shuffle this battlefield back into it's owners battlefield deck.","The artifact built on The Fog gains ""Action: Return a friendly creature and an enemy creature to their owner's hands.""",Brown,,,,,,,,
-286,Battlefield,The Trenches,Location,-,-,-,-,"When combat completes on The Trenches, creatures do not return to their owners Barracks. 
+289,Battlefield,The Trenches,Location,-,-,-,-,"When combat completes on The Trenches, creatures do not return to their owners Barracks. 
 End of Phase: If player controls 2 more creatures on this battlefield than their opponent, they capture this battlefield.","When you control two more creatures on the battlefield than an opponent, resolve combat on the battlefield.
 ",Brown,,,,,,,,
-287,Battlefield,"Variksylva, Dragon's Roost",Location | Wonder,-,-,-,-,Creatures with toughness or power less than 3 are considered to have an empty text box.,"The artifact built on Variksylva, Dragon's Roost gains +0|+2|+0 and ""Action: An enemy creature is considered to have an empty text box until end of phase.""",Brown,,,,,,,,
-288,Battlefield,Waterlogged Cavern,Location,-,-,-,-,"Each time you deploy a creature, exhaust another ready friendly creature.","The artifact built on Waterlogged Cavern gains ""Bloodied: You may exhaust an enemy creature of your choice.""",Brown,,,,,,,,
+290,Battlefield,"Variksylva, Dragon's Roost",Location | Wonder,-,-,-,-,Creatures with toughness or power less than 3 are considered to have an empty text box.,"The artifact built on Variksylva, Dragon's Roost gains +0|+2|+0 and ""Action: An enemy creature is considered to have an empty text box until end of phase.""",Brown,,,,,,,,
+291,Battlefield,Waterlogged Cavern,Location,-,-,-,-,"Each time you deploy a creature, exhaust another ready friendly creature.","The artifact built on Waterlogged Cavern gains ""Bloodied: You may exhaust an enemy creature of your choice.""",Brown,,,,,,,,
 ,,,,,,,,,,,,,,,,,,
-289,Artifact,Circlet of Translation,7A,Item,-,4,-,"Play: Your opponent discards a random card from their hand. Draw a card. 
-Action: 2A. Discard a card in your hand. Draw a card.",,Red,Artifact,3,Total,27,,,,
-290,Artifact,Mark of the Successor,5A,Item | Wonder,-,6,-,"When an allied creature is destroyed, place a counter on ""Mark of the Successor."" 
+292,Artifact,Circlet of Translation,7A,Item,-,4,-,"Play: Your opponent discards a random card from their hand. Draw a card. 
+Action: 2A. Discard a card in your hand. Draw a card.",,Red,Artifact,3,Total,28,,,,
+293,Artifact,Mark of the Successor,5A,Item | Wonder,-,6,-,"When an allied creature is destroyed, place a counter on ""Mark of the Successor."" 
 Action: Play a card of cost equal to the total amount of tokens on this card at no cost. Sacrifice ""Mark of the Successor.""",,Red,Creature,12,,,,,,
-291,Artifact,Philosopher's Shard,6A,Item,-,5,-,"Play: Sacrifice an allied creature. Gain A mana equal to the cost of that creature until End of Phase.
-Action: 2A. All the cards in your discard are considered A mana until End of Phase.",,Red,Instant,12,,,,,,
-292,Creature,"Var'i, Seer",4A,Human | Seer,1,1,1,Idle: Draw 2 cards. Discard 1,,Red,,,,,,,,
-293,Creature,Raspine Stowaway,1A,Beast,1,1,1,,,Red,,,,,,,,
-294,Creature,Bear Trap,2A,Construct,0,4,1,"Bear Trap enters play ready.
+294,Artifact,Philosopher's Shard,6A,Item,-,5,-,"Play: Sacrifice an allied creature. Gain A mana equal to the cost of that creature until End of Phase.
+Action: 2A. All the cards in your discard are considered A mana until End of Phase.",,Red,Instant,13,,,,,,
+295,Creature,"Var'i, Seer",4A,Human | Seer,1,1,1,Idle: Draw 2 cards. Discard 1,,Red,,,,,,,,
+296,Creature,Raspine Stowaway,1A,Beast,1,1,1,,,Red,,,,,,,,
+297,Creature,Bear Trap,2A,Construct,0,4,1,"Bear Trap enters play ready.
 Trap: Deal 2 damage to the trapped creature and reduce its power to 0 until end of phase.",,Red,,,,,,,,
-295,Creature,"Idvaline, Chemical Genius",5A,Human | Scholar,3,3,1,"Subtle (This creature may ignore the battleline when deploying)
+298,Creature,"Idvaline, Chemical Genius",5A,Human | Scholar,3,3,1,"Subtle (This creature may ignore the battleline when deploying)
+Creatures in the same zone as Idvaline lose Sturdy.
 Deploy: Each creature in this zone takes damage equal to its restore stat.",,Red,,,,,,,,
-296,Creature,Cal,2A,Cyborg,0,1,1,Action: 4A. Destroy an enemy creature.,,Red,,,,,,,,
-297,Creature,Gas Pump,4A,Construct,0,2,1,"Gas Pump enter play ready.
+299,Creature,Cal,2A,Cyborg,0,1,1,Action: 4A. Destroy an enemy creature.,,Red,,,,,,,,
+300,Creature,Gas Pump,4A,Construct,0,2,1,"Gas Pump enter play ready.
 Trap: Stockpile this card under the trapped creature. This creature gains ""End of Phase: This creature takes 2 damage.""",,Red,,,,,,,,
-298,Creature,Voice of the Oracle,3A,Apparition,1,3,3,"Witness: Look at the top three cards of your deck. Rearrange them in any order, then draw one.",,Red,,,,,,,,
-299,Creature,Rionate Mercenary,2A,Human,2,1,1,Destroyed: You may expend 1A to resummon Rionate Mercenary in your Barracks.,,Red,,,,,,,,
-300,Creature,"Ván, Magician",4A,Human | Thief,1,4,2,"Action: 1A. Reveal the top three cards of your deck. For each card of A color, shuffle a card from your enemy's discard into their deck. ",,Red,,,,,,,,
-301,Creature,"Binvi, The Embraced",5S,Kyr | [Trait],3,5,3,"Binvi recieves half damage (rounding down) from [Trait] creatures.
+301,Creature,Voice of the Oracle,3A,Apparition,1,3,3,"Witness: Look at the top three cards of your deck. Rearrange them in any order, then draw one.",,Red,,,,,,,,
+302,Creature,Rionate Mercenary,2A,Human,2,1,1,Destroyed: You may expend 1A to resummon Rionate Mercenary in your Barracks.,,Red,,,,,,,,
+303,Creature,"Ván, Magician",4A,Human | Thief,1,4,2,"Action: 1A. Reveal the top three cards of your deck. For each card of A color, shuffle a card from your enemy's discard into their deck. ",,Red,,,,,,,,
+304,Creature,"Binvi, The Embraced",5S,Kyr | [Trait],3,5,3,"Binvi recieves half damage (rounding down) from [Trait] creatures.
 Deploy: Ready a friendly [Trait] creature.","([Trait] can be Construct, Beast, Horror, Titan, or Summoner)",Red,,,,,,,,
-302,Creature,"Olian, The Wretched",8S,Kyr,6,3,0,"Sturdy.
+305,Creature,"Olian, The Wretched",8S,Kyr,6,3,0,"Sturdy.
 Dauntless.
 Olian, The Wretched does not take damage from [Trait] creatures.","([Trait] can be Human, Apparition, Pillager, Plant, Scrap, or Leader)",Red,,,,,,,,
-303,Creature,The Arbiter,2S,Kyr,2,2,1,"Trap: If the trapped creature is a Kyr, destroy it.",,Red,,,,,,,,
-304,Instant,Beat Down,3A,-,-,-,-,"Play: Deal 2 damage to a creature. If that creature already has damage on it, destroy it instead.",,Red,,,,,,,,
-305,Instant,Predict Future,3A,-,-,-,-,Play: Draw 3 cards. Discard 1,,Red,,,,,,,,
-306,Instant,Hard Read,1A,-,-,-,-,"Play: Your opponent reveals the top card of their library. If that card matches a card in play, draw 2 cards.",,Red,,,,,,,,
-307,Instant,Enlightened Counsel,3A,-,-,-,-,Play: Reveal from the top of your library until you find an artifact. Place that artifact in your hand and shuffle your library.,,Red,,,,,,,,
-308,Instant,Tribute,2A,-,-,-,-,"Play: Stockpile this card under a creature. That creature gains ""Destroyed: Your opponent gains 4A mana.""",,Red,,,,,,,,
-309,Instant,Overwhelming Force,5A,-,-,-,-,"Play: Exhaust two friendly creatures. If you do, destroy a creature.",,Red,,,,,,,,
-310,Instant,Weighted Bolas,2A,-,-,-,-,Play: Idle up to three enemy creatures.,,Red,,,,,,,,
-311,Instant,Divisive Manouver,2A,-,-,-,-,Play: Deploy or redeploy an enemy creature to a zone of your choosing. Exhaust that creature.,,Red,,,,,,,,
-312,Instant,Quick Thinking,3A,-,-,-,-,"Play: Stockpile this card under a creature. ""That creature gains ""Deploy: If this is the first time this creature has been deployed this turn, ready this creature.""",,Red,,,,,,,,
-313,Instant,Violence of the Learned,3A,-,-,-,-,"Play: Sacrifice a friendly artifact. If you do, search your library for any card you choose. Place that card in your hand and shuffle your library.",,Red,,,,,,,,
-314,Instant,Stacked Deck,2A,-,-,-,-,Play: Reveal the top five cards of your deck. You may place any number of these cards on the bottom of your deck.,,Red,,,,,,,,
-315,Instant,Grain of Knowledge,"4A
+306,Creature,The Arbiter,2S,Kyr,2,2,1,"Trap: If the trapped creature is a Kyr, destroy it.",,Red,,,,,,,,
+307,Instant,Beat Down,3A,-,-,-,-,"Play: Deal 2 damage to a creature. If that creature already has damage on it, destroy it instead.",,Red,,,,,,,,
+308,Instant,Predict Future,3A,-,-,-,-,Play: Draw 3 cards. Discard 1,,Red,,,,,,,,
+309,Instant,Hard Read,1A,-,-,-,-,"Play: Your opponent reveals the top card of their library. If that card matches a card in play, draw 2 cards.",,Red,,,,,,,,
+310,Instant,Enlightened Counsel,3A,-,-,-,-,Play: Reveal from the top of your library until you find an artifact. Place that artifact in your hand and shuffle your library.,,Red,,,,,,,,
+311,Instant,Tribute,2A,-,-,-,-,"Play: Stockpile this card under a creature. That creature gains ""Destroyed: Your opponent gains 4A mana.""",,Red,,,,,,,,
+312,Instant,Overwhelming Force,5A,-,-,-,-,"Play: Exhaust two friendly creatures. If you do, destroy a creature.",,Red,,,,,,,,
+313,Instant,Weighted Bolas,2A,-,-,-,-,Play: Idle up to three enemy creatures.,,Red,,,,,,,,
+314,Instant,Divisive Manouver,2A,-,-,-,-,Play: Deploy or redeploy an enemy creature to a zone of your choosing. Exhaust that creature.,,Red,,,,,,,,
+315,Instant,Dying Breath,3A,-,-,-,-,"Play: Stockpile this card under an allied creature. The creature this card is stockpiled under gains ""Destroyed: place a creature in this zone on the bottom of its owners deck""",,Red,,,,,,,,
+316,Instant,Quick Thinking,3A,-,-,-,-,"Play: Stockpile this card under a creature.The creature this is stockpiled under gains ""Deploy: If this is the first time this creature has been deployed this turn, ready this creature.""",,Red,,,,,,,,
+317,Instant,Violence of the Learned,3A,-,-,-,-,"Play: Sacrifice a friendly artifact. If you do, search your library for any card you choose. Place that card in your hand and shuffle your library.",,Red,,,,,,,,
+318,Instant,Stacked Deck,2A,-,-,-,-,Play: Reveal the top five cards of your deck. You may place any number of these cards on the bottom of your deck.,,Red,,,,,,,,
+319,Instant,Grain of Knowledge,"4A
 ",-,-,-,-,Play: All the cards in your discard are considered A mana until End of Phase.,,Red,,,,,,,,
