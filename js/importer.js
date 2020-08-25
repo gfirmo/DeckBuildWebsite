@@ -6,7 +6,7 @@ var currnum = 0;
 function fillCard(cardID) {
 	d3.csv("js/cgc.csv").then(function(data) {
 	if (data[cardID].Type == "Creature") {
-		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`" onclick="remov(this, this.id)" style="width:2.8in;">
+		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`" onclick="remov(this, this.id)">
 	<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
 		<div style="background-color:`+ data[cardID].Color+`;height:0.4in;border-radius:3px;color:white;font-weight:bolded;line-height:0.4in;font-size:16px;padding-left:7px;padding-right:7px;" class="printOmit" id="cName">` + data[cardID].Name+ "<div id='cCost' style='float:right;' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div> 
 			<div style="height:1.6in;">
