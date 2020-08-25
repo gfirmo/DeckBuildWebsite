@@ -1,0 +1,27 @@
+:root {
+    --heavy_gold: #BD9B30;
+    --light_gold: #AB8100;
+    --dark_brown: #60432D;
+    --light_brown: #7E6955;
+    --highlighted: #BDAA70;
+    --unhighlighted: #D3C5AA;
+
+    --power:#ff6666;
+    --restore:#85e085;
+}
+
+body {background-color:var(--unhighlighted)}
+
+header {
+    color:var(--dark_brown);
+    background-color: var(--light_gold);
+}
+
+.header-item:hover {
+    background-color: var(--highlighted);
+}
+
+#cPower{ background-color:var(--power); }
+
+#cRestore { background-color:var(--restore); }
+

@@ -7,9 +7,9 @@ function fillCard(cardID) {
 	d3.csv("js/cgc.csv").then(function(data) {
 	if (data[cardID].Type == "Creature") {
 		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID + `"onmouseover="toggleX(this)" onmouseout="toggleX(this)">
-		<div class="X" onclick="this.parentNode.remove()"> X </div>
+		<div class="X" onclick="this.parentNode.remove()"></div>
 		<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
-			<div style="background-color:`+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name + "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div>
+			<div style="background-color:`+ data[cardID].Color+`; border: 1px solid `+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name + "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div>
 				<div style="height:1.6in;">
 				<div id ="cTraits">`+ data[cardID].Traits +`</div> 
 					<div style="background-color:blue;float:right;height:1.2in;width:0.4in;"> 
@@ -25,9 +25,9 @@ function fillCard(cardID) {
 	}
 	else if (data[cardID].Type == "Instant") {
 		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`"onmouseover="toggleX(this)" onmouseout="toggleX(this)">
-		<div class="X" onclick="this.parentNode.remove()"> X </div>
+		<div class="X" onclick="this.parentNode.remove()"></div>
 	<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
-		<div style="background-color:`+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name+ "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div>
+		<div style="background-color:`+ data[cardID].Color+`; border: 1px solid `+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name+ "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div>
 			<div style="height:1.6in;">
 			<div id ="cTraits">`+ data[cardID].Traits +`</div> 
 <div style="top:136px;right:95px;" id="cType">`+ data[cardID].Type +`</div> 
@@ -39,7 +39,7 @@ function fillCard(cardID) {
 	}
 	else if (data[cardID].Type == "Artifact") {
 		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`"onmouseover="toggleX(this)" onmouseout="toggleX(this)">
-		<div class="X" onclick="this.parentNode.remove()"> X </div>
+		<div class="X" onclick="this.parentNode.remove()"></div>
 	<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
 			<div style="height:1.6in;">
 			<div id ="cTraits">`+ data[cardID].Traits +`</div>  
@@ -48,7 +48,7 @@ function fillCard(cardID) {
 	</div>
 	<div id="cTextBox">`+ data[cardID].Effect.replace(/\n/g, "<br>") +`
 </div>
-<div style="background-color:`+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name+ "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div> 
+<div style="background-color:`+ data[cardID].Color+`; border: 1px solid `+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name+ "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div> 
 	</div> </div>`;
 	currnum += 1;
 	}
@@ -151,11 +151,8 @@ function expCardList() {
     hiddenElement.click();
 }
 fillSelector();
-//readDList()
 
 
 
 //JULES TODO:
-// make remove Xs hidden by default
-// pointer on Xs to a finger not cursor
 // figure out the cards drop down so we can filter by color

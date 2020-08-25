@@ -2,10 +2,79 @@
 	box-sizing: border-box;
 }
 
+header {
+	display: grid;
+	grid-template-areas: 
+	"title title . ."
+	"upload process export choose";
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	height: 1.2in;
+	border-radius: 10px 10px 0 0;
+	padding: 5px 5px 0px 5px;
+
+	font-family: Arial, Helvetica, sans-serif;
+	margin-bottom: 10px;
+}
+
+.header-item {
+	height: 60%;
+	justify-self: stretch;
+	align-self: end;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2px;
+}
+#TITLE{
+	font-family: 'Lemonada';
+	font-size: 20pt;
+	margin-bottom: 20px;
+}
+#UPLOAD{
+	grid-area: upload;
+	cursor: pointer;
+}
+
+#PROCESS {
+	grid-area: process;
+}
+
+#EXPORT {
+	grid-area: export;
+}
+
+#CHOOSE {
+	grid-area: choose;
+}
+
 .X {
 	position: absolute;
-	transform: translate(1.25in, 1in);
-}
+	transform: translate(1.15in, 1.2in);
+	width: 32px;
+	height: 32px;
+	opacity: 0.3;
+	cursor: pointer;
+	visibility: hidden;
+  }
+  .X:hover {
+	opacity: 1;
+  }
+  .X:before, .X:after {
+	position: absolute;
+	left: 15px;
+	content: ' ';
+	height: 33px;
+	width: 2px;
+	background-color: #BD9B30;
+  }
+  .X:before {
+	transform: rotate(45deg);
+  }
+  .X:after {
+	transform: rotate(-45deg);
+  }
+  
 #cName {
 	height:0.4in;
 	border-radius:3px;
@@ -17,7 +86,6 @@
 	padding-right:7px;
 }
 #cPower{
-	background-color:#ff6666;
 	height:0.4in;
 	border-color:dimgray;
 	border-style:solid;
@@ -27,7 +95,6 @@
 }
 
 #cRestore {
-	background-color:#85e085;
 	height:0.4in;
 	border-color:dimgray;
 	border-style:solid;
@@ -83,13 +150,17 @@
 	margin: 5px;
 }
 @media print {
+	/*
 	*:not(.printOmit) {
 		background-color: white !important;
 		color: black !important;
 	}
-
-	header {
-		visibility: hidden;
+	*/
+	* {
+		background-color: white !important;
+		color: black !important;
 	}
-
+	header, .X {
+		display: none;
+	}
 }

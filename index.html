@@ -1,25 +1,77 @@
 <html>
 <head>
 <link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/colors.css">
+<link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet"> 
 </head>
 <body>
-  <header>Upload a Decklist: <input type="file" id="myFile" name="filename">
-    <input type="submit" value="Process Decklist" onclick="readDList()">
-    <br>
-    <button type="button" onclick="expCardList()">Export Decklist!</button> 
-    <label for="cards"> Choose a card: </label>
-    <select name="cards" id="cards"></select>
-    <label for="numCards"> # </label>
-    <select name="numCards" id="numCards">
-      <option value="1"> 1 </option>
-      <option value="2"> 2 </option>
-      <option value="3"> 3 </option>
-      <option value="4"> 4 </option> 
-    </select>
-   <button type="button" onClick="fillCardSelect()"> Add </button>
+  <header>
+    <section id="TITLE">
+      Deck Build Website
+    </section>
+    <label id="UPLOAD" class="header-item" for="myFile"> Upload a Decklist
+      <input type="file" id="myFile" name="filename" style="display:none">
+    </label>
+    <section id="PROCESS" class="header-item">
+      <input type="submit" value="Process Decklist" onclick="readDList()">
+    </section>
+    <section id="EXPORT" class="header-item">
+      <button type="button" onclick="expCardList()">Export Decklist!</button> 
+    </section>
+    <section id="CHOOSE" class="header-item">
+      <label for="cards"> Choose a card: </label>
+      <select name="cards" id="cards"></select>
+      <label for="numCards"> # </label>
+      <select name="numCards" id="numCards">
+        <option value="1"> 1 </option>
+        <option value="2"> 2 </option>
+        <option value="3"> 3 </option>
+        <option value="4"> 4 </option> 
+      </select>
+    <button type="button" onClick="fillCardSelect()"> Add </button>
+    </section>
   </header>
-<main class="grid-container" id="container" style="display:grid;grid-template-columns: repeat(4, 1fr);grid-row-gap:10px;page-break-inside:auto;">
-</main>
+
+
+  <main class="grid-container" id="container" style="display:grid;grid-template-columns: repeat(4, 1fr);grid-row-gap:10px;page-break-inside:auto;">
+    <div class="grid-item" id="36" onmouseover="toggleX(this)" onmouseout="toggleX(this)">
+        <div class="X" onclick="this.parentNode.remove()" style="visibility: hidden;"></div>
+        <div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
+          <div style="background-color:Purple;" class="printOmit" id="cName">Masked Salesman<div id="cCost" class="printOmit">5P</div> </div>
+            <div style="height:1.6in;">
+            <div id="cTraits">Horror | Summoner</div> 
+              <div style="background-color:blue;float:right;height:1.2in;width:0.4in;"> 
+      <div id="cPower">1</div>
+      <div style="background-color:#8080ff;height:0.4in;border-color:dimgray;border-style:solid;border-width:3px;text-align:center;line-height:20px;" id="cDefense">4</div>
+      <div id="cRestore">0</div></div>
+    <div style="top:116px;" id="cType">Creature</div> 
+      </div>
+      <div id="cTextBox">Trap: Stockpile the trapped creature under Masked Salesman.<br>Destroyed: Play the stockpiled cards under Masked Salesman as if they belonged to their original owner.<br>Masked Salesman has access to it's own effects, as well as that of any stockpiled card underneath it. 
+    </div>
+      </div> </div><div class="grid-item" id="105" onmouseover="toggleX(this)" onmouseout="toggleX(this)">
+        <div class="X" onclick="this.parentNode.remove()" style="visibility: hidden;"></div>
+      <div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
+        <div style="background-color:Gold;" class="printOmit" id="cName">Cull Imperfection<div id="cCost" class="printOmit">6O</div> </div>
+          <div style="height:1.6in;">
+          <div id="cTraits">-</div> 
+    <div style="top:136px;right:95px;" id="cType">Instant</div> 
+      </div>
+      <div id="cTextBox">Play: Destroy a creature.
+    </div>
+      </div> </div><div class="grid-item" id="0" onmouseover="toggleX(this)" onmouseout="toggleX(this)">
+        <div class="X" onclick="this.parentNode.remove()" style="visibility: hidden;"></div>
+      <div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
+          <div style="height:1.6in;">
+          <div id="cTraits">Item | Wonder</div>  
+    <div style="top:136px;right:95px;" id="cType">Artifact</div>
+    <div style="background-color:#8080ff;border-color:dimgray;border-style:solid;border-width:3px;text-align:center;height:0.3in;width:0.3in;position:relative;top:2.8in;left:1.8in;line-height:0px;" id="cDefense">9</div>
+      </div>
+      <div id="cTextBox">Play: Remove all counters from a card in play. Discard all stockpiled cards under the same card.<br>Action: 1P. If a card you expended to cast this matches a card in play, draw 3 cards.
+    </div>
+    <div style="background-color:Purple;" class="printOmit" id="cName">Retrospective Mirror<div id="cCost" class="printOmit">7P</div> </div> 
+      </div> </div></main>
+
+
 <script src='js/d3.js'></script>
 <script src='js/importer.js'></script>
 </body>
