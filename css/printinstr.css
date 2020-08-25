@@ -32,6 +32,49 @@
 	line-height:20px;
 }
 
+#cType {
+	position:relative;
+	background-color:lightgray;
+	height:0.2in;
+	width:1in;
+	float:left;
+	border-color:dimgray;
+	border-style:solid;
+	border-width:2px;
+	color:black;
+	padding-left:3px
+}
+
+#cTextBox {
+	background-color:azure;
+	height:1.4in;
+	border-radius:3px;
+	border-color:grey;
+	border-style:solid;
+	border-width:2px;
+	color:black;
+	padding-left:3px;
+	padding-right:3px;
+	font-size:12px;
+}
+
+#cTraits {
+	background-color:lightgray;
+	height:0.2in;
+	width:1in;
+	float:left;
+	border-color:dimgray;
+	border-style:solid;
+	border-width:2px;
+	color:black;
+	padding-left:3px;
+	font-size:15px;
+}
+
+#cCost {
+	float:right;
+}
+
 @page {
 	margin: 5px;
 }
