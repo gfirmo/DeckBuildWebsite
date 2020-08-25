@@ -6,12 +6,12 @@ var currnum = 0;
 function fillCard(cardID) {
 	d3.csv("js/cgc.csv").then(function(data) {
 	if (data[cardID].Type == "Creature") {
-		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`" onclick="remov(this, this.id)">
-	<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
-		<div style="background-color:`+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name+ "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div>
-			<div style="height:1.6in;">
-			<div id ="cTraits">`+ data[cardID].Traits +`</div> 
-				<div style="background-color:blue;float:right;height:1.2in;width:0.4in;"> 
+		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID + `" onclick="remov(this)">
+		<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
+			<div style="background-color:`+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name + "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div>
+				<div style="height:1.6in;">
+				<div id ="cTraits">`+ data[cardID].Traits +`</div> 
+					<div style="background-color:blue;float:right;height:1.2in;width:0.4in;"> 
 	<div id="cPower">`+ data[cardID].Strength +`</div>
 	<div style="background-color:#8080ff;height:0.4in;border-color:dimgray;border-style:solid;border-width:3px;text-align:center;line-height:20px;" id="cDefense">`+ data[cardID].Health +`</div>
 	<div id="cRestore">`+ data[cardID].Restore +`</div></div>
@@ -25,7 +25,7 @@ function fillCard(cardID) {
 	else if (data[cardID].Type == "Instant") {
 		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`" onclick="remov(this)">
 	<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
-		<div style="background-color:`+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name+ "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div> 
+		<div style="background-color:`+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name+ "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div>
 			<div style="height:1.6in;">
 			<div id ="cTraits">`+ data[cardID].Traits +`</div> 
 <div style="top:136px;right:95px;" id="cType">`+ data[cardID].Type +`</div> 
@@ -39,9 +39,9 @@ function fillCard(cardID) {
 		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`" onclick="remov(this)">
 	<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
 			<div style="height:1.6in;">
-			<div style="background-color:lightgray;height:0.2in;width:1in;float:left;border-color:dimgray;border-style:solid;border-width:2px;color:black;padding-left:3px;font-size:15px" id ="cTraits">`+ data[cardID].Traits +`</div>  
+			<div id ="cTraits">`+ data[cardID].Traits +`</div>  
 <div style="top:136px;right:95px;" id="cType">`+ data[cardID].Type +`</div>
-<div style="background-color:#8080ff;border-color:dimgray;border-style:solid;border-width:3px;text-align:center;height:0.3in;width:0.3in;position:relative;top:2.8in;left:1.8in;line-height:0px;" id="cDefense">`+ data[cardID].Health +`</div> 
+<div style="background-color:#8080ff;border-color:dimgray;border-style:solid;border-width:3px;text-align:center;height:0.3in;width:0.3in;position:relative;top:2.8in;left:1.8in;line-height:0px;" id="cDefense">`+ data[cardID].Health +`</div>
 	</div>
 	<div id="cTextBox">`+ data[cardID].Effect.replace(/\n/g, "<br>") +`
 </div>
@@ -51,6 +51,7 @@ function fillCard(cardID) {
 	}
 	});
 }
+
 function fillSelector() {
 	d3.csv("js/cgc.csv").then(function(data) {
 		var i = 0;
@@ -71,6 +72,7 @@ function fillCardSelect() {
 		i++;
 	}
 }
+
 function readDList() {
 	var theFile = document.getElementById('myFile').files[0];
 	//console.log(theFile);
@@ -108,9 +110,19 @@ function readDList() {
 	//});
 }
 
-function remov(el, id) {
+function remov(el) {
 	var element = el;
 	element.remove();
+}
+
+// TODO: add an ".X" to all cards style="position: absolute; transform: translate(1.25in, -2in);" onclick="this.parentNode.remove()"
+function toggleX(el) {
+	var X = el.querySelector(":scope > .X");
+	if (X.style.visibility == "visible") {
+		X.style.visibility = "hidden";
+	} else {
+		X.style.visibility = "visible";
+	}
 }
 
 function expCardList() {
