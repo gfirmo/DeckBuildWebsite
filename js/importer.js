@@ -12,9 +12,9 @@ function fillCard(cardID) {
 			<div style="height:1.6in;">
 			<div style="background-color:lightgray;height:0.2in;width:1in;float:left;border-color:dimgray;border-style:solid;border-width:2px;color:black;padding-left:3px;font-size:15px" id ="cTraits">`+ data[cardID].Traits +`</div> 
 				<div style="background-color:blue;float:right;height:1.2in;width:0.4in;"> 
-	<div style="background-color:#ff6666;height:0.4in;border-color:dimgray;border-style:solid;border-width:3px;text-align:center;line-height:20px;" id="cPower">`+ data[cardID].Strength +`</div>
+	<div id="cPower">`+ data[cardID].Strength +`</div>
 	<div style="background-color:#8080ff;height:0.4in;border-color:dimgray;border-style:solid;border-width:3px;text-align:center;line-height:20px;" id="cDefense">`+ data[cardID].Health +`</div>
-	<div style="background-color:#85e085;height:0.4in;border-color:dimgray;border-style:solid;border-width:3px;text-align:center;line-height:20px;" id="cRestore">`+ data[cardID].Restore +`</div></div>
+	<div id="cRestore">`+ data[cardID].Restore +`</div></div>
 <div style="position:relative;top:116px;background-color:lightgray;height:0.2in;width:1in;float:left;border-color:dimgray;border-style:solid;border-width:2px;color:black;padding-left:3px" id="cType">`+ data[cardID].Type +`</div> 
 	</div>
 	<div style="background-color:azure;height:1.4in;border-radius:3px;border-color:grey;border-style:solid;border-width:2px;color:black;padding-left:3px;padding-right:3px;font-size:12px;" id="cTextBox">`+ data[cardID].Effect.replace(/\n/g, "<br>") +`
