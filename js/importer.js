@@ -6,7 +6,8 @@ var currnum = 0;
 function fillCard(cardID) {
 	d3.csv("js/cgc.csv").then(function(data) {
 	if (data[cardID].Type == "Creature") {
-		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID + `" onclick="remov(this)">
+		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID + `onmouseover="toggleX(this)" onmouseout="toggleX(this)">
+		<div class=".X" style="position: absolute; transform: translate(1.25in, -2in);" onclick="this.parentNode.remove()"> X </div>
 		<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
 			<div style="background-color:`+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name + "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div>
 				<div style="height:1.6in;">
@@ -23,7 +24,8 @@ function fillCard(cardID) {
 	currnum += 1;
 	}
 	else if (data[cardID].Type == "Instant") {
-		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`" onclick="remov(this)">
+		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`onmouseover="toggleX(this)" onmouseout="toggleX(this)">
+		<div class=".X" style="position: absolute; transform: translate(1.25in, -2in);" onclick="this.parentNode.remove()"> X </div>
 	<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
 		<div style="background-color:`+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name+ "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div>
 			<div style="height:1.6in;">
@@ -36,7 +38,8 @@ function fillCard(cardID) {
 	currnum += 1;
 	}
 	else if (data[cardID].Type == "Artifact") {
-		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`" onclick="remov(this)">
+		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`onmouseover="toggleX(this)" onmouseout="toggleX(this)">
+		<div class=".X" style="position: absolute; transform: translate(1.25in, -2in);" onclick="this.parentNode.remove()"> X </div>
 	<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
 			<div style="height:1.6in;">
 			<div id ="cTraits">`+ data[cardID].Traits +`</div>  
