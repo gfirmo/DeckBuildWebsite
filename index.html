@@ -1,25 +1,25 @@
 <html>
 <head>
-<link rel="stylesheet" href="./css/printinstr.css">
+<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <header>Upload a Decklist: <input type="file" id="myFile" name="filename">
     <input type="submit" value="Process Decklist" onclick="readDList()">
     <br>
-     <button type="button" onclick="expCardList()">Export Decklist!</button> 
-   <label for="cards"> Choose a card: </label>
-   <select name="cards" id="cards">
-    </select>
+    <button type="button" onclick="expCardList()">Export Decklist!</button> 
+    <label for="cards"> Choose a card: </label>
+    <select name="cards" id="cards"></select>
     <label for="numCards"> # </label>
     <select name="numCards" id="numCards">
-   <option value="1"> 1 </option>
-   <option value="2"> 2 </option>
-   <option value="3"> 3 </option>
-   <option value="4"> 4 </option> </select>
+      <option value="1"> 1 </option>
+      <option value="2"> 2 </option>
+      <option value="3"> 3 </option>
+      <option value="4"> 4 </option> 
+    </select>
    <button type="button" onClick="fillCardSelect()"> Add </button>
   </header>
-<div class="grid-container" id="container" style="display:grid;grid-template-columns: repeat(4, 1fr);grid-row-gap:10px;page-break-inside:auto;">
-	</div>
+<main class="grid-container" id="container" style="display:grid;grid-template-columns: repeat(4, 1fr);grid-row-gap:10px;page-break-inside:auto;">
+</main>
 <script src='js/d3.js'></script>
 <script src='js/importer.js'></script>
 </body>

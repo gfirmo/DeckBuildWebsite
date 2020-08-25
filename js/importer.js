@@ -118,7 +118,6 @@ function remov(el) {
 	element.remove();
 }
 
-// TODO: confirm toggleX works as expected. confirm that remove works as expected.
 function toggleX(el) {
 	var X = el.querySelector(":scope > .X");
 	if (X.style.visibility == "visible") {
@@ -154,3 +153,9 @@ function expCardList() {
 fillSelector();
 //readDList()
 
+
+
+//JULES TODO:
+// make remove Xs hidden by default
+// pointer on Xs to a finger not cursor
+// figure out the cards drop down so we can filter by color
