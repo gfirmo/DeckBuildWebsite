@@ -144,6 +144,7 @@ header {
 
 #cCost {
 	float:right;
+	height: 100%;
 }
 
 @page {
