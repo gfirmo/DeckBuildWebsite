@@ -3,20 +3,21 @@
 <link rel="stylesheet" href="./css/printinstr.css">
 </head>
 <body>
- Upload a Decklist: <input type="file" id="myFile" name="filename">
- <input type="submit" value="Process Decklist" onclick="readDList()">
- <br>
-  <button type="button" onclick="expCardList()">Export Decklist!</button> 
-<label for="cards"> Choose a card: </label>
-<select name="cards" id="cards">
- </select>
- <label for="numCards"> # </label>
- <select name="numCards" id="numCards">
-<option value="1"> 1 </option>
-<option value="2"> 2 </option>
-<option value="3"> 3 </option>
-<option value="4"> 4 </option> </select>
-<button type="button" onClick="fillCardSelect()"> Add </button> 
+  <header>Upload a Decklist: <input type="file" id="myFile" name="filename">
+    <input type="submit" value="Process Decklist" onclick="readDList()">
+    <br>
+     <button type="button" onclick="expCardList()">Export Decklist!</button> 
+   <label for="cards"> Choose a card: </label>
+   <select name="cards" id="cards">
+    </select>
+    <label for="numCards"> # </label>
+    <select name="numCards" id="numCards">
+   <option value="1"> 1 </option>
+   <option value="2"> 2 </option>
+   <option value="3"> 3 </option>
+   <option value="4"> 4 </option> </select>
+   <button type="button" onClick="fillCardSelect()"> Add </button>
+  </header>
 <div class="grid-container" id="container" style="display:grid;grid-template-columns: repeat(4, 1fr);grid-row-gap:30px;page-break-inside:auto;">
 	</div>
 <script src='js/d3.js'></script>

@@ -1,4 +1,5 @@
 
+
 * {
 	box-sizing: border-box;
 }
@@ -7,6 +8,10 @@
 	*:not(.printOmit) {
 		background-color: white !important;
 		color: black !important;
+	}
+
+	header {
+		visibility: hidden;
 	}
 
 }
