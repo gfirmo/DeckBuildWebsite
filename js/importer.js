@@ -23,7 +23,7 @@ function fillCard(cardID) {
 	currnum += 1;
 	}
 	else if (data[cardID].Type == "Instant") {
-		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`" onclick="remov(this)" style="width:2.8in;">
+		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`" onclick="remov(this)">
 	<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
 		<div style="background-color:`+ data[cardID].Color+`;height:0.4in;border-radius:3px;color:white;font-weight:bolded;line-height:0.4in;font-size:large;padding-left:7px;padding-right:7px;" class="printOmit" id="cName">` + data[cardID].Name+ "<div id='cCost' style='float:right;'class='printOmit'>" + data[cardID].Cost + "</div> " + `</div> 
 			<div style="height:1.6in;">
@@ -36,7 +36,7 @@ function fillCard(cardID) {
 	currnum += 1;
 	}
 	else if (data[cardID].Type == "Artifact") {
-		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`" onclick="remov(this)" style="width:2.8in;">
+		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`" onclick="remov(this)">
 	<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
 			<div style="height:1.6in;">
 			<div style="background-color:lightgray;height:0.2in;width:1in;float:left;border-color:dimgray;border-style:solid;border-width:2px;color:black;padding-left:3px;font-size:15px" id ="cTraits">`+ data[cardID].Traits +`</div>  
