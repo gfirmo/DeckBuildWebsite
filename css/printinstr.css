@@ -1,5 +1,7 @@
 
-
+* {
+	box-sizing: border-box;
+}
 
 @media print {
 	*:not(.printOmit) {
