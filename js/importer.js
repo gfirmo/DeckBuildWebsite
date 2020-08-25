@@ -45,7 +45,7 @@ function fillCard(cardID) {
 	</div>
 	<div style="background-color:azure;height:1.4in;border-radius:3px;border-color:grey;border-style:solid;border-width:2px;color:black;padding-left:3px;padding-right:3px;font-size:12px;" id="cTextBox">`+ data[cardID].Effect.replace(/\n/g, "<br>") +`
 </div>
-<div style="background-color:`+ data[cardID].Color+`;height:0.4in;border-radius:3px;font-weight:bolded;color:white;line-height:0.4in;font-size:large;padding-left:7px;padding-right:7px;" class="printOmit" id="cName">` + data[cardID].Name+ "<div id='cCost' style='float:right;' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div> 
+<div style="background-color:`+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name+ "<div id='cCost' style='float:right;' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div> 
 	</div> </div>`;
 	currnum += 1;
 	}
