@@ -5,6 +5,17 @@
 .X {
 	position: absolute;
 	transform: translate(1.25in, 1in);
+	visibility: hidden;
+	cursor: pointer;
+	background-color: yellow;
+	color: red;
+	height: 0.3in;
+	width: 0.3in;
+	text-align: center;
+	line-height:0.3in;
+	border-style:solid;
+	border-width: 3px;
+	border-color: grey;
 }
 #cName {
 	height:0.4in;
