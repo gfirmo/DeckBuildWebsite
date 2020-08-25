@@ -25,7 +25,7 @@ function fillCard(cardID) {
 	}
 	else if (data[cardID].Type == "Instant") {
 		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`"onmouseover="toggleX(this)" onmouseout="toggleX(this)">
-		<div class="X" style="position: absolute; transform: translate(1.25in, -2in);" onclick="this.parentNode.remove()"> X </div>
+		<div class="X" onclick="this.parentNode.remove()"> X </div>
 	<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
 		<div style="background-color:`+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name+ "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div>
 			<div style="height:1.6in;">
@@ -39,7 +39,7 @@ function fillCard(cardID) {
 	}
 	else if (data[cardID].Type == "Artifact") {
 		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`"onmouseover="toggleX(this)" onmouseout="toggleX(this)">
-		<div class="X" style="position: absolute; transform: translate(1.25in, -2in);" onclick="this.parentNode.remove()"> X </div>
+		<div class="X" onclick="this.parentNode.remove()"> X </div>
 	<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
 			<div style="height:1.6in;">
 			<div id ="cTraits">`+ data[cardID].Traits +`</div>  
