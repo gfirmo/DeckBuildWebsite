@@ -9,7 +9,7 @@ function fillCard(cardID) {
 		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID + `"onmouseover="toggleX(this)" onmouseout="toggleX(this)">
 		<div class="X" onclick="this.parentNode.remove()"></div>
 		<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
-			<div style="background-color:`+ data[cardID].Color+`; border: 1px solid `+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name + "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div>
+			<div style="background-color:`+ data[cardID].Color+`; border: 2px solid `+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name + "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div>
 				<div style="height:1.6in;">
 				<div id ="cTraits">`+ data[cardID].Traits +`</div> 
 					<div style="background-color:blue;float:right;height:1.2in;width:0.4in;"> 
@@ -27,7 +27,7 @@ function fillCard(cardID) {
 		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`"onmouseover="toggleX(this)" onmouseout="toggleX(this)">
 		<div class="X" onclick="this.parentNode.remove()"></div>
 	<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
-		<div style="background-color:`+ data[cardID].Color+`; border: 1px solid `+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name+ "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div>
+		<div style="background-color:`+ data[cardID].Color+`; border: 2px solid `+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name+ "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div>
 			<div style="height:1.6in;">
 			<div id ="cTraits">`+ data[cardID].Traits +`</div> 
 <div style="top:136px;right:95px;" id="cType">`+ data[cardID].Type +`</div> 
@@ -48,7 +48,7 @@ function fillCard(cardID) {
 	</div>
 	<div id="cTextBox">`+ data[cardID].Effect.replace(/\n/g, "<br>") +`
 </div>
-<div style="background-color:`+ data[cardID].Color+`; border: 1px solid `+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name+ "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div> 
+<div style="background-color:`+ data[cardID].Color+`; border: 2px solid `+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name+ "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div> 
 	</div> </div>`;
 	currnum += 1;
 	}
