@@ -6,7 +6,7 @@ var currnum = 0;
 function fillCard(cardID) {
 	d3.csv("js/cgc.csv").then(function(data) {
 	if (data[cardID].Type == "Creature") {
-		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID + `"onmouseover="toggleX(this)" onmouseout="toggleX(this)">
+		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID + `"onmouseover="showX(this)" onmouseout="hideX(this)">
 		<div class="X" onclick="this.parentNode.remove()"></div>
 		<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
 			<div style="background-color:`+ data[cardID].Color+`; border: 4px solid `+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name + "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div>
@@ -24,7 +24,7 @@ function fillCard(cardID) {
 	currnum += 1;
 	}
 	else if (data[cardID].Type == "Instant") {
-		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`"onmouseover="toggleX(this)" onmouseout="toggleX(this)">
+		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`"onmouseover="showX(this)" onmouseout="hideX(this)">
 		<div class="X" onclick="this.parentNode.remove()"></div>
 	<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
 		<div style="background-color:`+ data[cardID].Color+`; border: 4px solid `+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name+ "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div>
@@ -38,7 +38,7 @@ function fillCard(cardID) {
 	currnum += 1;
 	}
 	else if (data[cardID].Type == "Artifact") {
-		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`"onmouseover="toggleX(this)" onmouseout="toggleX(this)">
+		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`"onmouseover="showX(this)" onmouseout="hideX(this)">
 		<div class="X" onclick="this.parentNode.remove()"></div>
 	<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
 			<div style="height:1.6in;">
@@ -125,6 +125,16 @@ function toggleX(el) {
 	} else {
 		X.style.visibility = "visible";
 	}
+}
+
+function showX(el) {
+	var X = el.querySelector(":scope > .X");
+	X.style.visibility = "visible";
+}
+
+function hideX(el) {
+	var X = el.querySelector(":scope > .X");
+	X.style.visibility = "hidden";
 }
 
 function expCardList() {

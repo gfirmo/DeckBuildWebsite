@@ -38,10 +38,12 @@ header {
 
 #PROCESS {
 	grid-area: process;
+	cursor: pointer;
 }
 
 #EXPORT {
 	grid-area: export;
+	cursor: pointer;
 }
 
 #CHOOSE {

@@ -12,12 +12,12 @@
     <label id="UPLOAD" class="header-item" for="myFile"> Upload a Decklist
       <input type="file" id="myFile" name="filename" style="display:none">
     </label>
-    <section id="PROCESS" class="header-item">
-      <input type="submit" value="Process Decklist" onclick="readDList()">
-    </section>
-    <section id="EXPORT" class="header-item">
-      <button type="button" onclick="expCardList()">Export Decklist!</button> 
-    </section>
+    <label id="PROCESS" class="header-item" for="process_btn"> Process Decklist
+      <input id="process-btn" type="submit" value="Process Decklist" style="display:none" onclick="readDList()">
+    </label>
+    <label id="EXPORT" class="header-item" for="export_btn">Export Decklist!
+      <button id="export_btn" type="button" onclick="expCardList()" style="display:none"></button> 
+    </label>
     <section id="CHOOSE" class="header-item">
       <label for="cards"> Choose a card: </label>
       <select name="cards" id="cards"></select>
