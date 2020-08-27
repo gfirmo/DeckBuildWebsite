@@ -176,7 +176,7 @@ header {
 		background-color: white !important;
 		color: black !important;
 	}
-	header, .X {
+	header, .X, #scroll_open {
 		display: none;
 	}
 }
