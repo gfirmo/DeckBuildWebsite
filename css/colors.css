@@ -21,6 +21,11 @@ header {
     background-color: var(--highlighted);
 }
 
+.header-item {
+    border: 2px solid var(--dark_brown);
+    border-bottom-width: 0px;
+}
+
 #cPower{ background-color:var(--power); }
 
 #cRestore { background-color:var(--restore); }

@@ -1,7 +1,4 @@
-d3.csv("js/cgc.csv").then(function(data) {
-	console.log(data[1])
-});
-var currnum = 0;
+//var currnum = 0;  //GABRIEL??? Why does currnum still exist?
 
 function fillCard(cardID) {
 	d3.csv("js/cgc.csv").then(function(data) {
@@ -21,7 +18,7 @@ function fillCard(cardID) {
 	<div id="cTextBox">`+ data[cardID].Effect.replace(/\n/g, "<br>") +`
 </div>
 	</div> </div>`;
-	currnum += 1;
+	// currnum += 1;
 	}
 	else if (data[cardID].Type == "Instant") {
 		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`"onmouseover="showX(this)" onmouseout="hideX(this)">
@@ -35,7 +32,7 @@ function fillCard(cardID) {
 	<div id="cTextBox">`+ data[cardID].Effect.replace(/\n/g, "<br>") +`
 </div>
 	</div> </div>`;
-	currnum += 1;
+	// currnum += 1;
 	}
 	else if (data[cardID].Type == "Artifact") {
 		document.getElementById('container').innerHTML = document.getElementById('container').innerHTML +  `<div class="grid-item" id="` + cardID +`"onmouseover="showX(this)" onmouseout="hideX(this)">
@@ -50,7 +47,7 @@ function fillCard(cardID) {
 </div>
 <div style="background-color:`+ data[cardID].Color+`; border: 4px solid `+ data[cardID].Color+`;" class="printOmit" id="cName">` + data[cardID].Name+ "<div id='cCost' class='printOmit'>" + data[cardID].Cost + "</div> " + `</div> 
 	</div> </div>`;
-	currnum += 1;
+	// currnum += 1;
 	}
 	});
 }
@@ -58,17 +55,21 @@ function fillCard(cardID) {
 function fillSelector() {
 	d3.csv("js/cgc.csv").then(function(data) {
 		var i = 0;
-		console.log(data[i].ID);
-		while (data[i].ID != "") {
-			document.getElementById('cards').innerHTML = document.getElementById('cards').innerHTML + `<option value="` + data[i].ID + `"> `+ data[i].Name + `</option>`;
-			i++;
+		try {
+			console.log(data[i].ID);
+			while (data[i].ID != "") {
+				document.getElementById('chosen_card').innerHTML += `<option value="` + data[i].ID + `"> `+ data[i].Name + `</option>`;
+				i++;
+			}
+		} catch (error) { // Catches data[i] is out of bounds so the list is empty
+			console.log(i + " cards loaded into the selector!");
 		}
+		
 });
 }
 
 function fillCardSelect() {
-	//console.log("hello");
-	var x = document.getElementById("cards").value - 1;
+	var x = document.getElementById("chosen_card").value - 1;
 	var i = 0;
 	while (i < document.getElementById("numCards").value) {
 		fillCard(x);
@@ -78,7 +79,6 @@ function fillCardSelect() {
 
 function readDList() {
 	var theFile = document.getElementById('myFile').files[0];
-	//console.log(theFile);
 	var fileCont = ""
 	var reader = new FileReader();
     reader.onload = function (evt) {
@@ -86,7 +86,7 @@ function readDList() {
         fileCont = evt.target.result;
 		console.log(fileCont);
 		data = d3.csvParse(fileCont);
-		var i =0;
+		var i = 0;
 		while(data[i].ID != "") {
 			var j = 0;
 			while(j < data[i].Quantity) {
@@ -100,31 +100,6 @@ function readDList() {
 		console.log('aaah');
 	}
 	reader.readAsText(theFile);
-	//d3.csv.parse(fileCont).then(function(data) {
-	//	var i = 0;
-	//	while(data[i].ID != "") {
-	//		var j = 0;
-	//		while(j < data[i].Quantity) {
-	//			fillCard(data[i - 1].ID)
-	//			j++;
-	//		}
-	//		i++;
-	//	}
-	//});
-}
-
-function remov(el) {
-	var element = el;
-	element.remove();
-}
-
-function toggleX(el) {
-	var X = el.querySelector(":scope > .X");
-	if (X.style.visibility == "visible") {
-		X.style.visibility = "hidden";
-	} else {
-		X.style.visibility = "visible";
-	}
 }
 
 function showX(el) {
@@ -162,7 +137,31 @@ function expCardList() {
 }
 fillSelector();
 
-
+function toggleScroll(){
+	if (document.getElementById("scroll_open").style.height == "30px") {
+		document.getElementById("scroll_open").style.height = "0px";
+	} else {
+		document.getElementById("scroll_open").style.height = "30px";
+	}
+}
 
 //JULES TODO:
 // figure out the cards drop down so we can filter by color
+
+
+/* OLD STUFF. Delete when ready
+
+function toggleX(el) {
+	var X = el.querySelector(":scope > .X");
+	if (X.style.visibility == "visible") {
+		X.style.visibility = "hidden";
+	} else {
+		X.style.visibility = "visible";
+	}
+}
+
+function remov(el) {
+	var element = el;
+	element.remove();
+}
+*/

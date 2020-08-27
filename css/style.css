@@ -2,34 +2,47 @@
 	box-sizing: border-box;
 }
 
+#scroll_open {
+	height: 0;
+	width: 100%;
+	color: white;
+	background-color: black;
+	overflow-y: hidden;
+	transition: 0.5s;
+	margin-bottom: 10px;
+}
+
+#scroll_open > * {
+	margin: 5px;
+}
+
 header {
 	display: grid;
 	grid-template-areas: 
 	"title title . ."
-	"upload process export choose";
+	"upload process choose export";
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	height: 1.2in;
+	grid-template-rows: 1.5fr 1fr;
 	border-radius: 10px 10px 0 0;
 	padding: 5px 5px 0px 5px;
 
 	font-family: Arial, Helvetica, sans-serif;
-	margin-bottom: 10px;
+	overflow: hidden;
 }
 
 .header-item {
-	height: 60%;
 	justify-self: stretch;
-	align-self: end;
-	
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 2px;
+	margin: 4px 4px 0px 4px;
+	border-radius: 8px 8px 0px 0px;
 }
 #TITLE{
+	grid-area: title;
 	font-family: 'Lemonada';
 	font-size: 20pt;
-	margin-bottom: 20px;
 }
 #UPLOAD{
 	grid-area: upload;
