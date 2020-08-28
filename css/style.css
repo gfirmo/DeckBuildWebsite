@@ -62,6 +62,9 @@ header {
 #CHOOSE {
 	grid-area: choose;
 }
+#chosen_card {
+	width:2in;
+}
 
 .X {
 	position: absolute;
@@ -166,12 +169,6 @@ header {
 	margin: 5px;
 }
 @media print {
-	/*
-	*:not(.printOmit) {
-		background-color: white !important;
-		color: black !important;
-	}
-	*/
 	* {
 		background-color: white !important;
 		color: black !important;
