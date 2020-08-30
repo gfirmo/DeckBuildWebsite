@@ -1,10 +1,11 @@
 fillSelector();
 
 function fillCard(cardID) {
+	cardID = cardID - 1; //For data[] 0 indexing
 	d3.csv("js/cgc.csv").then(function(data) {
 	if (data[cardID].Type == "Creature") {
-		document.getElementById('container').innerHTML += 
-		`<div class="grid-item" id="${cardID}" onmouseover="showX(this)" onmouseout="hideX(this)">
+		document.getElementById('container').innerHTML = 
+		`<div class="grid-item" id="${cardID + 1}" onmouseover="showX(this)" onmouseout="hideX(this)">
 			<div class="X" onclick="this.parentNode.remove()"> </div>
 			<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
 				<div style="background-color:${data[cardID].Color}; border: 4px solid ${data[cardID].Color};" class="printOmit" id="cName">
@@ -36,11 +37,11 @@ function fillCard(cardID) {
 					${data[cardID].Effect.replace(/\n/g, "<br>")}
 				</div>
 			</div> 
-		</div>`;
+		</div>` + document.getElementById('container').innerHTML;
 	}
 	else if (data[cardID].Type == "Instant") {
-		document.getElementById('container').innerHTML +=  
-		`<div class="grid-item" id="${cardID}" onmouseover="showX(this)" onmouseout="hideX(this)">
+		document.getElementById('container').innerHTML =  
+		`<div class="grid-item" id="${cardID + 1}" onmouseover="showX(this)" onmouseout="hideX(this)">
 			<div class="X" onclick="this.parentNode.remove()"> </div>
 			<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
 				<div style="background-color:${data[cardID].Color}; border: 4px solid ${data[cardID].Color};" class="printOmit" id="cName"> 
@@ -61,12 +62,12 @@ function fillCard(cardID) {
 					${data[cardID].Effect.replace(/\n/g, "<br>") }
 				</div>
 			</div>
-		</div>`;
+		</div>` + document.getElementById('container').innerHTML;;
 	
 	}
 	else if (data[cardID].Type == "Artifact") {
-		document.getElementById('container').innerHTML +=  
-		`<div class="grid-item" id="${cardID}" onmouseover="showX(this)" onmouseout="hideX(this)">
+		document.getElementById('container').innerHTML =  
+		`<div class="grid-item" id="${cardID + 1}" onmouseover="showX(this)" onmouseout="hideX(this)">
 			<div class="X" onclick="this.parentNode.remove()"> </div>
 			<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
 				<div style="height:1.6in;">
@@ -90,20 +91,20 @@ function fillCard(cardID) {
 					</div>
 				</div> 
 			</div> 
-		</div>`;
+		</div>` + document.getElementById('container').innerHTML;;
 	}
 	});
 }
 
 function fillSelector() {
-	var good_houses = readCheckBoxes();
+	var passesfilter = readCheckBoxes();
 	document.getElementById('chosen_card').innerHTML = ""; // wipe old selector
 
 	d3.csv("js/cgc.csv").then(function(data) {
 		var i = 0;
 		try {
 			while (data[i].ID != "") {
-				if (good_houses.includes(data[i].Color)) {
+				if (passesfilter.includes(data[i].Color) && passesfilter.includes(data[i].Type)) {
 					document.getElementById('chosen_card').innerHTML += `<option value="${data[i].ID}"> ${data[i].Name} </option>`;
 				}
 				i++;
@@ -116,7 +117,7 @@ function fillSelector() {
 }
 
 function fillCardSelect() {
-	var x = document.getElementById("chosen_card").value - 1;
+	var x = document.getElementById("chosen_card").value;
 	var i = 0;
 	while (i < document.getElementById("numCards").value) {
 		fillCard(x);
@@ -138,7 +139,7 @@ function readDList() {
 		while(data[i].ID != "") {
 			var j = 0;
 			while(j < data[i].Quantity) {
-				fillCard(data[i].ID - 1);
+				fillCard(data[i].ID);
 				j++;
 		}
 		i++;
@@ -188,15 +189,15 @@ function readCheckBoxes() {
 	var checked = document.querySelectorAll("input[type=checkbox]:checked");
 	var ret = [];
 	for (box of checked){
-		var house = box.id.split("-")[1]; // Based on how IDs are structured
-		ret.push(house);
+		var filterfor = box.id.split("-")[1]; // Based on how Houses and Types are stored
+		ret.push(filterfor);
 	}
 
 	return ret;
 }
 
 function getCSVCardHouse(card) {
-	var cost = (card.Cost).split(""); //Check periodically against side effects
+	var cost = (card.Cost).split(""); //I should check periodically against side effects
 	return cost.pop();
 }
 

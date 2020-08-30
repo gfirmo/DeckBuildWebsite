@@ -5,7 +5,8 @@
 <link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" href="./css/colors.css">
 <link rel="stylesheet" href="./css/checkbox.css">
-<link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet">
+<link href="./css/fontawesome/css/all.css" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -50,7 +51,20 @@
         <span class="checkmark" style="background-color:red"></span>
       </label>
     </span>
-
+    <span>
+      <label class="icon-container">
+        <input id="check-Artifact"  type="checkbox" checked="checked">
+        <i class="fas fa-ankh icon"></i>
+      </label>
+      <label class="icon-container">
+        <input id="check-Creature"  type="checkbox" checked="checked">
+        <span class="fas fa-tint icon"></span>
+      </label>
+      <label class="icon-container">
+        <input id="check-Instant"  type="checkbox" checked="checked">
+        <span class="fas fa-magic icon"></span>
+      </label>
+    </span>
     <select name="chosen_card" id="chosen_card" onmouseover="fillSelector()"></select>
     <label for="numCards"> # </label>
     <select name="numCards" id="numCards">
@@ -59,12 +73,12 @@
       <option value="3"> 3 </option>
       <option value="4"> 4 </option> 
     </select>
-    <button type="button" onClick="fillCardSelect()"> Add </button>
-    <button type="button" onClick="analyzeCards()"> Analyze </button>
+    <button type="button" onclick="fillCardSelect()"> Add </button>
+    <button type="button" onclick="analyzeCards()"> Analyze </button>
   </div>
   <main class="grid-container" id="container" style="display:grid;grid-template-columns: repeat(4, 1fr);grid-row-gap:10px;page-break-inside:auto;">
   </main>
-<script src='js/d3.js'></script>
+  <script src='js/d3.js'></script>
 <script src='js/importer.js'></script>
 </body>
 </html>
