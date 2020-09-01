@@ -3,8 +3,9 @@
 ## How About Some Rules
 
 ### Contents
-This is a game played with 40 cards, plus 5 additional Battlefields. In the 40 cards will be 6 Artifacts (max of one copy each). The rest consists of Creatures and Instants (max of 4 copies per card name).
+This is a game played with 40 cards, plus 5 additional Battlefields. In the 40 cards will be 6 Artifacts* (max of one copy each). The rest consists of Creatures and Instants (max of 4 copies per card name).
 
+*Do we mean up to 6 or actually 6?
 ### Parts of a Card
 
 #### Artifact
@@ -14,7 +15,7 @@ This is a game played with 40 cards, plus 5 additional Battlefields. In the 40 c
 3. Traits
 4. Type ("Artifact" in this case)
 5. Text block
-6. Stats (only Health in for Artifacts)
+6. Stats (only Health for Artifacts)
 
 #### Creature
 ![alt text](Numbered_Creature_Card.png)
@@ -33,6 +34,7 @@ This is a game played with 40 cards, plus 5 additional Battlefields. In the 40 c
 4. Type ("Instant" in this case)
 5. Text block
 
+**Restore or Heal? Hopefully "Restore"
 ### Setting Up
 
 You'll want a friend, your cards (40+5), a little space, and three kinds of small tokens. Plenty of them. Sitting across from your opponent (friend), you each separate your 5 Battlefields and place them facedown halfway between you and to your right. Shuffle the remaining 40 card deck until you are both satisfied and put that face down on your right. The first player is determined and they flip up the top battlefield from their stack, placing it in the Active Battlefield zone. You are now ready to begin the game.
@@ -63,7 +65,7 @@ After both players have passed their turns back-to-back, no more actions can be 
 The game ends the moment a player controls three Artifacts. Artifacts can only be built on controlled Battlefields so that's also a requirement.
 
 ---
-rules still needed
+rules still needed:
 * combat
 * global / controlled battlefield effects
 * switch out battlefields
@@ -73,6 +75,7 @@ rules still needed
 * guarding (+ healing)
 * building artifacts
 * deploying block / can't go past __ when __
+* what the X | X | X syntax means, it stacks, permanent 
 
 Keywords:
 * subtle
