@@ -225,8 +225,8 @@ function analyzeCards() {
 
 	d3.csv("js/cgc.csv").then(function(data) {
 		for (card of card_list) {
-			type[data[card.id].Type]++; //sloppy to do this with direct indexing
-			houses[data[card.id].Color]++;
+			type[data[card.id - 1].Type]++; //sloppy to do this with direct indexing
+			houses[data[card.id - 1].Color]++;
 		}
 		for ([house, num] of Object.entries(houses)) {
 			if (num > 0) {
