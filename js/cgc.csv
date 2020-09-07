@@ -106,10 +106,10 @@ Recyled: Destroy an enemy creature of power 3 or lower.
 When the Selfish Automata would take damage, instead stockpile a number of cards equivalent to the intended damage (first from your hand, then from your library) under the Selfish Automata.",Gold
 75,74.0,Creature,The Distributor,3O,Data,1,1,0,Action: 2O. Summon a creature from a friendly stockpile. Sacrifice the card the creature was stockpiled under.,Gold
 76,75.0,Creature,Outpost,4O,Settler | Construct,0,7,2,"Creatures in the same zone as Outpost have Sentry.
-Friendly creatures in the same zone as Outpost can take their Idle action in this zone.",
+Friendly creatures in the same zone as Outpost can take their Idle action in this zone.",Gold
 77,76.0,Creature,Away Defense Matrix,4O,Construct,3,5,0,"Sentry.
-Trap: If Away Defense Matrix has no direct opponent, move the trapped creature into direct combat with the Away Defense Matrix.",
-78,77.0,Creature,Dedicated Irritant,3O,Construct,0,3,3,Sentry. Sturdy.,
+Trap: If Away Defense Matrix has no direct opponent, move the trapped creature into direct combat with the Away Defense Matrix.",Gold
+78,77.0,Creature,Dedicated Irritant,3O,Construct,0,3,3,Sentry. Sturdy.,Gold
 79,78.0,Creature,Architect's Core,5O,Construct | Module,0,5,0,"Action: Stockpile an allied creature underneath this creature. If that creature is a Module, add its power to this one. 
 Architect's Core has the abilities of every module-creature stockpiled under it.",Gold
 80,79.0,Creature,Targeteer-1,2O,Construct | Module,2,1,0,,Gold
@@ -156,7 +156,7 @@ Principle of Locality","2O
 While this is in play, any time a creature dies in combat, give a friendly creature +0 | +1 | +0",Grey
 112,110.0,Artifact,Monument to the Ages,5S,Location,-,2,-,"Action: Sacrifice a creature. If you do, give this Artifact +0 | +2 | +0.
 When a creature dies defending Monument to the ages, instead of discarding it, return it to your hand.",Grey
-113,111.0,Artifact,Siegebreaker,7S,Weapon,-,7,-,Start of Phase: Each enemy creature that is outside of their barracks takes 1 damage.,
+113,111.0,Artifact,Siegebreaker,7S,Weapon,-,7,-,Start of Phase: Each enemy creature that is outside of their barracks takes 1 damage.,Grey
 114,112.0,Artifact,Hanging Gardens,6S,Location,"-
 ",6,-,"Action: For each Steel creature in the discard, deal 1 to Hanging Gardens. If this damage would destroy the Hanging Gardens, instead fully heal this artifact and destroy an ally and enemy creature. If you don't, sacrfice Hanging Gardens.",Grey
 115,113.0,Artifact,The Reminiscence,7S,Location,-,4,-,"Start of Phase: Choose and enemy creature. It gains, ""Destroyed: Shuffle the top two cards from your discard into your deck"" until end of phase.",Grey
@@ -262,7 +262,7 @@ Action: If you control a ready Beast provoke an enemy creature to the battleline
 188,185.0,Creature,"Yllioc, Salvaged Castaway",4G,Construct | Plant,2,2,0,Idle: Ready and heal another Plant creature.,Green
 189,186.0,Creature,Valloch Nymph,2G,Beast | Elemental,0,3,0,Idle: Fully heal an allied Elemental creature.,Green
 190,187.0,Creature,Towering Behemoth,4G,Beast,0,8,0,"Sentry.
-This creature cannot be deployed past the battlefield zone.",
+This creature cannot be deployed past the battlefield zone.",Green
 191,188.0,Creature,Swampit,3G,Beast,0,2,1,"Bloodied: You may stockpile a friendly creature recycled this turn under Swampit. If you do, give Swampit +1 | +2 | +0",Green
 192,189.0,Creature,Enraged Protector,5G,Beast | Warden,2,7,1,"End of Phase: If a battlefield was captured this turn,  Enraged Protector gains Dauntless and +3| +0 | +0 until the end of the next phase.",Green
 193,190.0,Creature,Deepwood Folk,2G,Faerie,1,1,0,"Trap: If the trapped creature has a toughness smaller than 3, return it to its barracks.",Green
@@ -329,7 +329,7 @@ End of Phase: Sacrifice this creature.",Blue
 242,238.0,Creature,Draguk Shambler,4B,Pillager | Horror,X,3,2,Draguk Shambler's base power is equal to half the number of cards in your discard pile.,Blue
 243,239.0,Creature,Maré,4B,Beast | Horror,0,2,1,"Destroyed: Stockpile the Maré under an enemy creature. That creature gains ""Destroyed: Shuffle your discard back into your library.""",Blue
 244,240.0,Creature,Katek Shaman,4B,Horror,1,1,1,"Idle: You may stockpile a card from your discard under a friendly creature. If you do, give that creature Sturdy until end of turn.",Blue
-245,241.0,Creature,Craven Commander,3B,Pillager,1,4,2,"If there is another allied creature in this zone, Craven Commander has Sentry and ""Trap: Deal 2 damage to the trapped creature.""",
+245,241.0,Creature,Craven Commander,3B,Pillager,1,4,2,"If there is another allied creature in this zone, Craven Commander has Sentry and ""Trap: Deal 2 damage to the trapped creature.""",Blue
 246,242.0,Creature,"Rav, The Unfelled",5B,Pillager | Horror,4,1,0,"Destroyed: If Rav is the only friendly creature in this zone, resummon it in the barracks at no cost.",Blue
 247,243.0,Creature,"Allya, Mapmaker",4B,Human | Scholar,1,2,1,Action: Ready a friendly Wonder.,Blue
 248,244.0,Creature,"Iui, Spirit of the Wreck",5B,Scrap | Horror,2,4,2,"Bloodied: Shuffle a number of cards equal to the damage on Iui from your enemy's discard back into their deck, ",Blue
@@ -356,7 +356,7 @@ While this creature has exactly 3 damage on it, cards with the trait Horror cost
 264,260.0,Instant,Raiding Party,2B,-,-,-,-,Play: Deal 1 damage to an artifact for each ready friendly creature you control.,Blue
 265,261.0,Instant,Symbiosis,2B,-,-,-,-,"Play: Sacrifice up to three friendly Pillager creatures. For each Pillager creature you sacrifice, give a friendly Horror +1| +1| +0",Blue
 266,262.0,Instant,Hunger of the Deep,6B,-,-,-,-,"Play: Give each creature ""End of Phase: Sacrifice this creature.""",Blue
-267,263.0,Instant,Stretch Thin,4B,-,-,-,-,"Play: Deal 1 damage to each creature with Sentry, then move them to the barracks and exhaust them.",
+267,263.0,Instant,Stretch Thin,4B,-,-,-,-,"Play: Deal 1 damage to each creature with Sentry, then move them to the barracks and exhaust them.",Blue
 268,264.0,Instant,Bloodforged,2B,-,-,-,-,"Play: Sacrifice any number of friendly creatures. For each sacrifice creature, give a friendly creature +1 | +0 | +0.",Blue
 269,265.0,Instant,Friendly Winds,3B,-,-,-,-,"Play: Deploy all friendly creatures to the Battleline. Resolve combat in the Battleline, but do not end the phase.",Blue
 271,266.0,Battlefield,Valhalla,Location,-,-,-,-,"If a creature would be deployed, deploy it to the battlefield",Brown
