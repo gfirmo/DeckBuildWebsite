@@ -39,11 +39,13 @@ header {
 	margin: 4px 4px 0px 4px;
 	border-radius: 8px 8px 0px 0px;
 }
+
 #TITLE{
 	grid-area: title;
 	font-family: 'Lemonada';
 	font-size: 20pt;
 }
+
 #UPLOAD{
 	grid-area: upload;
 	cursor: pointer;
@@ -62,8 +64,19 @@ header {
 #CHOOSE {
 	grid-area: choose;
 }
+
 #chosen_card {
 	width:2in;
+}
+
+#container {
+	justify-items: center;
+	display:grid;
+	grid-template-columns: repeat(4, 2.6in);
+	grid-row-gap:10px;
+	grid-column-gap:10px;
+	page-break-inside:auto;
+	border: 1px;
 }
 
 .X {
@@ -75,23 +88,27 @@ header {
 	cursor: pointer;
 	visibility: hidden;
   }
-  .X:hover {
+
+.X:hover {
 	opacity: 1;
-  }
-  .X:before, .X:after {
+}
+
+.X:before, .X:after {
 	position: absolute;
 	left: 15px;
 	content: ' ';
 	height: 33px;
 	width: 2px;
 	background-color: #BD9B30;
-  }
-  .X:before {
+}
+
+.X:before {
 	transform: rotate(45deg);
-  }
-  .X:after {
+}
+
+.X:after {
 	transform: rotate(-45deg);
-  }
+}
   
 #cName {
 	height:0.4in;
@@ -175,5 +192,13 @@ header {
 	}
 	header, .X, #scroll_open {
 		display: none;
+	}
+	
+	#container {
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+	}
+	.grid-item {
+		border: 1px dashed black;
 	}
 }

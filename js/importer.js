@@ -243,3 +243,20 @@ ${type["Instant"]} instants
 ${house_string}`);
 	});
 }
+
+/* JULES TODO
+- battlefields
+	- battlefield printing
+- card visualizer (instead of selector)
+	- possibly cards smaller than ending deck (scale down pls)
+	- some way to add, probably "+" in place of the "x"
+		- do something about hard coded "x" div
+	- fun visual separate from body
+	- beware the Analyze
+	- "Battleline"
+- import cards "properly"
+- export cards in qty
+- grid spacing online
+- display card collapsed qty
+- background / palette rework
+*/
