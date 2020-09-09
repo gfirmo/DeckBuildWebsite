@@ -46,22 +46,26 @@ function fillCard(cardID) {
 
 function fillSelector() {
 	var passesfilter = readCheckBoxes();
-	document.getElementById('chosen_card').innerHTML = ""; // wipe old selector
-	document.getElementById('visualizer').innerHTML = "";
+	document.getElementById('visualizer').innerHTML = ""; // wipe old visualizer
 
+	var selectorHTML = [];
+	var visualizerFrag = document.createDocumentFragment();
 	d3.csv("js/cgc.csv").then(function(data) {
 		var i = 0;
 		try {
 			while (data[i].ID != "") {
 				if (passesfilter.includes(data[i].Color) && passesfilter.includes(data[i].Type)) {
-					document.getElementById('chosen_card').innerHTML += `<option value="${data[i].ID}"> ${data[i].Name} </option>`;
-					/* var vis_card = makevisItem(data[i].ID)
-					vis_card += getCard(data[i]);
-					document.getElementById('visualizer').innerHTML += vis_card;*/
+					selectorHTML.push(`<option value="${data[i].ID}"> ${data[i].Name} </option>`);
+					
+					var vis_card = makevisItem(data[i].ID)
+					vis_card.innerHTML += getCard(data[i]);
+					visualizerFrag.appendChild(vis_card);
 				}
 				i++;
 			}
 		} catch (error) { // Catches data[i] is out of bounds so the list is empty
+			document.getElementById('chosen_card').innerHTML = selectorHTML.join('');
+			document.getElementById('visualizer').appendChild(visualizerFrag);
 			console.log( document.getElementById('chosen_card').childElementCount + "/" + i + " cards loaded into the selector!");
 		}
 		
@@ -69,9 +73,9 @@ function fillSelector() {
 }
 
 function makevisItem(ID) {
-	ret = 
-	`<div class="vis-item" id="${ID}" onmouseover="showX(this)" onmouseout="hideX(this)">
-		<div class="X" onclick="fillCard(this.parentNode.id)"> </div>`
+	var ret = createElementWithAttributes("div", {"class":"vis-item","id": ID, "onmouseover":"showPlus(this)", "onmouseout":"hidePlus(this)"});
+	var plus_item = createElementWithAttributes("div", {"class":"plus","onclick":"fillCard(this.parentNode.getAttribute('id'))"});
+	ret.appendChild(plus_item);
 	return ret
 }
 
@@ -133,6 +137,16 @@ function showX(el) {
 
 function hideX(el) {
 	var X = el.querySelector(":scope > .X");
+	X.style.visibility = "hidden";
+}
+
+function showPlus(el) {
+	var X = el.querySelector(":scope > .plus");
+	X.style.visibility = "visible";
+}
+
+function hidePlus(el) {
+	var X = el.querySelector(":scope > .plus");
 	X.style.visibility = "hidden";
 }
 
@@ -319,14 +333,10 @@ function htmlBattlefield(card) {
 }
 
 /* JULES TODO
-- card visualizer (instead of selector)
-	- some way to add, probably "+" in place of the "x"
-		- do something about hard coded "x" div
-	- beware the Analyze
-	- "Battleline"
 - import cards "properly"
 - export cards in qty
 - grid spacing online
+- "Battleline"
 - display card collapsed qty
 - background / palette rework
 */
