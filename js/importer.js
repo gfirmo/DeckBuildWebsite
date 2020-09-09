@@ -7,7 +7,7 @@ function fillCard(cardID) {
 		document.getElementById('container').innerHTML = 
 		`<div class="grid-item" id="${cardID + 1}" onmouseover="showX(this)" onmouseout="hideX(this)">
 			<div class="X" onclick="this.parentNode.remove()"> </div>
-			<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
+			<div class="card" style="height:92mm;width:66mm;">
 				<div style="background-color:${data[cardID].Color}; border: 4px solid ${data[cardID].Color};" class="printOmit" id="cName">
 					${data[cardID].Name}
 					<div id="cCost" class="printOmit"> 
@@ -43,7 +43,7 @@ function fillCard(cardID) {
 		document.getElementById('container').innerHTML =  
 		`<div class="grid-item" id="${cardID + 1}" onmouseover="showX(this)" onmouseout="hideX(this)">
 			<div class="X" onclick="this.parentNode.remove()"> </div>
-			<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
+			<div class="card" style="height:92mm;width:66mm;">
 				<div style="background-color:${data[cardID].Color}; border: 4px solid ${data[cardID].Color};" class="printOmit" id="cName"> 
 					${data[cardID].Name}
 					<div id='cCost' class='printOmit'>
@@ -62,14 +62,13 @@ function fillCard(cardID) {
 					${data[cardID].Effect.replace(/\n/g, "<br>") }
 				</div>
 			</div>
-		</div>` + document.getElementById('container').innerHTML;;
-	
+		</div>` + document.getElementById('container').innerHTML;
 	}
 	else if (data[cardID].Type == "Artifact") {
 		document.getElementById('container').innerHTML =  
 		`<div class="grid-item" id="${cardID + 1}" onmouseover="showX(this)" onmouseout="hideX(this)">
 			<div class="X" onclick="this.parentNode.remove()"> </div>
-			<div style="background-color:GhostWhite;height:92mm;width:66mm;padding:0.1in">
+			<div class="card" style="height:92mm;width:66mm;">
 				<div style="height:1.6in;">
 					<div id ="cTraits">
 						${data[cardID].Traits}
@@ -91,7 +90,23 @@ function fillCard(cardID) {
 					</div>
 				</div> 
 			</div> 
-		</div>` + document.getElementById('container').innerHTML;;
+		</div>` + document.getElementById('container').innerHTML;
+	}
+	else if (data[cardID].Type == "Battlefield") {
+		document.getElementById('container').innerHTML =  
+		`<div class="grid-item" id="${cardID + 1}" onmouseover="showX(this)" onmouseout="hideX(this)" style="grid-column: span 2; width:66mm">
+			<div class="X" onclick="this.parentNode.remove()"> </div>
+			<div class="card battlefield" style="height:66mm;width:92mm;">
+				<div style="height:1.6in;">
+					<div id ="cTraits">
+						${data[cardID].Name}
+					</div>
+				</div>
+				<div id="cGlobal">
+					${data[cardID].Effect.replace(/\n/g, "<br>")}
+				</div>
+			</div> 
+		</div>` + document.getElementById('container').innerHTML;
 	}
 	});
 }
@@ -191,6 +206,9 @@ function readCheckBoxes() {
 	for (box of checked){
 		var filterfor = box.id.split("-")[1]; // Based on how Houses and Types are stored
 		ret.push(filterfor);
+		if (filterfor == "Battlefield"){
+			ret.push("Brown"); // Technically the "color" of Battlefields so they'll show up
+		}
 	}
 
 	return ret;

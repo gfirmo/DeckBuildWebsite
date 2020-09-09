@@ -36,7 +36,7 @@ def main():
     with open ("cgcraw.csv", 'wb') as file:
         file.write(fh.getvalue())
     
-    cgc = pd.read_csv("cgcraw.csv", usecols=['ID','Type', 'Name', 'Cost', 'Traits','Strength','Health','Restore','Effect','Color'])
+    cgc = pd.read_csv("cgcraw.csv", usecols=['ID','Type', 'Name', 'Cost', 'Traits','Strength','Health','Restore','Effect','Notes','Color'])
     #print(cgc)
     cgc = cgc.dropna(axis=0, how="all")
     #print(cgc)

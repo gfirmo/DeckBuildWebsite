@@ -6,8 +6,10 @@
     --highlighted: #BDAA70;
     --unhighlighted: #D3C5AA;
 
-    --power:#ff6666;
+    --power:#bf1066;
     --restore:#85e085;
+
+    --card_background: #a143b6;
 }
 
 body {background-color:var(--unhighlighted)}
@@ -24,6 +26,10 @@ header {
 .header-item {
     border: 2px solid var(--dark_brown);
     border-bottom-width: 0px;
+}
+
+.card {
+    background-color: var(--card_background);
 }
 
 #cPower{ background-color:var(--power); }

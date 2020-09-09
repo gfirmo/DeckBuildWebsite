@@ -87,6 +87,7 @@ header {
 	opacity: 0.3;
 	cursor: pointer;
 	visibility: hidden;
+	z-index: 1;
   }
 
 .X:hover {
@@ -110,6 +111,10 @@ header {
 	transform: rotate(-45deg);
 }
   
+.card {
+	padding:0.1in;
+	border-radius: 8px;
+}
 #cName {
 	height:0.4in;
 	border-radius:3px;
@@ -164,6 +169,18 @@ header {
 	font-size:12px;
 }
 
+#cGlobal {
+	background-color:azure;
+	border-radius:3px;
+	border-color:grey;
+	border-style:solid;
+	border-width:2px;
+	color:black;
+	padding-left:3px;
+	padding-right:3px;
+	font-size:12px;
+}
+
 #cTraits {
 	background-color:lightgray;
 	height:0.2in;
@@ -199,6 +216,13 @@ header {
 		grid-row-gap: 0px;
 	}
 	.grid-item {
+		grid-column: span 1 !important;
+	}
+	.card {
 		border: 1px dashed black;
 	}
+	.battlefield {
+		transform:rotate(-90deg) translate(-50px,-50px);
+	}
+	
 }
