@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
+<title>For your Deck Building Needs</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" href="./css/colors.css">
 <link rel="stylesheet" href="./css/checkbox.css">
+<link rel="stylesheet" href="./css/cardStyling.css">
 <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet">
 <link href="./css/fontawesome/css/all.css" rel="stylesheet">
+<link rel="icon" href="Numbered_Layout.png" type="image/icon type">
 </head>
 <body>
   <header>
@@ -80,9 +83,14 @@
     <button type="button" onclick="fillCardSelect()"> Add </button>
     <button type="button" onclick="analyzeCards()"> Analyze </button>
   </div>
-  <main class="grid-container" id="container">
+  <main>
+    <section id="visualizer">
+
+    </section>
+    <section class="grid-container" id="container">
+    </section>
   </main>
   <script src='js/d3.js'></script>
-<script src='js/importer.js'></script>
+  <script src='js/importer.js'></script>
 </body>
 </html>

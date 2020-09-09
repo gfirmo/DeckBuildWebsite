@@ -1,122 +1,53 @@
 fillSelector();
 
+function createElementWithAttributes(tag, attributes) {
+	var ret = document.createElement(tag);
+	for (var attr in attributes) {
+		if (attributes.hasOwnProperty(attr)) {
+			if (attr.startsWith("data-") || attr.startsWith("on") || attr == "id" || attr == "class" || attr == "style") {
+				ret.setAttribute(attr, attributes[attr]);
+			} else {
+				ret.setAttribute("data-"+attr, attributes[attr]);
+			}
+		}
+	}
+	return ret;
+}
+
 function fillCard(cardID) {
 	cardID = cardID - 1; //For data[] 0 indexing
 	d3.csv("js/cgc.csv").then(function(data) {
-	if (data[cardID].Type == "Creature") {
-		document.getElementById('container').innerHTML = 
-		`<div class="grid-item" id="${cardID + 1}" onmouseover="showX(this)" onmouseout="hideX(this)">
-			<div class="X" onclick="this.parentNode.remove()"> </div>
-			<div class="card" style="height:92mm;width:66mm;">
-				<div style="background-color:${data[cardID].Color}; border: 4px solid ${data[cardID].Color};" class="printOmit" id="cName">
-					${data[cardID].Name}
-					<div id="cCost" class="printOmit"> 
-						${data[cardID].Cost}
-					</div>
-				</div>
-				<div style="height:1.6in;">
-					<div id ="cTraits">
-						${data[cardID].Traits}
-					</div> 
-					<div style="background-color:blue;float:right;height:1.2in;width:0.4in;"> 
-						<div id="cPower">
-							${data[cardID].Strength}
-						</div>
-						<div style="background-color:#8080ff;height:0.4in;border-color:dimgray;border-style:solid;border-width:3px;text-align:center;line-height:20px;" id="cDefense">
-							${data[cardID].Health}
-						</div>
-						<div id="cRestore">
-							${data[cardID].Restore}
-						</div>
-					</div>
-					<div style="top:116px;" id="cType">
-						${data[cardID].Type}
-					</div> 
-				</div>
-				<div id="cTextBox">
-					${data[cardID].Effect.replace(/\n/g, "<br>")}
-				</div>
-			</div> 
-		</div>` + document.getElementById('container').innerHTML;
-	}
-	else if (data[cardID].Type == "Instant") {
-		document.getElementById('container').innerHTML =  
-		`<div class="grid-item" id="${cardID + 1}" onmouseover="showX(this)" onmouseout="hideX(this)">
-			<div class="X" onclick="this.parentNode.remove()"> </div>
-			<div class="card" style="height:92mm;width:66mm;">
-				<div style="background-color:${data[cardID].Color}; border: 4px solid ${data[cardID].Color};" class="printOmit" id="cName"> 
-					${data[cardID].Name}
-					<div id='cCost' class='printOmit'>
-						${data[cardID].Cost}
-					</div>
-				</div>
-				<div style="height:1.6in;">
-					<div id ="cTraits">
-						${data[cardID].Traits}
-					</div> 
-					<div style="top:136px;right:95px;" id="cType">
-						${data[cardID].Type}
-					</div> 
-				</div>
-				<div id="cTextBox">
-					${data[cardID].Effect.replace(/\n/g, "<br>") }
-				</div>
-			</div>
-		</div>` + document.getElementById('container').innerHTML;
-	}
-	else if (data[cardID].Type == "Artifact") {
-		document.getElementById('container').innerHTML =  
-		`<div class="grid-item" id="${cardID + 1}" onmouseover="showX(this)" onmouseout="hideX(this)">
-			<div class="X" onclick="this.parentNode.remove()"> </div>
-			<div class="card" style="height:92mm;width:66mm;">
-				<div style="height:1.6in;">
-					<div id ="cTraits">
-						${data[cardID].Traits}
-					</div>  
-					<div style="top:136px;right:95px;" id="cType">
-						${data[cardID].Type}
-					</div>
-					<div style="background-color:#8080ff;border-color:dimgray;border-style:solid;border-width:3px;text-align:center;height:0.3in;width:0.3in;position:relative;top:2.8in;left:1.8in;line-height:0px;" id="cDefense">
-						${data[cardID].Health}
-					</div>
-				</div>
-				<div id="cTextBox">
-					${data[cardID].Effect.replace(/\n/g, "<br>")}
-				</div>
-				<div style="background-color:${data[cardID].Color}; border: 4px solid ${data[cardID].Color};" class="printOmit" id="cName">
-					${data[cardID].Name}
-					<div id='cCost' class='printOmit'>
-						${data[cardID].Cost}
-					</div>
-				</div> 
-			</div> 
-		</div>` + document.getElementById('container').innerHTML;
-	}
-	else if (data[cardID].Type == "Battlefield") {
-		document.getElementById('container').innerHTML =  
-		`<div class="grid-item" id="${cardID + 1}" onmouseover="showX(this)" onmouseout="hideX(this)" style="grid-column: span 2; width:66mm">
-			<div class="X" onclick="this.parentNode.remove()"> </div>
-			<div class="card battlefield" style="height:66mm;width:92mm;">
-				<div style="height:1.6in;">
-					<div id ="cTraits">
-						${data[cardID].Name}
-					</div>
-				</div>
-				<div id="cGlobal">
-					${data[cardID].Effect.replace(/\n/g, "<br>")}
-				</div>
-				<div id="cCaptured">
-					${data[cardID].Notes.replace(/\n/g, "<br>")}
-				</div>
-			</div> 
-		</div>` + document.getElementById('container').innerHTML;
-	}
+
+		var grid_item = createElementWithAttributes("div", {"class":"grid-item","id": data[cardID].ID, "onmouseover":"showX(this)", "onmouseout":"hideX(this)"});
+		var X_item = createElementWithAttributes("div", {"class":"X","onclick":"this.parentNode.remove()"});
+		grid_item.appendChild(X_item);
+
+		switch(data[cardID].Type) {
+			case "Creature":
+				grid_item.innerHTML += htmlCreature(data[cardID]);
+				break;
+			case "Instant":
+				grid_item.innerHTML += htmlInstant(data[cardID]);
+				break;
+			case "Artifact":
+				grid_item.innerHTML += htmlArtifact(data[cardID]);
+				break;
+			case "Battlefield":
+				grid_item.innerHTML += htmlBattlefield(data[cardID]);
+				grid_item.setAttribute("style", "grid-column: span 2; width:66mm");
+				break;
+			default:
+				alert("Card Type not recognized");
+		}
+
+		document.getElementById('container').prepend(grid_item);
 	});
 }
 
 function fillSelector() {
 	var passesfilter = readCheckBoxes();
 	document.getElementById('chosen_card').innerHTML = ""; // wipe old selector
+	document.getElementById('visualizer').innerHTML = "";
 
 	d3.csv("js/cgc.csv").then(function(data) {
 		var i = 0;
@@ -124,6 +55,9 @@ function fillSelector() {
 			while (data[i].ID != "") {
 				if (passesfilter.includes(data[i].Color) && passesfilter.includes(data[i].Type)) {
 					document.getElementById('chosen_card').innerHTML += `<option value="${data[i].ID}"> ${data[i].Name} </option>`;
+					/* var vis_card = makevisItem(data[i].ID)
+					vis_card += getCard(data[i]);
+					document.getElementById('visualizer').innerHTML += vis_card;*/
 				}
 				i++;
 			}
@@ -132,6 +66,29 @@ function fillSelector() {
 		}
 		
 });
+}
+
+function makevisItem(ID) {
+	ret = 
+	`<div class="vis-item" id="${ID}" onmouseover="showX(this)" onmouseout="hideX(this)">
+		<div class="X" onclick="fillCard(this.parentNode.id)"> </div>`
+	return ret
+}
+
+function getCard(card) {
+
+	switch (card.Type) {
+		case "Creature":
+			return htmlCreature(card);
+		case "Instant":
+			return htmlInstant(card);
+		case "Artifact":
+			return htmlArtifact(card);
+		case "Battlefield":
+			return htmlBattlefield(card);
+		default:
+			alert("Card Type not recognized");
+	}
 }
 
 function fillCardSelect() {
@@ -265,14 +222,106 @@ ${house_string}`);
 	});
 }
 
+function htmlCreature(card) {
+	return `<div class="card" style="height:92mm;width:66mm;">
+				<div style="background-color:${card.Color}; border: 4px solid ${card.Color};" class="printOmit" id="cName">
+					${card.Name}
+					<div id="cCost" class="printOmit"> 
+						${card.Cost}
+					</div>
+				</div>
+				<div style="height:1.6in;">
+					<div id ="cTraits">
+						${card.Traits}
+					</div> 
+					<div style="background-color:blue;float:right;height:1.2in;width:0.4in;"> 
+						<div id="cPower">
+							${card.Strength}
+						</div>
+						<div style="background-color:#8080ff;height:0.4in;border-color:dimgray;border-style:solid;border-width:3px;text-align:center;line-height:20px;" id="cDefense">
+							${card.Health}
+						</div>
+						<div id="cRestore">
+							${card.Restore}
+						</div>
+					</div>
+					<div style="top:116px;" id="cType">
+						${card.Type}
+					</div> 
+				</div>
+				<div id="cTextBox">
+					${card.Effect.replace(/\n/g, "<br>")}
+				</div>
+			</div>`;
+}
+
+function htmlInstant(card) {
+	return `<div class="card" style="height:92mm;width:66mm;">
+				<div style="background-color:${card.Color}; border: 4px solid ${card.Color};" class="printOmit" id="cName"> 
+					${card.Name}
+					<div id='cCost' class='printOmit'>
+						${card.Cost}
+					</div>
+				</div>
+				<div style="height:1.6in;">
+					<div id ="cTraits">
+						${card.Traits}
+					</div> 
+					<div style="top:136px;right:95px;" id="cType">
+						${card.Type}
+					</div> 
+				</div>
+				<div id="cTextBox">
+					${card.Effect.replace(/\n/g, "<br>") }
+				</div>
+			</div>`;
+}
+
+function htmlArtifact(card){
+	return `<div class="card" style="height:92mm;width:66mm;">
+				<div style="height:1.6in;">
+					<div id ="cTraits">
+						${card.Traits}
+					</div>  
+					<div style="top:136px;right:95px;" id="cType">
+						${card.Type}
+					</div>
+					<div style="background-color:#8080ff;border-color:dimgray;border-style:solid;border-width:3px;text-align:center;height:0.3in;width:0.3in;position:relative;top:2.8in;left:1.8in;line-height:0px;" id="cDefense">
+						${card.Health}
+					</div>
+				</div>
+				<div id="cTextBox">
+					${card.Effect.replace(/\n/g, "<br>")}
+				</div>
+				<div style="background-color:${card.Color}; border: 4px solid ${card.Color};" class="printOmit" id="cName">
+					${card.Name}
+					<div id='cCost' class='printOmit'>
+						${card.Cost}
+					</div>
+				</div> 
+			</div>`;
+}
+
+function htmlBattlefield(card) {
+	return `<div class="card battlefield" style="height:66mm;width:92mm;">
+				<div style="height:1.6in;">
+					<div id ="cTraits">
+						${card.Name}
+					</div>
+				</div>
+				<div id="cGlobal">
+					${card.Effect.replace(/\n/g, "<br>")}
+				</div>
+				<div id="cCaptured">
+					${card.Notes.replace(/\n/g, "<br>")}
+				</div>
+			</div>`;
+}
+
 /* JULES TODO
-- battlefields
-	- battlefield printing
 - card visualizer (instead of selector)
-	- possibly cards smaller than ending deck (scale down pls)
 	- some way to add, probably "+" in place of the "x"
 		- do something about hard coded "x" div
-	- fun visual separate from body
 	- beware the Analyze
 	- "Battleline"
 - import cards "properly"

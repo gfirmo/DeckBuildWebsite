@@ -9,7 +9,6 @@
 	background-color: black;
 	overflow-y: hidden;
 	transition: 0.5s;
-	margin-bottom: 10px;
 }
 
 #scroll_open > * {
@@ -110,120 +109,40 @@ header {
 .X:after {
 	transform: rotate(-45deg);
 }
-  
-.card {
-	padding:0.1in;
-	border-radius: 8px;
-}
-#cName {
-	height:0.4in;
-	border-radius:3px;
-	color:white;
-	font-weight:bolded;
-	line-height:0.4in;
-	font-size:16px;
-	padding-left:7px;
-	padding-right:7px;
-}
-#cPower{
-	height:0.4in;
-	border-color:dimgray;
-	border-style:solid;
-	border-width:3px;
-	text-align:center;
-	line-height:20px;
-}
 
-#cRestore {
-	height:0.4in;
-	border-color:dimgray;
-	border-style:solid;
-	border-width:3px;
-	text-align:center;
-	line-height:20px;
+#visualizer{
+	border: 5px outset beige;
+	border-radius: 20px;
+	background: #333;
+	
+	overflow: auto;
+  white-space: nowrap;
+	
+	margin: 10px 0px 10px 0px;
+	padding-bottom: 10px;
+	
 }
-
-#cType {
-	position:relative;
-	background-color:lightgray;
-	height:0.2in;
-	width:1in;
-	float:left;
-	border-color:dimgray;
-	border-style:solid;
-	border-width:2px;
-	color:black;
-	padding-left:3px
+#visualizer::-webkit-scrollbar-thumb{
+	background-clip: content-box;
 }
-
-#cTextBox {
-	background-color:azure;
-	height:1.4in;
-	border-radius:3px;
-	border-color:grey;
-	border-style:solid;
-	border-width:2px;
-	color:black;
-	padding-left:3px;
-	padding-right:3px;
-	font-size:12px;
-}
-
-#cGlobal {
-	background-color:azure;
-	border-radius:3px;
-	border-color:grey;
-	border-style:solid;
-	border-width:2px;
-	color:black;
-	padding-left:3px;
-	padding-right:3px;
-	font-size:12px;
-}
-
-
-#cCaptured {
-	background-color:azure;
-	border-radius:3px;
-	border-color:grey;
-	border-style:solid;
-	border-width:2px;
-	color:black;
-	padding-left:3px;
-	padding-right:3px;
-	font-size:12px;
-}
-
-#cTraits {
-	background-color:lightgray;
-	height:0.2in;
-	width:1in;
-	float:left;
-	border-color:dimgray;
-	border-style:solid;
-	border-width:2px;
-	color:black;
-	padding-left:3px;
-	font-size:15px;
-}
-
-#cCost {
-	float:right;
-	height: 100%;
+#visualizer .vis-item{
+	white-space: normal;
+	scale: 75%;
+	display: inline-block;
 }
 
 @page {
-	margin: 5px;
+	margin: 15px;
 }
 @media print {
+	header, .X, #scroll_open, #visualizer {
+		display: none;
+	}
+	
 	* {
 		background-color: white !important;
 		color: black !important;
 	}
-	header, .X, #scroll_open {
-		display: none;
-	}
-	
 	#container {
 		grid-column-gap: 0px;
 		grid-row-gap: 0px;
