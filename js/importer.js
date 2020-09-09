@@ -105,6 +105,9 @@ function fillCard(cardID) {
 				<div id="cGlobal">
 					${data[cardID].Effect.replace(/\n/g, "<br>")}
 				</div>
+				<div id="cCaptured">
+					${data[cardID].Notes.replace(/\n/g, "<br>")}
+				</div>
 			</div> 
 		</div>` + document.getElementById('container').innerHTML;
 	}

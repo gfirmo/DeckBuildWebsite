@@ -68,7 +68,7 @@ The creature this is stockpiled under has ""End of Phase: Give this creature +1 
 47,Instant,Fleetfooted,3P,-,-,-,-,"Play: Deploy a friendly creature. Then, redeploy them. Deploy effects are triggered both times.",,Purple,,,,,,,Beast | Scrap,1
 48,Instant,Beyond the Gate,3P,-,-,-,-,"Play: Select a friendly creature. Give that creature +1 | -1 | +0 and the trait ""Apparition""",,Purple,,,,,,,Titan | Location,1
 49,Instant,Pietr's Sanctum,4P,-,-,-,-,"Play: During this phase, every time your opponent discards or recycles cards, they must sacrifice a creature.",,Purple,,,,,,,Scrap | Scholar,1
-,,,,,,,,, ,,,,,,,,Plant | Wonder,1
+,,,,,,,,,,,,,,,,,Plant | Wonder,1
 50,Artifact,Tower of Rabble,7O,Location | Anomaly,-,9,-,"Play: Until the end of this phase, every Construct is also considered an Anomaly.
 Action: Give a creature +0 | +1 | +1 for each card stashed under Tower of Rabble. Shuffle the stashed cards into your deck.
 Whenever summoning/constructing anything that requires Gold mana, stash one of the cards expended under Tower of Rabble.",,Gold,Artifact,12,,,,,Beast,11
@@ -450,7 +450,7 @@ Olian, The Wretched does not take damage from [Trait] creatures.","([Trait] can 
 319,Instant,Weighted Bolas,2A,-,-,-,-,Play: Idle up to three enemy creatures.,,Red,,,,,,,,
 320,Instant,Divisive Manouver,2A,-,-,-,-,Play: Deploy or redeploy an enemy creature to a zone of your choosing. Exhaust that creature.,,Red,,,,,,,,
 321,Instant,Dying Breath,3A,-,-,-,-,"Play: Stockpile this card under an allied creature. The creature this card is stockpiled under gains ""Destroyed: place a creature in this zone on the bottom of its owners deck""",,Red,,,,,,,,
-322,Instant,Reinforce,2A,-,-,-,-,Play: Give a friendly artifact +2.,,,,,,,,,,
+322,Instant,Reinforce,2A,-,-,-,-,Play: Give a friendly artifact +2.,,Red,,,,,,,,
 323,Instant,Quick Thinking,3A,-,-,-,-,"Play: Stockpile this card under a creature.The creature this is stockpiled under gains ""Deploy: If this is the first time this creature has been deployed this turn, ready this creature.""",,Red,,,,,,,,
 324,Instant,Violence of the Learned,3A,-,-,-,-,"Play: Sacrifice a friendly artifact. If you do, search your library for any card you choose. Place that card in your hand and shuffle your library.",,Red,,,,,,,,
 325,Instant,Stacked Deck,2A,-,-,-,-,Play: Reveal the top five cards of your deck. You may place any number of these cards on the bottom of your deck.,,Red,,,,,,,,
