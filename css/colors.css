@@ -9,7 +9,7 @@
     --power:#bf1066;
     --restore:#85e085;
 
-    --card_background: #a143b6;
+    --card_background: #f8f8ff;
 }
 
 body {background-color:var(--unhighlighted)}
