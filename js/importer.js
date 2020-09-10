@@ -176,11 +176,11 @@ function readCheckBoxes() {
 }
 
 function toggleScroll() {
-	if (document.getElementById("scroll-open").style.height == "425px") {
+	if (document.getElementById("scroll-open").style.height == "395px") {
 		document.getElementById("scroll-open").style.height = "0px";
 		document.getElementById("scroll-open").style.borderWidth = "0px"
 	} else {
-		document.getElementById("scroll-open").style.height = "425px";
+		document.getElementById("scroll-open").style.height = "395px";
 		document.getElementById("scroll-open").style.borderWidth = "5px"
 	}
 }
