@@ -2,19 +2,6 @@
 	box-sizing: border-box;
 }
 
-#scroll_open {
-	height: 0;
-	width: 100%;
-	color: white;
-	background-color: black;
-	overflow-y: hidden;
-	transition: 0.5s;
-}
-
-#scroll_open > * {
-	margin: 5px;
-}
-
 header {
 	display: grid;
 	grid-template-areas: 
@@ -70,12 +57,11 @@ header {
 
 #container {
 	justify-items: center;
-	display:grid;
-	grid-template-columns: repeat(4, 2.6in);
+	display:flex;
+	flex-wrap:wrap;
 	grid-row-gap:10px;
 	grid-column-gap:10px;
-	page-break-inside:auto;
-	border: 1px;
+	margin-top: 10px;
 }
 
 .X, .plus {
@@ -128,29 +114,45 @@ header {
 	background-color: #BD9B30;
 }
 
+#scroll-open {
+	height: 0px;
+	transition: 0.5s;
+	border: 0px outset beige;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+#scroll-open > #scroll-header {
+	height: 35px;
+	width: 100%;
+	color: white;
+	background-color: black;
+	overflow-y: hidden;
+	padding-left: 10px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 #visualizer{
 	display: flex;
-	border: 5px outset beige;
-	border-radius: 20px;
 	background: #333;
 	
 	overflow: auto;
-	
-	margin: 10px 0px 10px 0px;
-	padding-bottom: 10px;
 
-	min-height: 380px;
+	height: 385px;
 	
 }
 #visualizer .vis-item{
-	scale: 75%;
+	transform: scale(0.75);
 }
 
 @page {
 	margin: 15px;
 }
 @media print {
-	header, .X, #scroll_open, #visualizer {
+	header, .X, #scroll-open {
 		display: none;
 	}
 	
@@ -159,8 +161,11 @@ header {
 		color: black !important;
 	}
 	#container {
+		display:grid;
+		grid-template-columns: repeat(4, minmax(2.6in, 1fr));
 		grid-column-gap: 0px;
 		grid-row-gap: 0px;
+	  page-break-inside:auto;
 	}
 	.grid-item {
 		grid-column: span 1 !important;

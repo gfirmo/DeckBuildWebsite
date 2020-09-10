@@ -1,4 +1,4 @@
-fillSelector();
+fillVisualizer();
 
 function createElementWithAttributes(tag, attributes) {
 	var ret = document.createElement(tag);
@@ -44,19 +44,16 @@ function fillCard(cardID) {
 	});
 }
 
-function fillSelector() {
+function fillVisualizer() {
 	var passesfilter = readCheckBoxes();
 	document.getElementById('visualizer').innerHTML = ""; // wipe old visualizer
 
-	var selectorHTML = [];
 	var visualizerFrag = document.createDocumentFragment();
 	d3.csv("js/cgc.csv").then(function(data) {
 		var i = 0;
 		try {
 			while (data[i].ID != "") {
 				if (passesfilter.includes(data[i].Color) && passesfilter.includes(data[i].Type)) {
-					selectorHTML.push(`<option value="${data[i].ID}"> ${data[i].Name} </option>`);
-					
 					var vis_card = makevisItem(data[i].ID)
 					vis_card.innerHTML += getCard(data[i]);
 					visualizerFrag.appendChild(vis_card);
@@ -64,9 +61,8 @@ function fillSelector() {
 				i++;
 			}
 		} catch (error) { // Catches data[i] is out of bounds so the list is empty
-			document.getElementById('chosen_card').innerHTML = selectorHTML.join('');
 			document.getElementById('visualizer').appendChild(visualizerFrag);
-			console.log( document.getElementById('chosen_card').childElementCount + "/" + i + " cards loaded into the selector!");
+			console.log( document.getElementById('visualizer').childElementCount + "/" + i + " cards loaded into the selector!");
 		}
 		
 });
@@ -92,15 +88,6 @@ function getCard(card) {
 			return htmlBattlefield(card);
 		default:
 			alert("Card Type not recognized");
-	}
-}
-
-function fillCardSelect() {
-	var x = document.getElementById("chosen_card").value;
-	var i = 0;
-	while (i < document.getElementById("numCards").value) {
-		fillCard(x);
-		i++;
 	}
 }
 
@@ -188,16 +175,13 @@ function readCheckBoxes() {
 	return ret;
 }
 
-function getCSVCardHouse(card) {
-	var cost = (card.Cost).split(""); //I should check periodically against side effects
-	return cost.pop();
-}
-
 function toggleScroll() {
-	if (document.getElementById("scroll_open").style.height == "30px") {
-		document.getElementById("scroll_open").style.height = "0px";
+	if (document.getElementById("scroll-open").style.height == "425px") {
+		document.getElementById("scroll-open").style.height = "0px";
+		document.getElementById("scroll-open").style.borderWidth = "0px"
 	} else {
-		document.getElementById("scroll_open").style.height = "30px";
+		document.getElementById("scroll-open").style.height = "425px";
+		document.getElementById("scroll-open").style.borderWidth = "5px"
 	}
 }
 
@@ -318,7 +302,7 @@ function htmlArtifact(card){
 
 function htmlBattlefield(card) {
 	return `<div class="card battlefield" style="height:66mm;width:92mm;">
-				<div style="height:1.6in;">
+				<div style="height:1.3in;">
 					<div id ="cTraits">
 						${card.Name}
 					</div>
@@ -339,4 +323,20 @@ function htmlBattlefield(card) {
 - "Battleline"
 - display card collapsed qty
 - background / palette rework
+*/
+
+/* possibly not needed:
+function fillCardSelect() {
+	var x = document.getElementById("chosen_card").value;
+	var i = 0;
+	while (i < document.getElementById("numCards").value) {
+		fillCard(x);
+		i++;
+	}
+}
+
+function getCSVCardHouse(card) {
+	var cost = (card.Cost).split(""); //I should check periodically against side effects
+	return cost.pop();
+}
 */

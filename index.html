@@ -27,65 +27,56 @@
       <button id="export_btn" type="button" style="display:none" onclick="expCardList()"></button> 
     </label>
   </header>
-  <div id="scroll_open" >
-    <span>
-      <label class="container">
-        <input id="check-Purple" type="checkbox" checked="checked" onchange="fillSelector()">
-        <span class="checkmark" style="background-color:purple"></span>
-      </label>
-      <label class="container">
-        <input id="check-Gold" type="checkbox" checked="checked" onchange="fillSelector()">
-        <span class="checkmark" style="background-color:orange"></span>
-      </label>
-      <label class="container">
-        <input id="check-Grey" type="checkbox" checked="checked" onchange="fillSelector()">
-        <span class="checkmark" style="background-color:grey"></span>
-      </label>
-      <label class="container">
-        <input id="check-Green" type="checkbox" checked="checked" onchange="fillSelector()">
-        <span class="checkmark" style="background-color:green"></span>
-      </label>
-      <label class="container">
-        <input id="check-Blue"  type="checkbox" checked="checked" onchange="fillSelector()">
-        <span class="checkmark" style="background-color:blue"></span>
-      </label>
-      <label class="container">
-        <input id="check-Red" type="checkbox" checked="checked" onchange="fillSelector()">
-        <span class="checkmark" style="background-color:red"></span>
-      </label>
-    </span>
-    <span>
-      <label class="icon-container">
-        <input id="check-Artifact"  type="checkbox" checked="checked" onchange="fillSelector()">
-        <i class="fas fa-ankh icon"></i>
-      </label>
-      <label class="icon-container">
-        <input id="check-Creature"  type="checkbox" checked="checked" onchange="fillSelector()">
-        <span class="fas fa-tint icon"></span>
-      </label>
-      <label class="icon-container">
-        <input id="check-Instant"  type="checkbox" checked="checked" onchange="fillSelector()">
-        <span class="fas fa-magic icon"></span>
-      </label>
-      <label class="icon-container">
-        <input id="check-Battlefield"  type="checkbox" checked="checked" onchange="fillSelector()">
-        <span class="fas fa-mountain icon"></span>
-      </label>
-    </span>
-    <select name="chosen_card" id="chosen_card"></select>
-    <label for="numCards"> # </label>
-    <select name="numCards" id="numCards">
-      <option value="1"> 1 </option>
-      <option value="2"> 2 </option>
-      <option value="3"> 3 </option>
-      <option value="4"> 4 </option> 
-    </select>
-    <button type="button" onclick="fillCardSelect()"> Add </button>
-    <button type="button" onclick="analyzeCards()"> Analyze </button>
-  </div>
   <main>
-    <section id="visualizer">
-
+    <section id="scroll-open" >
+      <div id="scroll-header">
+        <span>
+          <label class="container">
+            <input id="check-Purple" type="checkbox" checked="checked" onchange="fillVisualizer()">
+            <span class="checkmark" style="background-color:purple"></span>
+          </label>
+          <label class="container">
+            <input id="check-Gold" type="checkbox" checked="checked" onchange="fillVisualizer()">
+            <span class="checkmark" style="background-color:orange"></span>
+          </label>
+          <label class="container">
+            <input id="check-Grey" type="checkbox" checked="checked" onchange="fillVisualizer()">
+            <span class="checkmark" style="background-color:grey"></span>
+          </label>
+          <label class="container">
+            <input id="check-Green" type="checkbox" checked="checked" onchange="fillVisualizer()">
+            <span class="checkmark" style="background-color:green"></span>
+          </label>
+          <label class="container">
+            <input id="check-Blue"  type="checkbox" checked="checked" onchange="fillVisualizer()">
+            <span class="checkmark" style="background-color:blue"></span>
+          </label>
+          <label class="container">
+            <input id="check-Red" type="checkbox" checked="checked" onchange="fillVisualizer()">
+            <span class="checkmark" style="background-color:red"></span>
+          </label>
+        </span>
+        <span>
+          <label class="icon-container">
+            <input id="check-Artifact"  type="checkbox" checked="checked" onchange="fillVisualizer()">
+            <i class="fas fa-ankh icon"></i>
+          </label>
+          <label class="icon-container">
+            <input id="check-Creature"  type="checkbox" checked="checked" onchange="fillVisualizer()">
+            <span class="fas fa-tint icon"></span>
+          </label>
+          <label class="icon-container">
+            <input id="check-Instant"  type="checkbox" checked="checked" onchange="fillVisualizer()">
+            <span class="fas fa-magic icon"></span>
+          </label>
+          <label class="icon-container">
+            <input id="check-Battlefield"  type="checkbox" checked="checked" onchange="fillVisualizer()">
+            <span class="fas fa-mountain icon"></span>
+          </label>
+        </span>
+        <button type="button" onclick="analyzeCards()"> Analyze </button>
+      </div>
+      <section id="visualizer"></section>
     </section>
     <section class="grid-container" id="container">
     </section>
