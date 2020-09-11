@@ -138,22 +138,28 @@ function hidePlus(el) {
 }
 
 function expCardList() {
-	i = 0;
-	var cardList = [["ID", "Quantity"]]
 	var allCards = document.getElementsByClassName("grid-item");
-	var i = 0;
-	while (i < allCards.length) {
-		cardList.push([allCards[i].id, "1"])
-		i++;
-	}
-	console.log(cardList);
-	var csv = "" 
-	cardList.forEach(function(row) {
-		csv += row.join(',');
-		csv += "\n";
-	});
 	
+	var cardDict = {"ID":"Quantity"}
+	for (i of allCards) {
+		var key = i.id
+		if (key in cardDict) {
+			++(cardDict[key]);
+		} else {
+			cardDict[key] = 1;
+		}
+	}
+
+	console.log(cardDict);
+	
+	var csv = "" 
+	for (var key in cardDict) {
+		if (cardDict.hasOwnProperty(key)) {
+			csv += key + "," + cardDict[key] + "\n";
+		}
+	}
 	console.log(csv);
+
 	var hiddenElement = document.createElement('a');
 	hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
     hiddenElement.target = '_blank';
@@ -318,7 +324,6 @@ function htmlBattlefield(card) {
 
 /* JULES TODO
 - import cards "properly"
-- export cards in qty
 - grid spacing online
 - "Battleline"
 - display card collapsed qty
