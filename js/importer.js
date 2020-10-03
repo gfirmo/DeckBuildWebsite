@@ -19,9 +19,16 @@ function fillCard(cardID) {
 	d3.csv("js/cgc.csv").then(function(data) {
 
 		var grid_item = createElementWithAttributes("div", {"class":"grid-item","id": data[cardID].ID, "onmouseover":"showX(this)", "onmouseout":"hideX(this)"});
-		var X_item = createElementWithAttributes("div", {"class":"X","onclick":"this.parentNode.remove()"});
+		const X_item = createElementWithAttributes("div", {"class":"X","onclick":"this.parentNode.remove()"});
 		grid_item.appendChild(X_item);
 
+
+		grid_item.innerHTML += getCard(data[cardID]);
+		console.log(data[cardID].Name, data[cardID].Type);
+		if (data[cardID].Type == "Battlefield"){
+			//grid_item.setAttribute("style", "grid-column: span 2; width:66mm");
+		}
+		/*
 		switch(data[cardID].Type) {
 			case "Creature":
 				grid_item.innerHTML += htmlCreature(data[cardID]);
@@ -38,23 +45,23 @@ function fillCard(cardID) {
 				break;
 			default:
 				alert("Card Type not recognized");
-		}
+		}*/
 
 		document.getElementById('container').prepend(grid_item);
 	});
 }
 
 function fillVisualizer() {
-	var passesfilter = readCheckBoxes();
+	const passesfilter = readCheckBoxes();
 	document.getElementById('visualizer').innerHTML = ""; // wipe old visualizer
 
-	var visualizerFrag = document.createDocumentFragment();
+	let visualizerFrag = document.createDocumentFragment();
 	d3.csv("js/cgc.csv").then(function(data) {
-		var i = 0;
+		let i = 0;
 		try {
 			while (data[i].ID != "") {
 				if (passesfilter.includes(data[i].Color) && passesfilter.includes(data[i].Type)) {
-					var vis_card = makevisItem(data[i].ID)
+					let vis_card = makevisItem(data[i].ID)
 					vis_card.innerHTML += getCard(data[i]);
 					visualizerFrag.appendChild(vis_card);
 				}
@@ -62,15 +69,15 @@ function fillVisualizer() {
 			}
 		} catch (error) { // Catches data[i] is out of bounds so the list is empty
 			document.getElementById('visualizer').appendChild(visualizerFrag);
-			console.log( document.getElementById('visualizer').childElementCount + "/" + i + " cards loaded into the selector!");
+			console.log( document.getElementById('visualizer').childElementCount + "/" + i + " cards loaded into the visualizer!");
 		}
 		
 });
 }
 
 function makevisItem(ID) {
-	var ret = createElementWithAttributes("div", {"class":"vis-item","id": ID, "onmouseover":"showPlus(this)", "onmouseout":"hidePlus(this)"});
-	var plus_item = createElementWithAttributes("div", {"class":"plus","onclick":"fillCard(this.parentNode.getAttribute('id'))"});
+	let ret = createElementWithAttributes("div", {"class":"vis-item","id": ID, "onmouseover":"showPlus(this)", "onmouseout":"hidePlus(this)"});
+	const plus_item = createElementWithAttributes("div", {"class":"plus","onclick":"fillCard(this.parentNode.getAttribute('id'))"});
 	ret.appendChild(plus_item);
 	return ret
 }

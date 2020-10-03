@@ -169,6 +169,7 @@ header {
 	}
 	.grid-item {
 		grid-column: span 1 !important;
+		width:66mm;
 	}
 	.card {
 		border: 1px dashed black;
