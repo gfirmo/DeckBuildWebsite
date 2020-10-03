@@ -22,30 +22,7 @@ function fillCard(cardID) {
 		const X_item = createElementWithAttributes("div", {"class":"X","onclick":"this.parentNode.remove()"});
 		grid_item.appendChild(X_item);
 
-
 		grid_item.innerHTML += getCard(data[cardID]);
-		console.log(data[cardID].Name, data[cardID].Type);
-		if (data[cardID].Type == "Battlefield"){
-			//grid_item.setAttribute("style", "grid-column: span 2; width:66mm");
-		}
-		/*
-		switch(data[cardID].Type) {
-			case "Creature":
-				grid_item.innerHTML += htmlCreature(data[cardID]);
-				break;
-			case "Instant":
-				grid_item.innerHTML += htmlInstant(data[cardID]);
-				break;
-			case "Artifact":
-				grid_item.innerHTML += htmlArtifact(data[cardID]);
-				break;
-			case "Battlefield":
-				grid_item.innerHTML += htmlBattlefield(data[cardID]);
-				grid_item.setAttribute("style", "grid-column: span 2; width:66mm");
-				break;
-			default:
-				alert("Card Type not recognized");
-		}*/
 
 		document.getElementById('container').prepend(grid_item);
 	});
@@ -125,12 +102,12 @@ function readDList() {
 }
 
 function showX(el) {
-	var X = el.querySelector(":scope > .X");
+	const X = el.querySelector(":scope > .X");
 	X.style.visibility = "visible";
 }
 
 function hideX(el) {
-	var X = el.querySelector(":scope > .X");
+	const X = el.querySelector(":scope > .X");
 	X.style.visibility = "hidden";
 }
 
