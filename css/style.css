@@ -64,6 +64,17 @@ header {
 	margin-top: 10px;
 }
 
+.grid-item{
+	position:relative;
+}
+
+.card-stack{
+	position:absolute;
+	border: 1px solid black;
+	height:100%;
+	width: 100%;
+}
+
 .X, .plus {
 	position: absolute;
 	transform: translate(1.15in, 1.2in);

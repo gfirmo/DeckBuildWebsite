@@ -1,5 +1,7 @@
 fillVisualizer();
 
+var RunningCardList = {"ID":"Quantity"};
+
 function createElementWithAttributes(tag, attributes) {
 	var ret = document.createElement(tag);
 	for (var attr in attributes) {
@@ -14,15 +16,39 @@ function createElementWithAttributes(tag, attributes) {
 	return ret;
 }
 
+function removeCard(parent_card){
+	RunningCardList[parent_card.id] = RunningCardList[parent_card.id] - 1;
+	parent_card.remove();
+}
+
 function fillCard(cardID) {
 	cardID = cardID - 1; //For data[] 0 indexing
 	d3.csv("js/cgc.csv").then(function(data) {
 
 		var grid_item = createElementWithAttributes("div", {"class":"grid-item","id": data[cardID].ID, "onmouseover":"showX(this)", "onmouseout":"hideX(this)"});
-		const X_item = createElementWithAttributes("div", {"class":"X","onclick":"this.parentNode.remove()"});
+		const X_item = createElementWithAttributes("div", {"class":"X","onclick":"removeCard(this.parentNode)"});
 		grid_item.appendChild(X_item);
 
 		grid_item.innerHTML += getCard(data[cardID]);
+		
+		/*
+		{
+			const card_stack = createElementWithAttributes("div", {"class":"card-stack"});
+			const key = data[cardID].ID
+			if (key in RunningCardList) {
+				++(RunningCardList[key]);
+				const stack_height = RunningCardList[key] - 1;
+				card_stack.style.bottom = `${stack_height * 5}px`; 
+				card_stack.style.left = `${stack_height * 5}px`;
+				card_stack.style.zIndex = `${-1 * stack_height}`
+				grid_item.appendChild(card_stack);
+			} else {
+				RunningCardList[key] = 1;
+			}
+			
+			console.log(RunningCardList);
+		}
+		*/
 
 		document.getElementById('container').prepend(grid_item);
 	});
@@ -101,28 +127,8 @@ function readDList() {
 	reader.readAsText(theFile);
 }
 
-function showX(el) {
-	const X = el.querySelector(":scope > .X");
-	X.style.visibility = "visible";
-}
-
-function hideX(el) {
-	const X = el.querySelector(":scope > .X");
-	X.style.visibility = "hidden";
-}
-
-function showPlus(el) {
-	var X = el.querySelector(":scope > .plus");
-	X.style.visibility = "visible";
-}
-
-function hidePlus(el) {
-	var X = el.querySelector(":scope > .plus");
-	X.style.visibility = "hidden";
-}
-
 function expCardList() {
-	var allCards = document.getElementsByClassName("grid-item");
+	const allCards = document.getElementsByClassName("grid-item");
 	
 	var cardDict = {"ID":"Quantity"}
 	for (i of allCards) {
@@ -151,30 +157,6 @@ function expCardList() {
     hiddenElement.click();
 }
 
-function readCheckBoxes() {
-	var checked = document.querySelectorAll("input[type=checkbox]:checked");
-	var ret = [];
-	for (box of checked){
-		var filterfor = box.id.split("-")[1]; // Based on how Houses and Types are stored
-		ret.push(filterfor);
-		if (filterfor == "Battlefield"){
-			ret.push("Brown"); // Technically the "color" of Battlefields so they'll show up
-		}
-	}
-
-	return ret;
-}
-
-function toggleScroll() {
-	if (document.getElementById("scroll-open").style.height == "395px") {
-		document.getElementById("scroll-open").style.height = "0px";
-		document.getElementById("scroll-open").style.borderWidth = "0px"
-	} else {
-		document.getElementById("scroll-open").style.height = "395px";
-		document.getElementById("scroll-open").style.borderWidth = "5px"
-	}
-}
-
 function analyzeCards() {
 	/*
 	Stats to get:
@@ -182,12 +164,12 @@ function analyzeCards() {
 	Number of Creatures, Artifacts, Instants
 	Number in each house
 	*/
-	var card_list = document.querySelectorAll(".grid-item");
-	var qty = card_list.length
+	const card_list = document.querySelectorAll(".grid-item");
+	const qty = card_list.length
 
-	var type = {"Creature":0, "Artifact":0, "Instant":0};
-	var houses = {"Purple":0, "Gold":0, "Grey":0, "Green":0, "Blue":0, "Red":0};
-	var house_string = "";
+	let type = {"Creature":0, "Artifact":0, "Instant":0};
+	let houses = {"Purple":0, "Gold":0, "Grey":0, "Green":0, "Blue":0, "Red":0};
+	let house_string = "";
 
 	d3.csv("js/cgc.csv").then(function(data) {
 		for (card of card_list) {
@@ -208,6 +190,63 @@ ${type["Instant"]} instants
 		
 ${house_string}`);
 	});
+}
+
+function readCheckBoxes() {
+	const checked = document.querySelectorAll("input[type=checkbox]:checked");
+	let ret = [];
+	for (box of checked){
+		const filterfor = box.id.split("-")[1]; // Based on how Houses and Types are stored
+		ret.push(filterfor);
+		if (filterfor == "Battlefield"){
+			ret.push("Brown"); // Technically the "color" of Battlefields so they'll show up
+		}
+	}
+	return ret;
+}
+
+/* JULES TODO
+- import cards "properly"
+- grid spacing online
+- display card collapsed qty
+- background / palette rework
+*/
+
+/*
+*
+* CSS AND HTML SCRIPTS
+* Macros, really
+*
+*/
+
+function toggleScroll() {
+	if (document.getElementById("scroll-open").style.height == "395px") {
+		document.getElementById("scroll-open").style.height = "0px";
+		document.getElementById("scroll-open").style.borderWidth = "0px"
+	} else {
+		document.getElementById("scroll-open").style.height = "395px";
+		document.getElementById("scroll-open").style.borderWidth = "5px"
+	}
+}
+
+function showX(el) {
+	const X = el.querySelector(":scope > .X");
+	X.style.visibility = "visible";
+}
+
+function hideX(el) {
+	const X = el.querySelector(":scope > .X");
+	X.style.visibility = "hidden";
+}
+
+function showPlus(el) {
+	const X = el.querySelector(":scope > .plus");
+	X.style.visibility = "visible";
+}
+
+function hidePlus(el) {
+	const X = el.querySelector(":scope > .plus");
+	X.style.visibility = "hidden";
 }
 
 function htmlCreature(card) {
@@ -305,14 +344,6 @@ function htmlBattlefield(card) {
 				</div>
 			</div>`;
 }
-
-/* JULES TODO
-- import cards "properly"
-- grid spacing online
-- "Battleline"
-- display card collapsed qty
-- background / palette rework
-*/
 
 /* possibly not needed:
 function fillCardSelect() {
