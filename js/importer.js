@@ -1,6 +1,6 @@
 fillVisualizer();
 
-var RunningCardList = {"ID":"Quantity"};
+var RunningCardList = {};
 
 function createElementWithAttributes(tag, attributes) {
 	var ret = document.createElement(tag);
@@ -16,14 +16,78 @@ function createElementWithAttributes(tag, attributes) {
 	return ret;
 }
 
-function removeCard(parent_card){
-	RunningCardList[parent_card.id] = RunningCardList[parent_card.id] - 1;
-	parent_card.remove();
+async function stackCards(){
+	document.querySelector(".grid-container").innerHTML = "";
+
+	let old_list = {}
+	Object.assign(old_list, RunningCardList);
+	for (const [id, qty] of Object.entries(old_list)) {
+		if (id == "ID") {
+			continue;
+		}
+		delete RunningCardList[id];
+		for (let i = 0; i < qty; i++){
+			await addCard(id);
+		}
+	}
 }
 
-function fillCard(cardID) {
+function flattenCards(){
+	document.querySelector(".grid-container").innerHTML = "";
+	
+	for (const [id, qty] of Object.entries(RunningCardList)) {
+		if (id == "ID") {
+			continue;
+		}
+		for (let i = 0; i < qty; i++){
+			fillCard(id);
+		}
+	}
+}
+
+async function addCard(id){
+	if (id in RunningCardList) {
+		const stack_height = RunningCardList[id];
+		if ( stack_height < 4 ) {
+			const card_stack = createElementWithAttributes("div", {"class":"card-stack"});
+			card_stack.style.bottom = `${stack_height * 5}px`; 
+			card_stack.style.left = `${stack_height * 5}px`;
+			card_stack.style.zIndex = `${-1 * stack_height}`;
+
+			document.querySelector(`.grid-container [id='${id}']`).appendChild(card_stack);
+			++(RunningCardList[id]);
+		} else if (isNaN(stack_height)) {
+			RunningCardList[id] = 1;
+			await fillCard(id);
+		} else {
+			alert("Already have 4 of that card! Tsk tsk");
+		}
+		
+	} else {
+		RunningCardList[id] = 1;
+		await fillCard(id);
+	}
+	
+	return "card added"
+}
+
+function removeCard(parent_card){
+	try {
+		let stacked_cards = parent_card.querySelectorAll(".card-stack");
+		stacked_cards[stacked_cards.length - 1].remove();
+		--RunningCardList[parent_card.id];
+	} catch (error) {
+		--RunningCardList[parent_card.id];
+		if (RunningCardList[parent_card.id] == 0){
+			delete RunningCardList[parent_card.id];
+		}
+		parent_card.remove();
+	}
+}
+
+async function fillCard(cardID) {
 	cardID = cardID - 1; //For data[] 0 indexing
-	d3.csv("js/cgc.csv").then(function(data) {
+	await d3.csv("js/cgc.csv").then(function(data) {
 
 		var grid_item = createElementWithAttributes("div", {"class":"grid-item","id": data[cardID].ID, "onmouseover":"showX(this)", "onmouseout":"hideX(this)"});
 		const X_item = createElementWithAttributes("div", {"class":"X","onclick":"removeCard(this.parentNode)"});
@@ -31,27 +95,9 @@ function fillCard(cardID) {
 
 		grid_item.innerHTML += getCard(data[cardID]);
 		
-		/*
-		{
-			const card_stack = createElementWithAttributes("div", {"class":"card-stack"});
-			const key = data[cardID].ID
-			if (key in RunningCardList) {
-				++(RunningCardList[key]);
-				const stack_height = RunningCardList[key] - 1;
-				card_stack.style.bottom = `${stack_height * 5}px`; 
-				card_stack.style.left = `${stack_height * 5}px`;
-				card_stack.style.zIndex = `${-1 * stack_height}`
-				grid_item.appendChild(card_stack);
-			} else {
-				RunningCardList[key] = 1;
-			}
-			
-			console.log(RunningCardList);
-		}
-		*/
-
 		document.getElementById('container').prepend(grid_item);
-	});
+
+		});
 }
 
 function fillVisualizer() {
@@ -80,7 +126,7 @@ function fillVisualizer() {
 
 function makevisItem(ID) {
 	let ret = createElementWithAttributes("div", {"class":"vis-item","id": ID, "onmouseover":"showPlus(this)", "onmouseout":"hidePlus(this)"});
-	const plus_item = createElementWithAttributes("div", {"class":"plus","onclick":"fillCard(this.parentNode.getAttribute('id'))"});
+	const plus_item = createElementWithAttributes("div", {"class":"plus","onclick":"addCard(this.parentNode.getAttribute('id'))"});
 	ret.appendChild(plus_item);
 	return ret
 }
@@ -106,19 +152,21 @@ function readDList() {
 	var theFile = document.getElementById('myFile').files[0];
 	var fileCont = ""
 	var reader = new FileReader();
-    reader.onload = function (evt) {
+    reader.onload = async function (evt) {
 		document.querySelector(".grid-container").innerHTML = "";
+		RunningCardList = {}; // doesn't remove references if RCL has been copied
+
         fileCont = evt.target.result;
 		console.log(fileCont);
-		data = d3.csvParse(fileCont);
+		data = await d3.csvParse(fileCont);
 		var i = 0;
 		while(data[i].ID != "") {
 			var j = 0;
 			while(j < data[i].Quantity) {
-				fillCard(data[i].ID);
+				await addCard(`${data[i].ID}.0`); // I hate doing this. Please find the origin of our id issues
 				j++;
-		}
-		i++;
+			}
+			i++;
 		}
     }
 	reader.onerror = function (evt) {
@@ -164,25 +212,34 @@ function analyzeCards() {
 	Number of Creatures, Artifacts, Instants
 	Number in each house
 	*/
-	const card_list = document.querySelectorAll(".grid-item");
-	const qty = card_list.length
+	// const stack_list = document.querySelectorAll(".grid-item");
+	var total_cards = 0;
 
 	let type = {"Creature":0, "Artifact":0, "Instant":0};
 	let houses = {"Purple":0, "Gold":0, "Grey":0, "Green":0, "Blue":0, "Red":0};
 	let house_string = "";
 
 	d3.csv("js/cgc.csv").then(function(data) {
-		for (card of card_list) {
+		for (const [id, qty] of Object.entries(RunningCardList)) {
+			total_cards += qty;
+			for (let i = 0; i < qty; i++){
+				type[data[id - 1].Type]++; //sloppy to do this with direct indexing
+				houses[data[id - 1].Color]++;
+			}
+		}
+		/*
+		for (card of stack_list) {
 			type[data[card.id - 1].Type]++; //sloppy to do this with direct indexing
 			houses[data[card.id - 1].Color]++;
 		}
+		*/
 		for ([house, num] of Object.entries(houses)) {
 			if (num > 0) {
 				house_string += num + " in " + house + "\n";
 			}
 		}
 
-		alert(`${qty} total cards
+		alert(`${total_cards} total cards
 
 ${type["Creature"]} creatures
 ${type["Artifact"]} artifacts
@@ -210,6 +267,8 @@ function readCheckBoxes() {
 - grid spacing online
 - display card collapsed qty
 - background / palette rework
+- PRINT BUTTON
+- track down ID int!= int.0
 */
 
 /*

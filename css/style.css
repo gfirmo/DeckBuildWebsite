@@ -59,9 +59,9 @@ header {
 	justify-items: center;
 	display:flex;
 	flex-wrap:wrap;
-	grid-row-gap:10px;
-	grid-column-gap:10px;
-	margin-top: 10px;
+	grid-row-gap:20px;
+	grid-column-gap:20px;
+	margin-top: 20px;
 }
 
 .grid-item{
@@ -70,7 +70,8 @@ header {
 
 .card-stack{
 	position:absolute;
-	border: 1px solid black;
+	border: 2px solid black;
+	background: grey;
 	height:100%;
 	width: 100%;
 }
@@ -159,11 +160,21 @@ header {
 	transform: scale(0.75);
 }
 
+#button_container {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+}
+
+#flatten, #stack{
+	margin: 10px;
+}
+
 @page {
 	margin: 15px;
 }
 @media print {
-	header, .X, #scroll-open {
+	header, .X, #scroll-open, footer {
 		display: none;
 	}
 	
