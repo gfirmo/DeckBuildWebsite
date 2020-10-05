@@ -3,8 +3,8 @@ fillVisualizer();
 var RunningCardList = {};
 
 function createElementWithAttributes(tag, attributes) {
-	var ret = document.createElement(tag);
-	for (var attr in attributes) {
+	let ret = document.createElement(tag);
+	for (let attr in attributes) {
 		if (attributes.hasOwnProperty(attr)) {
 			if (attr.startsWith("data-") || attr.startsWith("on") || attr == "id" || attr == "class" || attr == "style") {
 				ret.setAttribute(attr, attributes[attr]);
@@ -19,12 +19,9 @@ function createElementWithAttributes(tag, attributes) {
 async function stackCards(){
 	document.querySelector(".grid-container").innerHTML = "";
 
-	let old_list = {}
+	let old_list = {};
 	Object.assign(old_list, RunningCardList);
 	for (const [id, qty] of Object.entries(old_list)) {
-		if (id == "ID") {
-			continue;
-		}
 		delete RunningCardList[id];
 		for (let i = 0; i < qty; i++){
 			await addCard(id);
@@ -176,29 +173,13 @@ function readDList() {
 }
 
 function expCardList() {
-	const allCards = document.getElementsByClassName("grid-item");
-	
-	var cardDict = {"ID":"Quantity"}
-	for (i of allCards) {
-		var key = i.id
-		if (key in cardDict) {
-			++(cardDict[key]);
-		} else {
-			cardDict[key] = 1;
-		}
-	}
-
-	console.log(cardDict);
-	
-	var csv = "" 
-	for (var key in cardDict) {
-		if (cardDict.hasOwnProperty(key)) {
-			csv += key + "," + cardDict[key] + "\n";
-		}
+	var csv = "ID,Quantity\n" 
+	for (const [id, qty] of Object.entries(RunningCardList)) {
+		csv += parseInt(id) + "," + qty + "\n";
 	}
 	console.log(csv);
 
-	var hiddenElement = document.createElement('a');
+	let hiddenElement = document.createElement('a');
 	hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
     hiddenElement.target = '_blank';
     hiddenElement.download = 'decklist.csv';
@@ -212,7 +193,6 @@ function analyzeCards() {
 	Number of Creatures, Artifacts, Instants
 	Number in each house
 	*/
-	// const stack_list = document.querySelectorAll(".grid-item");
 	var total_cards = 0;
 
 	let type = {"Creature":0, "Artifact":0, "Instant":0};
@@ -227,13 +207,8 @@ function analyzeCards() {
 				houses[data[id - 1].Color]++;
 			}
 		}
-		/*
-		for (card of stack_list) {
-			type[data[card.id - 1].Type]++; //sloppy to do this with direct indexing
-			houses[data[card.id - 1].Color]++;
-		}
-		*/
-		for ([house, num] of Object.entries(houses)) {
+
+		for (let [house, num] of Object.entries(houses)) {
 			if (num > 0) {
 				house_string += num + " in " + house + "\n";
 			}
@@ -263,9 +238,6 @@ function readCheckBoxes() {
 }
 
 /* JULES TODO
-- import cards "properly"
-- grid spacing online
-- display card collapsed qty
 - background / palette rework
 - PRINT BUTTON
 - track down ID int!= int.0
