@@ -84,7 +84,7 @@ function removeCard(parent_card){
 
 async function fillCard(cardID) {
 	cardID = cardID - 1; //For data[] 0 indexing
-	await d3.csv("js/cgc.csv").then(function(data) {
+	await d3.csv("Scripts/cgc.csv").then(function(data) {
 
 		var grid_item = createElementWithAttributes("div", {"class":"grid-item","id": data[cardID].ID, "onmouseover":"showX(this)", "onmouseout":"hideX(this)"});
 		const X_item = createElementWithAttributes("div", {"class":"X","onclick":"removeCard(this.parentNode)"});
@@ -102,7 +102,7 @@ function fillVisualizer() {
 	document.getElementById('visualizer').innerHTML = ""; // wipe old visualizer
 
 	let visualizerFrag = document.createDocumentFragment();
-	d3.csv("js/cgc.csv").then(function(data) {
+	d3.csv("Scripts/cgc.csv").then(function(data) {
 		let i = 0;
 		try {
 			while (data[i].ID != "") {
@@ -157,13 +157,17 @@ function readDList() {
 		console.log(fileCont);
 		data = await d3.csvParse(fileCont);
 		var i = 0;
-		while(data[i].ID != "") {
-			var j = 0;
-			while(j < data[i].Quantity) {
-				await addCard(`${data[i].ID}.0`); // I hate doing this. Please find the origin of our id issues
-				j++;
+		try { // What about "for (A of data){ for (B of A.Quantity) {} }
+			while(data[i].ID != "") {
+				var j = 0;
+				while(j < data[i].Quantity) {
+					await addCard(`${data[i].ID}.0`); // I hate doing this. Please find the origin of our id issues
+					j++;
+				}
+				i++;
 			}
-			i++;
+		} catch (error) { // Catches data[i] is out of bounds so the list is empty
+			console.log("Read in Deck List");
 		}
     }
 	reader.onerror = function (evt) {
@@ -199,7 +203,7 @@ function analyzeCards() {
 	let houses = {"Purple":0, "Gold":0, "Grey":0, "Green":0, "Blue":0, "Red":0};
 	let house_string = "";
 
-	d3.csv("js/cgc.csv").then(function(data) {
+	d3.csv("Scripts/cgc.csv").then(function(data) {
 		for (const [id, qty] of Object.entries(RunningCardList)) {
 			total_cards += qty;
 			for (let i = 0; i < qty; i++){
@@ -238,9 +242,21 @@ function readCheckBoxes() {
 }
 
 /* JULES TODO
-- background / palette rework
+- export with Name
+- filtering for stacks
+- unique card rules
+	> artifacts
+	> battlefields
+- search by name
+- card formatting (input handling)
+	> bold keywords
+	> italic within paren
+- spam clicking "stack" causes duplicates
 - PRINT BUTTON
+
+
 - track down ID int!= int.0
+- background / palette rework
 */
 
 /*
@@ -281,6 +297,39 @@ function hidePlus(el) {
 }
 
 function htmlCreature(card) {
+	/*
+	make card
+	make Name
+	make Cost
+	make body
+	make Traits
+	make Stats
+	make Strength
+	make Health
+	make Restore
+	make Type
+	make TextBox
+
+	set Name
+	set Cost
+	set Traits
+	set Strength
+	set Health
+	set Restore
+	set Type
+	set TextBox
+
+	child Cost < Name
+	child Name < card
+	child Traits < body
+	child S < Stats
+	child H < Stats
+	child R < Stats
+	child Stats < body
+	child Type < body
+	child body < card
+	child TextBox < card
+	*/
 	return `<div class="card" style="height:92mm;width:66mm;">
 				<div style="background-color:${card.Color}; border: 4px solid ${card.Color};" class="printOmit" id="cName">
 					${card.Name}

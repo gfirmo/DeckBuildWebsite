@@ -9,7 +9,7 @@ This is a game played with 40 cards, plus 5 additional Battlefields. In the 40 c
 ### Parts of a Card
 
 #### Artifact
-![alt text](Numbered_Artifact_Card.png)
+![alt text](Images/Numbered_Artifact_Card.png)
 1. Name
 2. Cost
 3. Traits
@@ -18,7 +18,7 @@ This is a game played with 40 cards, plus 5 additional Battlefields. In the 40 c
 6. Stats (only Health for Artifacts)
 
 #### Creature
-![alt text](Numbered_Creature_Card.png)
+![alt text](Images/Numbered_Creature_Card.png)
 1. Name
 2. Cost
 3. Traits
@@ -27,7 +27,7 @@ This is a game played with 40 cards, plus 5 additional Battlefields. In the 40 c
 6. Stats (top to bottom: Power, Health, Restore**)
 
 #### Instant
-![alt text](Numbered_Instant_Card.png)
+![alt text](Images/Numbered_Instant_Card.png)
 1. Name
 2. Cost
 3. Traits
@@ -39,7 +39,7 @@ This is a game played with 40 cards, plus 5 additional Battlefields. In the 40 c
 
 You'll want a friend, your cards (40+5), a little space, and three kinds of small tokens. Plenty of them. Sitting across from your opponent (friend), you each separate your 5 Battlefields and place them facedown halfway between you and to your right. Shuffle the remaining 40 card deck until you are both satisfied and put that face down on your right. The first player is determined and they flip up the top battlefield from their stack, placing it in the Active Battlefield zone. You are now ready to begin the game.
 
-![alt text](Numbered_Layout.png)
+![alt text](Images/Numbered_Layout.png)
 
 1. Active Battlefield
 2. Battlefield draw
