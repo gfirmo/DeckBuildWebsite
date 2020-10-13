@@ -50,7 +50,7 @@ Destroyed: Gain 1P.",,Purple
 35,Creature,Masked Salesman,5P,Horror | Summoner,1,4,0,"Masked Salesman gains the effects of all cards stockpiled underneath it.
 Trap: Stockpile the trapped creature under Masked Salesman.
 Destroyed: Play the cards stockpiled under Masked Salesman as if they belonged to their original owner.",,Purple
-36,Instant,Pace of Progress,1P,-,-,-,-,"Play: The next time you deploy a creature this phase, trigger its deploy effect twice.",,Purple
+36,Instant,Pace of Progress,1P,-,-,-,-,Play: The next deploy effect triggers twice.,,Purple
 37,Instant,Blessing of the Spectre,1P,-,-,-,-,"Play: Stockpile this card under a creature. 
 Stockpiled: Gain subtle.",,Purple
 38,Instant,The Igvryic Process,2P,-,-,-,-,Play: Move a creature.,,Purple
