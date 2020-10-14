@@ -135,7 +135,7 @@ function getCard(card) {
 			return htmlCreature(card);
 		case "Instant":
 			return htmlInstant(card);
-		case "Artifact":
+		case "Wonder":
 			return htmlArtifact(card);
 		case "Battlefield":
 			return htmlBattlefield(card);
@@ -194,12 +194,12 @@ function analyzeCards() {
 	/*
 	Stats to get:
 	Number of cards
-	Number of Creatures, Artifacts, Instants
+	Number of Creatures, Wonders, Instants
 	Number in each house
 	*/
 	var total_cards = 0;
 
-	let type = {"Creature":0, "Artifact":0, "Instant":0};
+	let type = {"Creature":0, "Wonder":0, "Instant":0};
 	let houses = {"Purple":0, "Gold":0, "Grey":0, "Green":0, "Blue":0, "Red":0};
 	let house_string = "";
 
@@ -221,7 +221,7 @@ function analyzeCards() {
 		alert(`${total_cards} total cards
 
 ${type["Creature"]} creatures
-${type["Artifact"]} artifacts
+${type["Wonder"]} Wonders
 ${type["Instant"]} instants
 		
 ${house_string}`);
@@ -245,7 +245,7 @@ function readCheckBoxes() {
 - export with Name
 - filtering for stacks
 - unique card rules
-	> artifacts
+	> Wonders
 	> battlefields
 - search by name
 - card formatting (input handling)
