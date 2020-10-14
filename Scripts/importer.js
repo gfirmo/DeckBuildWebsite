@@ -167,7 +167,7 @@ function readDList() {
 			while(data[i].ID != "") {
 				var j = 0;
 				while(j < data[i].Quantity) {
-					await addCard(`${data[i].ID}.0`); // I hate doing this. Please find the origin of our id issues
+					await addCard(`${parseInt(data[i].ID)}.0`); // I hate doing this. Please find the origin of our id issues
 					j++;
 				}
 				i++;
