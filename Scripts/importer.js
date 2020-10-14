@@ -17,7 +17,9 @@ function createElementWithAttributes(tag, attributes) {
 }
 
 async function stackCards(){
-	document.querySelector(".grid-container").innerHTML = "";
+	document.querySelector(".grid-container").innerHTML = `<div class="card Card_Back">
+	<img style="width:100%" src="Images/Card_Back.png" alt="Back">
+  </div>`;
 
 	let old_list = {};
 	Object.assign(old_list, RunningCardList);
@@ -30,7 +32,9 @@ async function stackCards(){
 }
 
 function flattenCards(){
-	document.querySelector(".grid-container").innerHTML = "";
+	document.querySelector(".grid-container").innerHTML = `<div class="card Card_Back">
+	<img style="width:100%" src="Images/Card_Back.png" alt="Back">
+  </div>`;
 	
 	for (const [id, qty] of Object.entries(RunningCardList)) {
 		if (id == "ID") {
@@ -49,7 +53,7 @@ async function addCard(id){
 			const card_stack = createElementWithAttributes("div", {"class":"card-stack"});
 			card_stack.style.bottom = `${stack_height * 5}px`; 
 			card_stack.style.left = `${stack_height * 5}px`;
-			card_stack.style.zIndex = `${-1 * stack_height}`;
+			card_stack.style.zIndex = `${-1 * stack_height - 5}`;
 
 			document.querySelector(`.grid-container [id='${id}']`).appendChild(card_stack);
 			++(RunningCardList[id]);
@@ -136,7 +140,7 @@ function getCard(card) {
 		case "Instant":
 			return htmlInstant(card);
 		case "Wonder":
-			return htmlArtifact(card);
+			return htmlWonder(card);
 		case "Battlefield":
 			return htmlBattlefield(card);
 		default:
@@ -150,7 +154,9 @@ function readDList() {
 	var fileCont = ""
 	var reader = new FileReader();
     reader.onload = async function (evt) {
-		document.querySelector(".grid-container").innerHTML = "";
+		document.querySelector(".grid-container").innerHTML = `<div class="card Card_Back">
+		<img style="width:100%" src="Images/Card_Back.png" alt="Back">
+	  </div>`;
 		RunningCardList = {}; // doesn't remove references if RCL has been copied
 
         fileCont = evt.target.result;
@@ -297,39 +303,70 @@ function hidePlus(el) {
 }
 
 function htmlCreature(card) {
-	/*
-	make card
-	make Name
-	make Cost
-	make body
-	make Traits
-	make Stats
-	make Strength
-	make Health
-	make Restore
-	make Type
-	make TextBox
+	return `<div class="card Creature_Template">
+				<img style="width:100%" src="Images/Creature_template.png" alt="Creature">
+				<a class="name">${card.Name}</a>
+				<span class="stats">
+					<a class="strength">${card.Strength}</a>
+					<a class="health">${card.Health}</a>
+					<a class="restore">${card.Restore}</a>
+				</span>
+				<a class="text">${card.Effect.replace(/\n/g, "<br>")}</a>
+				<a class="traits">${card.Traits}</a>
+				<a class="cost">${(card.Cost).split("")[0]}</a>
+				<a class="color" style="background-color:var(--${card.Color})"></a>
+			</div>`;
+}
 
-	set Name
-	set Cost
-	set Traits
-	set Strength
-	set Health
-	set Restore
-	set Type
-	set TextBox
+function htmlInstant(card) {
+	return `<div class="card Instant_Template">
+				<img style="width:100%" src="Images/Instant_template.png" alt="Instant">
+				<a class="name">${card.Name}</a>
+				<a class="traits">${card.Traits}</a>
+				<a class="text">${card.Effect.replace(/\n/g, "<br>") }</a>
+				<a class="cost">${(card.Cost).split("")[0]}</a>
+				<a class="color" style="background-color:var(--${card.Color})"></a>
+  			</div>`;
+}
 
-	child Cost < Name
-	child Name < card
-	child Traits < body
-	child S < Stats
-	child H < Stats
-	child R < Stats
-	child Stats < body
-	child Type < body
-	child body < card
-	child TextBox < card
-	*/
+function htmlWonder(card){
+	return `<div class="card Wonder_Template">
+				<img style="width:100%" src="Images/Wonder_template.png" alt="Wonder">
+				<a class="cost">${(card.Cost).split("")[0]}</a>
+				<a class="name">${card.Name}</a>
+				<a class="health">${card.Health}</a>
+				<a class="text">${card.Effect.replace(/\n/g, "<br>")}</a>
+				<a class="traits">${card.Traits}</a>
+				<a class="color" style="background-color:var(--${card.Color})"></a>
+			</div>`;
+}
+
+function htmlBattlefield(card) {
+	return `<div class="card Battlefield_Template">
+				<img style="width:100%" src="Images/Battlefield_template.png" alt="Battlefield">
+				<a class="name">${card.Name}</a>
+				<a class="captured_text">${card.Notes.replace(/\n/g, "<br>")}</a>
+				<a class="wild_text">${card.Effect.replace(/\n/g, "<br>")}</a>
+			</div>`;
+}
+
+/* possibly not needed:
+function fillCardSelect() {
+	var x = document.getElementById("chosen_card").value;
+	var i = 0;
+	while (i < document.getElementById("numCards").value) {
+		fillCard(x);
+		i++;
+	}
+}
+
+function getCSVCardHouse(card) {
+	var cost = (card.Cost).split(""); //I should check periodically against side effects
+	return cost.pop();
+}
+
+THESE ARE THE OLD HTML CARDS SAVED FOR A FEW VERSIONS:
+function htmlCreature(card) {
 	return `<div class="card" style="height:92mm;width:66mm;">
 				<div style="background-color:${card.Color}; border: 4px solid ${card.Color};" class="printOmit" id="cName">
 					${card.Name}
@@ -384,7 +421,7 @@ function htmlInstant(card) {
 			</div>`;
 }
 
-function htmlArtifact(card){
+function htmlWonder(card){
 	return `<div class="card" style="height:92mm;width:66mm;">
 				<div style="height:1.6in;">
 					<div id ="cTraits">
@@ -425,18 +462,5 @@ function htmlBattlefield(card) {
 			</div>`;
 }
 
-/* possibly not needed:
-function fillCardSelect() {
-	var x = document.getElementById("chosen_card").value;
-	var i = 0;
-	while (i < document.getElementById("numCards").value) {
-		fillCard(x);
-		i++;
-	}
-}
 
-function getCSVCardHouse(card) {
-	var cost = (card.Cost).split(""); //I should check periodically against side effects
-	return cost.pop();
-}
 */

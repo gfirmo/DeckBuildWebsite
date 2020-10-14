@@ -10,6 +10,14 @@
     --restore:#85e085;
 
     --card_background: #f8f8ff;
+    
+    --Purple: #665566;
+    --Gold: #f2e090;
+    --Grey: #999;
+    --Green: #7a9460;
+    --Blue: #667799;
+    --Red: #dd7788;
+    
 }
 
 body {background-color:var(--unhighlighted)}
@@ -27,11 +35,6 @@ header {
     border: 2px solid var(--dark_brown);
     border-bottom-width: 0px;
 }
-
-.card {
-    background-color: var(--card_background);
-}
-
 #cPower{ background-color:var(--power); }
 
 #cRestore { background-color:var(--restore); }

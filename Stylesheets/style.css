@@ -5,7 +5,7 @@
 header {
 	display: grid;
 	grid-template-areas: 
-	"title title . ."
+	"title title title title"
 	"upload process choose export";
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1.5fr 1fr;
@@ -56,7 +56,6 @@ header {
 }
 
 #container {
-	justify-items: center;
 	display:flex;
 	flex-wrap:wrap;
 	grid-row-gap:20px;
@@ -174,31 +173,40 @@ header {
 	margin: 15px;
 }
 @media print {
-	header, .X, #scroll-open, footer {
+  header, .X, #scroll-open, footer {
 		display: none;
 	}
-	
-	* {
+	body {
 		background-color: white !important;
-		color: black !important;
 	}
 	#container {
 		display:grid;
-		grid-template-columns: repeat(4, minmax(2.6in, 1fr));
+		grid-template-columns: repeat(6, 2.5in);
 		grid-column-gap: 0px;
 		grid-row-gap: 0px;
 	  page-break-inside:auto;
 	}
 	.grid-item {
 		grid-column: span 1 !important;
-		width:66mm;
-		height: 92mm;
+		width: 2.5in;
+		height: 3.5in;
+	}
+	.Battlefield_Template {
+		transform:rotate(-90deg) translate(-48px,-48px);
+	}
+	.Card_Back {
+		grid-column: 6;
+	}
+
+	/* FOR INK PRINTING
+	
+	* {
+		background-color: white !important;
+		color: black !important;
 	}
 	.card {
 		border: 1px dashed black;
 	}
-	.battlefield {
-		transform:rotate(-90deg) translate(-50px,-50px);
-	}
+	*/
 	
 }

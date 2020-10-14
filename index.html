@@ -5,8 +5,8 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="./Stylesheets/style.css">
 <link rel="stylesheet" href="./Stylesheets/colors.css">
-<link rel="stylesheet" href="./Stylesheets/checkbox.css">
 <link rel="stylesheet" href="./Stylesheets/cardStyling.css">
+<link rel="stylesheet" href="./Stylesheets/checkbox.css">
 <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet">
 <link href="./Stylesheets/fontawesome/css/all.css" rel="stylesheet">
 <link rel="icon" href="./Images/Annika_picked_me.png" type="image/icon type">
@@ -14,7 +14,7 @@
 <body>
   <header>
     <section id="TITLE">
-      Mythos Rising
+      Mythos Rising           Cmd P is for Tabletop Simulator exporting. Printing is unavailable.
     </section>
     <label id="UPLOAD" class="header-item" for="myFile"> Upload a Decklist
       <input type="file" id="myFile" name="filename" style="display:none" accept=".csv" onchange="this.parentNode.firstChild.data=this.files[0].name;">
@@ -79,7 +79,48 @@
       <section id="visualizer"></section>
     </section>
     <section class="grid-container" id="container">
+      <div class="card Card_Back">
+        <img style="width:100%" src="Images/Card_Back.png" alt="Back">
+      </div>
     </section>
+    <!-- THESE ARE CARD TEMPLATE EXAMPLES. EVERYTHING SHOULD WORK FINE
+    <div class="card Instant_Template">
+      <img style="width:100%" src="Images/Instant_template.png" alt="Instant">
+      <a class="name">Instant Name</a>
+      <a class="traits">Traits | Traits</a>
+      <a class="text">Images are not technically inserted into a web page; images are linked to web pages. The tag creates a holding space for the referenced image.</a>
+      <a class="cost">5</a>
+      <a class="color"></a>
+    </div>
+    <div class="card Creature_Template">
+      <img style="width:100%" src="Images/Creature_template.png" alt="Creature">
+      <a class="name">Creature Name</a>
+      <span class="stats">
+        <a class="strength"></a>
+        <a class="health"></a>
+        <a class="restore"></a>
+      </span>
+      <a class="text">Images are not technically inserted into a web page; images are linked to web pages. The tag creates a holding space for the referenced image.</a>
+      <a class="traits">Traits | Traits</a>
+      <a class="cost">5</a>
+      <a class="color"></a>
+    </div>
+    <div class="card Wonder_Template">
+      <img style="width:100%" src="Images/Wonder_template.png" alt="Wonder">
+      <a class="cost">5</a>
+      <a class="name">Wonder Name</a>
+      <a class="health">H</a>
+      <a class="text">Images are not technically inserted into a web page; images are linked to web pages. The tag creates a holding space for the referenced image.</a>
+      <a class="traits">Traits | Traits</a>
+      <a class="color"></a>
+    </div>
+    <div class="card Battlefield_Template">
+      <img style="width:100%" src="Images/Battlefield_template.png" alt="Battlefield">
+      <a class="name">Battlefield Name</a>
+      <a class="wild_text">Images are not technically inserted into a web page; images are linked to web pages. The tag creates a holding space for the referenced image.</a>
+      <a class="captured_text">Images are not technically inserted into a web page; images are linked to web pages. The tag creates a holding space for the referenced image.</a>
+    </div>
+    -->
   </main>
   <footer>
     <section id="button_container">
