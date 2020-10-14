@@ -8,154 +8,155 @@ Action: You may summon a card in this stockpile at its cost +2, reduced by 1 for
 3,Wonder,The Night's Gale,5P,Artifact,-,7,-,"Action: Give a friendly creature subtle until the end of this phase. If that creature already has subtle, give it +1 | +1 | + 0.",,Purple
 4,Wonder,Igvyr's Passageway,6P,Location,-,12,-,"Play: You may Provoke two enemy creatures.
 Action: Choose 1 friendly and 1 enemy creature not in their owners' barracks. Return them to their owners' Barracks.",,Purple
-5,Wonder,Ritual of Banishment,4P,Ritual,-,8,-,Play: Stockpile 3 creatures under Ritual of Banishment.,,Purple
+5,Wonder,Ritual of Banishment,4P,Ritual,-,8,-,"Play: Stockpile 3 creatures under Ritual of Banishment.
+Destroyed: Return to play under their owner's control each creature that was stockpiled under Ritual of Banishment.",,Purple
 6,Wonder,War Drum,4P,Artifact,-,7,-,Action: Move up to three friendly creatures.,,Purple
 7,Wonder,Ancestral Grove,5P,Location,-,3,-,"Action: 1P. Give a friendly creature ""Deploy: Give each Apparition in this zone +1 Strength.""  until end of phase.",,Purple
-8,Wonder,Malevolent Scroll,6P,Artifact,-,3,-,"Action: 2P. Give a deployed creature ""Trap: Destroy the trapped creature."" until end of phase.",,Purple
+8,Wonder,Malevolent Scroll,6P,Artifact,-,3,-,"Action: 1P. Give a deployed creature ""Trap: Destroy the trapped creature."" until end of phase.",,Purple
 9,Wonder,Lineate Palanquin,6P,Artifact,-,5,-,"Action: 1P. Ready a creature then deploy or move it. Until end of phase, it gains Sentry, cannot be dealt damage, and cannot capture battlefields.",,Purple
 10,Wonder,Cult of Control,7P,Ritual,-,3,-,"Summoner creatures get +2 Health while Cult of Control is in play.
 Action: 1A. Trigger the ""Bloodied/Deploy/Action/Destroyed"" effect of a Summoner creature. ",,Purple
 11,Wonder,Pandor's Case,5P,Artifact,-,9,-,"Action: Deploy an enemy creature to this Wonder.
-Destroyed: Destroy each creature.",,Purple
-12,Wonder,Empowered Vessel,6P,Artifact,-,3,-,"When a friendly Apparition is destroyed, you may sacrifice this Wonder. If you do, resummon that Apparition at no cost and give it +3 | +1 | +0",,Purple
-13,Creature,Traveling Charlatan,2P,Human | Summoner,2,2,2,,,Purple
-14,Creature,"Vidant, Otherseer",4P,Summoner,1,4,1,Bloodied: Reveal cards from the top of your library until you find a creature with the trait Apparition or Beast. Place it in your hand and shuffle your library.,,Purple
+Destroyed: Choose a friendly creature. Destroy each other creature.",,Purple
+12,Wonder,Empowered Vessel,6P,Artifact,-,3,-,"When a friendly Apparition is destroyed, you may sacrifice this Wonder. If you do, resummon that Apparition at no cost and give it +5 | +3 | +0",,Purple
+13,Creature,Traveling Charlatan,2P,Human | Summoner,2,2,2,Subtle. Sentry.,,Purple
+14,Creature,"Vidant, Otherseer",4P,Summoner,2,4,1,Bloodied: Reveal cards from the top of your library until you find a creature with the trait Apparition or Beast. Place it in your hand and shuffle your library.,,Purple
 15,Creature,Bitter Haunt,1P,Apparition,1,1,0,Subtle (This creature may ignore the battleline when deploying),,Purple
 16,Creature,Shade,1P,Apparition | Horror,2,1,0,"Shade enters play ready.
 Subtle
 End of Phase: Sacrifice Shade.",,Purple
-17,Creature,Diviner of Bones,2P,Summoner,1,2,1,Idle: Draw a card.,,Purple
-18,Creature,Leader of the March,3P,Apparition | Leader,1,3,0,Idle: Move another friendly creature,,Purple
+17,Creature,Diviner of Bones,3P,Summoner,1,4,1,Deploy/Idle: Draw a card.,,Purple
+18,Creature,Leader of the March,3P,Apparition | Leader,2,3,1,Idle: Ready and Deploy another friendly creature.,,Purple
 19,Creature,Lingering Malice,2P,Apparition,3,1,0,"Sentry
 Trap: Deal 1 damage to the trapped creature.",,Purple
-20,Creature,Vengeful Huntress,4P,Demon | Hunter,3,4,1,Bloodied: Deal 2 damage to an enemy creature.,,Purple
+20,Creature,Vengeful Huntress,4P,Demon | Hunter,3,6,2,"Sentry.
+Bloodied: Deal 2 damage to an enemy creature.",,Purple
 21,Creature,"Visant, Gravekeeper",3P,Human,2,2,2,Destroyed: Give a friendly Apparition +2 | +2 | +0.,,Purple
 22,Creature,Necronomican,4P ,Summoner,4,2,0,"Destroyed: You may sacrifice a friendly creature. If you do, revive Necronomican",,Purple
-23,Creature,Heart of the March,4P,Human,2,3,0,Deploy: Give Heart of the March +1 Strength.,"""Pick it up! Let's go! Pick it up!"" - Heart of the March",Purple
-24,Creature,Pointman,4P,Human | Leader,1,2,2,"Sentry
+23,Creature,Heart of the March,3P,Human,2,3,1,Deploy: Give Heart of the March +1 Strength.,"""Pick it up! Let's go! Pick it up!"" - Heart of the March",Purple
+24,Creature,Pointman,4P,Human | Leader,1,3,2,"Sentry
 Friendly creatures in the same zone as Pointman have Sentry.",,Purple
-25,Creature,Composite of Shadows,2P,Apparition | Summoner,1,1,1,"If there are 2 or more other friendly apparitions in play, Composite of Shadows gets +3|+3|+0.",,Purple
-26,Creature,"Yindír, Pit-builder",3P,Demon,1,1,1,Trap: The trapped creature's Strength becomes 0.,,Purple
-27,Creature,Liminal Mage,5P,Summoner,2,3,0,Trap: Play an Apparition from your hand to this zone at no cost.,,Purple
-28,Creature,"Pietr Kivala, Gate's Warden",5P,Human | Summoner,2,2,1,"Each time your opponent discards or recycles a card, draw a card.","""Every deal passes through the warden..."" - Vidant, Otherseer",Purple
+25,Creature,Composite of Shadows,2P,Apparition | Summoner,1,1,1,"If there are 2 or more other friendly Apparition creatures in play, Composite of Shadows gets +3|+3|+0.",,Purple
+26,Creature,"Yindír, Pit-builder",3P,Demon,2,3,1,Trap: The trapped creature's Strength becomes 0.,,Purple
+27,Creature,Liminal Mage,5P,Summoner,2,3,0,"Trap: Play an Apparition, Demon or Horror from your hand to this zone at no cost.",,Purple
+28,Creature,"Pietr Kivala, Gate's Warden",4P,Human | Summoner,2,2,1,"Each time your opponent discards or recycles a card, draw a card.","""Every deal passes through the warden..."" - Vidant, Otherseer",Purple
 29,Creature,"T. Taylor, Spirit Spy",4P,Apparition,3,2,0,"Subtle (This creature may ignore the battleline when deploying).
 Whenever T. Taylor, Spirit Spy is deployed to the enemy Barracks, provoke an enemy creature in its zone.",,Purple
-30,Creature,"Aylki, the Hunger",3P,Apparition,1,3,0,"When a creature is destroyed by Aylki, you may search your library for a card named ""Consume Spirit,"" and place it in your hand. Shuffle your library.",,Purple
-31,Creature,"Ischdil, The Consumed",6P,Horror | Priest,4,2,0,"Subtle (This creature may ignore the batteline when deploying)
+30,Creature,"Aylki, the Hunger",3P,Apparition,1,3,1,"When a creature is destroyed by Aylki, you may search your library for a card named ""Consume Spirit,"" and place it in your hand. Shuffle your library.",,Purple
+31,Creature,"Ischdil, The Consumed",4P,Horror | Priest,4,2,0,"Subtle (This creature may ignore the batteline when deploying)
 Deploy: Other horrors in this zone lose 1 health.","""Gods know what Ischdil has seen... Or perhaps, they don't."" -  Uenva, Ruinspeaker",Purple
-32,Creature,Eclissi,3P,Apparition | Horror,0,6,0,Subtle,,Purple
-33,Creature,"Mirk, Runein",4P,Summoner,3,1,1,"Deploy: Search your library for a card named ""Mirkin Space"" and place it in your hand. Then shuffle your library.
+32,Creature,Eclissi,3P,Apparition | Horror,0,6,0,"Subtle. 
+End of Phase: Each creature in this zone takes 1 damage.",,Purple
+33,Creature,"Mirk, Runein",2P,Summoner,2,1,1,"Subtle
+Deploy: Search your library for a card named ""Mirkin Space"" and place it in your hand. Then shuffle your library.
 Destroyed: Gain 1P.",,Purple
-34,Creature,Terrat Ward,1P,Location | Ritual,0,2,1,"Guard: A friendly Wonder gains ""Trap: If the trapped creature is an Apparition or Horror, destroy it"" until end of phase.",,Purple
+34,Creature,Terrat Ward,1P,Location | Ritual,0,2,1,"Guard: A friendly Wonder gains ""Trap: Destroy the trapped creaure"" until End of Phase.",,Purple
 35,Creature,Masked Salesman,5P,Horror | Summoner,1,4,0,"Masked Salesman gains the effects of all cards stockpiled underneath it.
 Trap: Stockpile the trapped creature under Masked Salesman.
-Destroyed: Play the cards stockpiled under Masked Salesman as if they belonged to their original owner.",,Purple
-36,Instant,Pace of Progress,1P,-,-,-,-,"Play: The next time you deploy a creature this phase, trigger its deploy effect twice.",,Purple
-37,Instant,Blessing of the Spectre,1P,-,-,-,-,"Play: Stockpile this card under a creature. 
+Destroyed: Play each card stockpiled under Masked Salesman as if they belonged to their original owner.",,Purple
+36,Creature,Double Agent,3P,Human,3,3,0,Deploy: Provoke an enemy creature.,,Purple
+37,Creature,"Adlin, the Fate-Torn",5P,Human | Apparition,2,4,1,"Subtle.
+Deploy: If there is a creature in this zone with more than double Adlin's Power, destroy it.",,Purple
+38,Instant,Pace of Progress,1P,-,-,-,-,"Play: The next time you deploy a creature this phase, trigger its deploy effect twice.",,Purple
+39,Instant,Blessing of the Spectre,1P,-,-,-,-,"Play: Stockpile this card under a creature. 
 Stockpiled: Gain subtle.",,Purple
-38,Instant,The Igvryic Process,2P,-,-,-,-,Play: Move a creature.,,Purple
-39,Instant,Mirkin Space,1P,-,-,-,-,"Play: Deal 1 damage to a friendly creature. If this damage destroys that creature, gain 2P mana.",,Purple
-40,Instant,On the Move,3P,-,-,-,-,"Play: Until the end of phase, whenever a creature is deployed, trigger its Idle effect.",,Purple
-41,Instant,The Haunt,4P,-,-,-,-,Play: Apparitions get +2 Strength until the end of this phase.,,Purple
-42,Instant,The Night of Many Terrors,2P,-,-,-,-,Play: Every friendly creature gains Subtle until end of phase.,,Purple
-43,Instant,Consume Spirit,2P,-,-,-,-,"Play: Choose a friendly creature with Health equal to 3. Reduce that creature's Strength to 0 and stockpile this card under it.
-Stockpiled: Gain ""End of Phase: Give this creature +1 | +1 | +0."" ",,Purple
-44,Instant,Decay,3P,-,-,-,-,Play: Choose any creature. The next damage dealt to that creature this phase destroys it.,,Purple
-45,Instant,Horrific Visions,2P,-,-,-,-,Play: Deal 2 damage to an enemy creature. Move it to its owner's baracks.,,Purple
-46,Instant,Cause for Wonder,4P,-,-,-,-,"Play: Choose a friendly creature. Trigger its Bloodied, Deploy, or Idle effect, then you may exhaust a friendly creature. If you do, trigger the chosen creature's effect.",,Purple
-47,Instant,Fleetfooted,3P,-,-,-,-,"Play: Choose a friendly creature. Deploy it, then ready and deploy it again.",,Purple
-48,Instant,Beyond the Gate,3P,-,-,-,-,"Play: Select a friendly creature. Give that creature +1 | -1 | +0 and the trait ""Apparition""",,Purple
-49,Instant,Pietr's Sanctum,4P,-,-,-,-,"Play: During this phase, every time your opponent discards or recycles cards, they must sacrifice a creature.",,Purple
+40,Instant,The Igvryic Process,2P,-,-,-,-,Play: Move a creature.,,Purple
+41,Instant,Mirkin Space,1P,-,-,-,-,"Play: Gain P mana equal to the number of enemy creatures in the same zone as Mirk, Runein. If you do, sacrifice him.",,Purple
+42,Instant,On the Move,3P,-,-,-,-,"Play: Until the end of phase, whenever a creature is deployed, trigger its Idle effect and heal it for double its Restore stat.",,Purple
+43,Instant,The Haunt,4P,-,-,-,-,Play: Apparitions get +2 Strength until End of Phase.,,Purple
+44,Instant,The Night of Many Terrors,2P,-,-,-,-,Play: Each friendly creature gains Subtle until End of Phase.,,Purple
+45,Instant,Consume Spirit,2P,-,-,-,-,"Play: Choose a friendly creature. Reduce that creature's Strength to 0 and stockpile this card under it.
+Stockpiled: Gain ""End of Phase: Give this creature +1 Strength.""",,Purple
+46,Instant,Decay,3P,-,-,-,-,Play: Choose any creature. The next damage dealt to that creature this phase destroys it.,,Purple
+47,Instant,Horrific Visions,3P,-,-,-,-,"Play: Deal 2 damage to an enemy creature. Move it to its owner's baracks. Then, deal 1 damage to each creature in the same zone as that creature.",,Purple
+48,Instant,Cause for Wonder,4P,-,-,-,-,"Play: Choose a friendly creature. Trigger its Bloodied, Deploy, or Idle effect. Then, you may exhaust a friendly creature. If you do, trigger the chosen creature's effect again.",,Purple
+49,Instant,Fleetfooted,3P,-,-,-,-,"Play: Choose a friendly creature. Deploy it, then ready and deploy it again.",,Purple
+50,Instant,Beyond the Gate,3P,-,-,-,-,"Play: Stockpile this card under a friendly creature. Give it +1 | -1 | +0.
+Stockpile: This creature is an Apparition.",,Purple
+51,Instant,Guardian Spirits,5P,-,-,-,-,"Play: If an allied creature has been damaged this turn, destroy an enemy creature. Fully heal an allied creature.",,Purple
+52,Instant,Violent Possession,4P,-,-,-,-,Play: Choose a creature. It deals damage to itself equal to its strength. Exhaust that creature.,,Purple
+53,Instant,Pietr's Sanctum,4P,-,-,-,-,"Play: During this phase, every time your opponent discards or recycles cards, they must sacrifice a creature.",,Purple
 ,,,,,,,,,,
-50,Wonder,Tower of Rabble,7O,Location | Anomaly,-,9,-,"Whenever you recycle a gold card, Stockpile one of the recycled cards under Tower of Rabble.
+54,Wonder,Tower of Rabble,7O,Location | Anomaly,-,9,-,"Whenever you recycle a gold card, Stockpile one of the recycled cards under Tower of Rabble.
 Play: Until the end of this phase, every Construct gains the trait Anomaly.
 Action: Give a creature +0 | +1 | +1 for each card stockpiled under Tower of Rabble. Shuffle the stockpiled cards into your deck.",,Gold
-51,Wonder,Swarm Construction Chip,8O,Artifact,-,4,-,"Each Construct in play gains ""Action: Gain 2 gold mana.""",,Gold
-52,Wonder,Oracle's Eye,"6O
+55,Wonder,Swarm Construction Chip,8O,Artifact,-,4,-,"Each Construct in play gains ""Action: Gain 2 gold mana.""",,Gold
+56,Wonder,Oracle's Eye,"6O
 ",Location,-,7,-,"Play: Your opponent reveals a card in their hand for each Wonder in play.
 Action: 1G. Look at the next X number of cards in your library, where X is  the number of Wonders in play. Put those cards back in any order, then draw one card.",,Gold
-53,Wonder,"Crucible of Progress
-",5O,Location,-,5,-,"Play: Search your library for a Wonder and place it in your hand, then shuffle your library. Fully heal all other Wonders.
+57,Wonder,Crucible of Progress,5O,Location,-,5,-,"Play: Search your library for a Wonder and place it in your hand, then shuffle your library. Fully heal all other Wonders.
 Action: Sacrifice a creature. If you do, search your library for a Wonder, place it in your hand, then shuffle your library.","""It is from the Crucible that the greatest civilizations are sprung"" -
  Daidon, Light's Representative",Gold
-54,Wonder,"Ningaipodos, Purifier
+58,Wonder,"Ningaipodos, Purifier
 ","6O
 ",Artifact,-,5,-,"Play: Return a creature to its owner's hand.
 Action: Deal 2 damage to a creature. If that creature has no damage on it, instead deal 4.","""No, please no!"" - Fugitive Misalign",Gold
-55,Wonder,"Damaci, The Compiler",7O,Artifact,-,8,-,Action: 1O. Sacrifice a creature. Another friendly creature gains Strength equal to the sacrificed creature's Strength and Health equal to the sacrificed creature's Health.,,Gold
-56,Wonder,Armory Exaltate,7O,Location,-,8,-,"Play: A friendly creature gains ""Trap: Deploy two other friendly creatures to this zone and resolve combat"" until end of phase.
-Action: Deal 2 damage to a creature. If this destroys that creature, gain 1 gold mana.",,Gold
-57,Wonder,Neural Web,7O,Artifact,-,3,-,"When a friendly creature would be destroyed instead revive it and ready it. At the end of phase, sacrifice that creature.","
+59,Wonder,"Damaci, The Compiler",7O,Artifact,-,8,-,Action: 1O. Sacrifice a creature. Another friendly creature gains Strength equal to the sacrificed creature's Strength and Health equal to the sacrificed creature's Health.,,Gold
+60,Wonder,Armory Exaltate,7O,Location,-,8,-,"Play: A friendly creature gains ""Trap: Deploy two other friendly creatures to this zone and resolve combat"" until end of phase.
+Action: 1O. Deal 2 damage to a creature. If this destroys that creature, gain 1 gold mana.",,Gold
+61,Wonder,Neural Web,7O,Artifact,-,3,-,"When a friendly creature would be destroyed instead revive it and ready it. At the end of phase, sacrifice that creature.","
 ""Power in perfection!"" - Exaltate Idiom",Gold
-58,Wonder,Key Ite Elevatus,6O,Location,-,3,-,"Friendly non-Leader, non-Scholar creatures in the same zone as a Leader or Scholar gain Sturdy and are considered to have X Health, where X is the number of friendly creatures in play.",,Gold
-59,Wonder,Ministry of Corrections,6O,Location,-,3,-,"Action: Select an enemy creature and pay its cost (in gold mana). If you do, place that creature on the bottom of its owner's deck.",,Gold
-60,Wonder,Reta Galvari,8O,Location | Ritual,-,8,-,"End of Phase: Deal 1 damage to Reta Galvari. 
+62,Wonder,Key Ite Elevatus,6O,Location,-,3,-,"Friendly non-Leader, non-Scholar creatures in the same zone as a Leader or Scholar gain Sturdy and are considered to have X Health, where X is the number of friendly creatures in its zone.",,Gold
+63,Wonder,Ministry of Corrections,6O,Location,-,3,-,"Action: Select an enemy creature and pay its cost (in gold mana). If you do, place that creature on the bottom of its owner's deck.",,Gold
+64,Wonder,Reta Galvari,8O,Location | Ritual,-,8,-,"End of Phase: Deal 1 damage to Reta Galvari. 
 Action: 2O. For each point of damage on Reta Galvari, ready a friendly creature. Fully heal Reta Galvari.",,Gold
-61,Wonder,Reta Anioch,5O,Location | Ritual,-,3,-,"Whenever you summon a creature, if there is not already a card stockpiled under Reta Anioch, you may instead stockpile that creature under Reta Anioch.
+65,Wonder,Reta Anioch,5O,Location | Ritual,-,3,-,"Whenever you summon a creature, if there is not already a card stockpiled under Reta Anioch, you may instead stockpile that creature under Reta Anioch.
 End of Phase: Summon each creature under Reta Anioch at no cost and give it +2 | +2 | +0.",,Gold
-62,Creature,Fugitive Junker,3O,Construct | Anomaly,1,5,1,Fugitive Junker gains +1 | -1 | +0 for each non Anomaly Construct you control.,,Gold
-63,Creature,Drifter Prophet,3O,Construct | Anomaly,2,3,2,Action: Draw a card for each other card you control with the Anomaly trait. Discard a card.,,Gold
-64,Creature,Clockwork Enforcer,"2O
-",Construct,2,3,1,,"""It'll do, for an evening's work."" - Tink, Tinkerer",Gold
-65,Creature,Quality Control,2O,Construct,1,1,3,Guard: Discard the top card of your library,,Gold
-66,Creature,Version Control,2O,Construct,1,3,1,"Guard: Reveal the top card of your library. If that card matches a friendly card in play, ready and fully heal it.",,Gold
-67,Creature,Branch Control,3O,Construct,3,1,1,Guard: Each creature in play that doesn't share a trait with another creature is destroyed.,,Gold
-68,Creature,Historical Corrections Bot,4O,Construct | Drone,1,2,0,Action: 3O. Return an enemy creature in this zone to it's owners hand.,,Gold
-69,Creature,"Tink, Tinkerer",4O,Human | Scholar,1,1,0,"Tink, Tinkerer gains +1 | +1 | +0 for each Wonder in play.",,Gold
-70,Creature,Replicating Widget,2O,Construct,1,1,0,"If a Replicating Widget is in play, this card costs 1 less to summon.
+66,Creature,Fugitive Junker,3O,Construct | Anomaly,1,4,1,Fugitive Junker gains +1 | -1 | +0 for each non Anomaly Construct you control.,,Gold
+67,Creature,Drifter Prophet,3O,Construct | Anomaly,2,3,2,Action: Draw a card for each other card you control with the Anomaly trait. Discard a card.,,Gold
+68,Creature,Clockwork Enforcer,"2O
+",Construct,3,2,1,,"""It'll do, for an evening's work."" - Tink, Tinkerer",Gold
+69,Creature,Quality Control,2O,Construct,1,1,3,Guard: Discard the top card of your library,,Gold
+70,Creature,Version Control,2O,Construct,1,3,1,"Guard: Reveal the top card of your library. If that card matches a friendly card in play, ready and fully heal it.",,Gold
+71,Creature,Branch Control,3O,Construct,3,1,1,Guard: Each creature in play that doesn't share a trait with another creature is destroyed.,,Gold
+72,Creature,Historical Corrections Bot,4O,Construct | Drone,1,2,0,Action: 3O. Return an enemy creature in this zone to it's owners hand.,,Gold
+73,Creature,"Tink, Tinkerer",4O,Human | Scholar,1,1,0,"Tink, Tinkerer gains +1 | +1 | +0 for each Wonder in play.",,Gold
+74,Creature,Replicating Widget,2O,Construct,1,1,0,"If a Replicating Widget is in play, this card costs 1 less to summon.
 Idle: 1O. Search your library for a card named ""Replicating Widget"" and place it in your hand, then shuffle your library. ","""1, 2, 4, 8, double and exterminate!"" - Replicating Widget",Gold
-71,Creature,Malignant Virus,2O,Data | Anomaly,1,2,1,"Malignant Virus cannot be discarded.
+75,Creature,Malignant Virus,2O,Data | Anomaly,1,2,1,"Malignant Virus cannot be discarded.
 Idle: Sacrifice Malignant Virus.
 Recyled: Destroy an enemy creature of power 3 or lower.","""I'm happy enough to avoid war, if their decay is an option"" - The Architect",Gold
-72,Creature,"Daidon, Light's Representative",4O,Construct | Leader,1,4,2,Idle: Draw two cards.,,Gold
-73,Creature,Selfish Automata ,6O,Construct,5,2,,"Action: Shuffle each stockpiled card into its owner's deck. Sacrifice Selfish Automata.
+76,Creature,"Daidon, Light's Representative",3O,Construct | Leader,1,4,2,Idle: Draw one card.,,Gold
+77,Creature,Selfish Automata ,6O,Construct,4,1,0,"Action: Shuffle each stockpiled card into its owner's deck. Sacrifice Selfish Automata.
 When the Selfish Automata would take damage, instead stockpile a number of cards (first from your hand, then from your library) equal to the damage prevented under Selfish Automata.",,Gold
-74,Creature,The Distributor,3O,Data,1,1,0,Action: 2O. Summon a creature from a friendly stockpile. Sacrifice the card the creature was stockpiled under.,,Gold
-75,Creature,Outpost,4O,Construct | Settler,0,7,2,"Sentry
-Friendly creatures in the same zone as Outpost have Sentry and can use the Idle action in this zone.",,Gold
-76,Creature,Away Defense Matrix,4O,Construct,3,5,0,"Sentry.
+78,Creature,The Distributor,3O,Data,1,1,0,Action: 2O. Summon a creature from a friendly stockpile. Sacrifice the card the creature was stockpiled under.,,Gold
+79,Creature,Outpost,4O,Construct | Settler,0,7,2,Friendly creatures in the same zone as Outpost have Sentry and can use the Idle action in this zone.,,Gold
+80,Creature,Away Defense Matrix,4O,Construct,2,3,0,"Sentry.
 Trap: The trapped creature must be in direct combat with Away Defense Matrix if able.",,Gold
-77,Creature,Dedicated Irritant,3O,Construct,0,3,3,Sentry. Sturdy.,,Gold
-78,Creature,Architect's Core,5O,Construct | Module,0,5,0,"Action: Stockpile a friendly creature under Architect's Core. If that creature is a Module, Architect's Core gains power equal to the stockpiled creature's power. 
+81,Creature,Dedicated Irritant,3O,Construct,0,3,3,Sentry. Sturdy.,,Gold
+82,Creature,Architect's Core,5O,Construct | Module,0,5,0,"Action: Stockpile a friendly creature under Architect's Core. If that creature is a Module, Architect's Core gains power equal to the stockpiled creature's power. 
 Architect's Core has the abilities of every module creature stockpiled under it.",,Gold
-79,Creature,Targeteer-1,2O,Construct | Module,2,1,0,,,Gold
-80,Creature,Viseer-2,3O,Construct | Module,0,2,0,Idle: Your opponent reveals a card at random from their hand.,,Gold
-81,Creature,Traveleer-3,2O,Construct | Module,1,1,0,Deploy: Trigger Traveleer-3's Idle effects,,Gold
-82,Creature,Disadeer-4,4O,Construct | Module,0,2,0,Idle: Disadeer-4 gets +2 Health until end of phase.,,Gold
-83,Creature,Sanitation Bot,2O,Construct,0,2,1,"Idle: Draw 2 cards, then discard 1.",,Gold
-84,Creature,"Akillas, Maximate Design",6O,Construct | Leader,7,3,1,You may only play Akillas if you already control 2 other Constructs,"""Haha! Akillas, my greatest creation. Built to win a thousand battles!"" Tink, Tinkerer",Gold
-85,Creature,The Architect,3O,Cyborg | Scholar,1,2,1,Idle: Give a creature +1 | +1 | +0.,,Gold
-86,Creature,Evolved Coherence,3O,Data,1,1,0,End of Phase: If a creature this phase was destroyed in the same zone as Evolved Coherenece +1 | +1 | +0.,,Gold
-87,Creature,Trikeri Spearbot,5O,Construct | Weapon,3,1,0,"Deploy: Deal 1 damage to a creature in this zone.
+83,Creature,Targeteer-1,2O,Construct | Module,2,1,0,,,Gold
+84,Creature,Viseer-2,3O,Construct | Module,0,2,0,Idle: Your opponent reveals a card at random from their hand.,,Gold
+85,Creature,Traveleer-3,2O,Construct | Module,1,1,0,Deploy: Trigger Traveleer-3's Idle effects,,Gold
+86,Creature,Disadeer-4,4O,Construct | Module,0,2,0,Idle: Disadeer-4 gets +2 Health until end of phase.,,Gold
+87,Creature,Sanitation Bot,2O,Construct,0,2,1,"Action: Draw 2 cards, then discard 1.",,Gold
+88,Creature,"Akillas, Maximate Design",6O,Construct | Leader,6,4,1,You may only play Akillas if you already control 2 other Constructs,"""Haha! Akillas, my greatest creation. Built to win a thousand battles!"" Tink, Tinkerer",Gold
+89,Creature,The Architect,3O,Cyborg | Scholar,1,2,1,Action: Give a creature +1 | +1 | +0.,,Gold
+90,Creature,Evolved Coherence,3O,Data,1,1,0,End of Phase: If a creature this phase was destroyed in the same zone as Evolved Coherenece give it +1 | +1 | +0.,,Gold
+91,Creature,Trikeri Spearbot,5O,Construct | Weapon,3,1,0,"Deploy: Deal 1 damage to a creature in this zone.
 Action: Heal 1 damage from a creature in this zone.
-Idle: Sacrifice Trikeri Spearbot. Give a creature in this zone +3 | +0 | +0.",,Gold
-88,Creature,0x43616e617279,4O,Data,0,1,1,Destroyed: Move all friendly creatures in 0x43616e617279's zone to your Barracks. The Battlefield may not be captured this phase.,,Gold
-89,Creature,Master of the Swarm,7O,Construct,3,7,2,"Drone Master can only be played if you control 3 or more creatures.
-Deploy: Search your library for a Drone. Play it at no cost, in this zone.",,Gold
-90,Creature,"Yatoris, the Avaricious",3O,Cyborg | Anomaly,4,2,0,"Sturdy (This creature does not take damage, unless that damage would be enough to destroy it.) 
+Idle: Sacrifice Trikeri Spearbot. Give a creature in this zone +3 Strength.",,Gold
+92,Creature,0x43616e617279,4O,Data,0,1,1,Destroyed: Move all friendly creatures in 0x43616e617279's zone to your Barracks. The Battlefield may not be captured this phase.,,Gold
+93,Creature,"Yatoris, the Avaricious",6O,Cyborg | Anomaly,4,2,0,"Sturdy (This creature does not take damage, unless that damage would be enough to destroy it.) 
 Destroyed: You may sacrifice a friendly creature in the same zone as Yatoris. If you do, revive Yatoris.",,Gold
-91,Creature,Reco,4O,Construct | Drone,1,2,0,Destroyed: Fully heal all other friendly creatures in this zone.,,Gold
-92,Creature,Apostate of Light,4O,Cyborg | Anomaly,2,4,1,"Subtle (This creature may ignore the battleline when deploying).
-Deploy: Destroy a creature of health less than 2 in this zone.",,Gold
-93,Creature,"Kliotise, Evolutionary Test",3O,Plant,2,1,0,"Idle: Kliotise, Evolutionary Test gets +1 health.",,Gold
-94,Instant,Light's Favor,2O,-,-,-,-,"Play: If you control a Leader, stockpile this card under a friendly creature. 
+94,Creature,Reco,4O,Construct | Drone,1,2,0,Destroyed: Fully heal all other friendly creatures in this zone.,,Gold
+95,Creature,Apostate of Light,4O,Cyborg | Anomaly,2,2,1,"Subtle (This creature may ignore the battleline when deploying).
+Deploy: Destroy a creature of Health less than 2 in this zone.",,Gold
+96,Creature,"Kliotise, Evolutionary Test",3O,Plant,2,1,0,"Idle: Kliotise, Evolutionary Test gets +1 health.",,Gold
+97,Instant,Light's Favor,2O,-,-,-,-,"Play: If you control a Leader, stockpile this card under a friendly creature. 
 Stockpiled: Gains Sturdy and ""Deploy: You may exhaust a friendly Construct. If you do, give this creature  +1 Health."" ",,Gold
-95,Instant,Exploit Vulnerability,2O,-,-,-,-,"Play: Tap an enemy Wonder. If you do, deal 3 damage to it",,Gold
-96,Instant,"
-Principle of Locality","2O
-",-,-,-,-,"Play: Choose a creature in the battleline. For each friendly creature in the Battleline, give that creature +1 | +0 | +0.",,Gold
-97,Instant,Midaic Touch,5O,-,-,-,-,Play: All cards in every discard are considered to be Gold until the start of the next phase.,,Gold
-98,Instant,Reset to Factory Default,3O,-,-,-,-,Play: Return a creature to its owner's hand.,,Gold
-99,Instant,Gilded Ideal,3O,-,-,-,-,Play: Choose a creature. That creature may not be dealt damage until the start of the next phase.,,Gold
-100,Instant,Holographic Trick,2O,-,-,-,-,"Play: Return a creature from your discard to the Battlefield. That creature has 0 power and cannot capture a battlefield. At the end of the phase, sacrifice this creature.","Some idea of ""distraction."" IE, creatures only fight what is in front of them, so you could use this to disable their strongest creature.
-Frontline should be changed",Gold
-101,Instant,Value Drift,4O,-,-,-,-,"Play: Every Construct creature is considered an Anomaly until End of Phase. Give every Anomaly, Scrap, and Scholar creature +2 | +0 | +0.",,Gold
-102,Instant,Cost of Perfection,2O,-,-,-,-,Play: Choose a friendly creature. Deal damage equal to half that creature's health (rounded down) to each creature in its zone. Sacrifice the chosen creature.,,Gold
-103,Instant,Model of Excellence,3O,-,-,-,-,Play: Your opponent discards a random card in their hand.,,Gold
-104,Instant,Community Service,3O,-,-,-,-,Play: Choose an enemy creature. Deal 1 damage to that creature for each creature you control.,,Gold
-105,Instant,Stabilize,4O,-,-,-,-,Play: Your opponent may not recycle cards until the start of the next phase.,,Gold
+98,Instant,Exploit Vulnerability,2O,-,-,-,-,"Play: Tap an enemy Wonder. If you do, deal 3 damage to it",,Gold
+99,Instant,Principle of Locality,"2O
+",-,-,-,-,"Play: Choose a creature on the Battlefield. For each other friendly creature on the Battlefield, give that creature +1 Strength.",,Gold
+100,Instant,Reset to Factory Default,4O,-,-,-,-,Play: Return a creature to its owner's hand.,,Gold
+101,Instant,Gilded Ideal,3O,-,-,-,-,Play: Choose a creature. That creature may not be dealt damage until the start of the next phase.,,Gold
+102,Instant,Value Drift,4O,-,-,-,-,"Play: Every Construct creature is considered an Anomaly until End of Phase. Give every Anomaly, Scrap, and Scholar creature +2 Strength.",,Gold
+103,Instant,Cost of Perfection,2O,-,-,-,-,Play: Choose a friendly creature. Deal damage equal to half that creature's health (rounded down) to each creature in its zone. Sacrifice the chosen creature.,,Gold
+104,Instant,Model of Excellence,2O,-,-,-,-,Play: Your opponent discards a random card in their hand.,,Gold
+105,Instant,Community Service,5O,-,-,-,-,Play: Choose an enemy creature. Deal 1 damage to that creature for each creature you control.,,Gold
 106,Instant,Repurpose,2O,-,-,-,-,Play: Sacrifice up to three creatures to summon a creature at regular cost - the health of the sacrificed creatures.,,Gold
-107,Instant,Cull Imperfection,5O,-,-,-,-,Play: Destroy a creature.,Maybe still a bit too expensive?,Gold
+107,Instant,Cull Imperfection,6O,-,-,-,-,Play: Destroy a creature.,,Gold
 108,Instant,Controlled Supply Lines,2O,-,-,-,-,"Play: Until the end of phase, the next player to recycle from their discard must exhaust two ready friendly creatures.",,Gold
 ,,,,,,,,,,
 109,Wonder,"Recyling Plant
@@ -322,7 +323,7 @@ Bloodied: You may sacrifice a friendly creature. If you do, summon each creature
 224,Creature,Seasoned Marauder,2B,Pillager,1,3,0,Bloodied: Seasoned Marauder gains +1 | +1 | +0,,Blue
 225,Creature,"Vïlaac, Protector",4B,Pillager,2,5,3,"Bloodied: Fully heal another friendly creature.
 Revealed: Your opponent sacrifices a creature.",,Blue
-226,Creature,Desperate Finale,8B,Horror,*,3,1,"Sturdy (This creature does not take damage, unless that damage would be enough to destroy it)
+226,Creature,Desperate Finale,8B,Horror,*,3,1,"Sturdy 
 Play: Stockpile each creature in your discard under Desperate Finale. Desperate Finale's power is equal to the number of creatures stockpiled under it.",,Blue
 227,Creature,Corpse-Eater,3B,Horror,5,2,0,"Sturdy (This creature does not take damage, unless that damage would be enough to destroy it) 
 Whenever Corpse-Eater destroys a creature, stockpile it under Corpse-Eater.",,Blue
@@ -421,15 +422,15 @@ Action: Play a card of cost equal to the total amount of tokens on this card at 
 Action: 2A. All the cards in your discard are considered A mana until End of Phase.",,Red
 300,Creature,"Var'i, Seer",4A,Human | Seer,1,1,1,Idle: Draw 2 cards. Discard 1,,Red
 301,Creature,Raspine Stowaway,1A,Beast,1,1,1,,,Red
-302,Creature,Bear Trap,2A,Construct,0,4,1,"Bear Trap enters play ready.
-Trap: Deal 2 damage to the trapped creature and reduce its power to 0 until end of phase.",,Red
+302,Creature,Bear Trap,4A,Construct,0,4,1,"Bear Trap enters play ready.
+Trap: Deal 1 damage to the trapped creature and reduce its power to 0 until end of phase.",,Red
 303,Creature,"Idvaline, Chemical Genius",5A,Human | Scholar,3,3,1,"Subtle (This creature may ignore the battleline when deploying)
 Creatures in the same zone as Idvaline lose Sturdy.
 Deploy: Each creature in this zone takes damage equal to its Restore.",,Red
 304,Creature,Cal,2A,Cyborg,0,1,1,Action: 4A. Destroy an enemy creature.,,Red
 305,Creature,Gas Pump,4A,Construct,0,2,1,"Gas Pump enters play ready.
 Trap: Stockpile this card under the trapped creature. 
-Stockpiled: gains ""End of Phase: This creature takes 2 damage.""",,Red
+Stockpiled: gains ""End of Phase: This creature takes 3 damage.""",,Red
 306,Creature,Voice of the Oracle,3A,Apparition,1,3,3,"End of Phase: If a battlefield was captured this phase, look at the top three cards of your deck. Rearrange them in any order, then draw one.",,Red
 307,Creature,Rionate Mercenary,2A,Human,2,1,1,Destroyed: You may expend 1A to revive Rionate Mercenary.,,Red
 308,Creature,"Ván, Magician",4A,Human | Thief,1,4,2,"Action: 1A. Reveal the top three cards of your deck. For each card of A color, shuffle a card from your enemy's discard into their deck. ",,Red
