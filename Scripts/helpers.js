@@ -36,6 +36,27 @@ function getCard(card) {
 			alert("Card Type not recognized");
 	}
 }
+
+function parseEffectText(rawString) {
+	let lines = rawString.split('\n');
+	let ret = ""
+	for (line of lines){
+		if (line.search(':') != -1){
+			let keyword = line.split(':');
+			ret += `<b>${keyword[0]}:</b>${keyword[1]}`
+			if (keyword[2] != undefined) {
+				ret += `:${keyword[2]}`
+			}
+			if (keyword[3] != undefined) {
+				alert(rawString);
+			}
+			ret += "<br>";
+		} else {
+			ret += line + "<br>";
+		}
+	}
+	return ret
+}
 //#endregion
 
 //#region CSS AND HTML SCRIPTS
@@ -80,7 +101,7 @@ function htmlCreature(card) {
 					<a class="health">${card.Health}</a>
 					<a class="restore">${card.Restore}</a>
 				</span>
-				<a class="text">${card.Effect.replace(/\n/g, "<br>")}</a>
+				<a class="text">${parseEffectText(card.Effect)}</a>
 				<a class="traits">${card.Traits}</a>
 				<a class="cost">${(card.Cost).split("")[0]}</a>
 				<a class="color" style="background-color:var(--${card.Color})"></a>
@@ -92,7 +113,7 @@ function htmlInstant(card) {
 				<img style="width:100%" src="Images/Instant_template.png" alt="Instant">
 				<a class="name">${card.Name}</a>
 				<a class="traits">${card.Traits}</a>
-				<a class="text">${card.Effect.replace(/\n/g, "<br>") }</a>
+				<a class="text">${parseEffectText(card.Effect)}</a>
 				<a class="cost">${(card.Cost).split("")[0]}</a>
 				<a class="color" style="background-color:var(--${card.Color})"></a>
   			</div>`;
@@ -104,7 +125,7 @@ function htmlWonder(card){
 				<a class="cost">${(card.Cost).split("")[0]}</a>
 				<a class="name">${card.Name}</a>
 				<a class="health">${card.Health}</a>
-				<a class="text">${card.Effect.replace(/\n/g, "<br>")}</a>
+				<a class="text">${parseEffectText(card.Effect)}</a>
 				<a class="traits">${card.Traits}</a>
 				<a class="color" style="background-color:var(--${card.Color})"></a>
 			</div>`;
@@ -114,9 +135,8 @@ function htmlBattlefield(card) {
 	return `<div class="card Battlefield_Template">
 				<img style="width:100%" src="Images/Battlefield_template.png" alt="Battlefield">
 				<a class="name">${card.Name}</a>
-				<a class="captured_text">${card.Notes.replace(/\n/g, "<br>")}</a>
+				<a class="captured_text">${parseEffectText(card.Effect)}</a>
 				<a class="wild_text">${card.Effect.replace(/\n/g, "<br>")}</a>
 			</div>`;
 }
-
 //#endregion

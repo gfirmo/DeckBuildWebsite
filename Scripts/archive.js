@@ -4,14 +4,12 @@
 *   I put old functions, HTML templates, and a TODO list
 *   here so it doesn't clog the main scripts.
 *
-*   Reve control is nice. On hand is nicer.
+*   Rev control is nice. On hand is nicer.
 */
 
 
 /* JULES TODO
-
 - card formatting (input handling)
-	> bold keywords
 	> italic within paren
 	> name shrink
 - add only one of card
