@@ -173,7 +173,14 @@ header {
 	margin: 15px;
 }
 @media print {
-  header, .X, #scroll-open, footer {
+	* {
+		background-color: white !important;
+		color: black !important;
+	}
+	.card {
+		border: 1px dashed black;
+	}
+  	header, .X, #scroll-open, footer {
 		display: none;
 	}
 	body {
@@ -181,7 +188,7 @@ header {
 	}
 	#container {
 		display:grid;
-		grid-template-columns: repeat(6, 2.5in);
+		grid-template-columns: repeat(4, 2.5in);
 		grid-column-gap: 0px;
 		grid-row-gap: 0px;
 	  page-break-inside:auto;
@@ -194,19 +201,8 @@ header {
 	.Battlefield_Template {
 		transform:rotate(-90deg) translate(-48px,-48px);
 	}
+	/*
 	.Card_Back {
 		grid-column: 6;
-	}
-
-	/* FOR INK PRINTING
-	
-	* {
-		background-color: white !important;
-		color: black !important;
-	}
-	.card {
-		border: 1px dashed black;
-	}
-	*/
-	
+	}*/
 }
