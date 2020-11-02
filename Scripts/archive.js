@@ -11,15 +11,12 @@
 /* JULES TODO
 
 -  reinstate printing
+	> color or layout for printing version
 
 - TTS improvements
 	- battlefields are broken
-	- download zip as name
 	- .png "__X ${name of card}"
 	- double check .png name format
-	- time reduction (down from 1.7s/card)
-		> OR (progress / loading bar)
-	- better resolution
 
 - Formatting (card input handling)
 	> italic within paren
@@ -42,11 +39,44 @@
 	- PRINT BUTTON
 
 - background / palette rework
-
-- Automatically processes (after upload)
 */
 
 
+/*
+*	Old way to read and get TTS for cards
+*	Very slow because it converts renders every card individually
+*
+*/
+async function zipStuff(){
+	async function fillURLs(){
+		for (const [id, qty] of Object.entries(RunningCardList)) {
+			var offScreen = document.querySelector(`.grid-container [data-card-id='${id}']`);
+			await html2canvas(offScreen)
+				.then(function(canvas) {
+					url = canvas.toDataURL().replace(/^data:image\/(png|jpg);base64,/, "")
+					zip.file(`${qty}X ${id}.png`, url, {base64: true});
+				})
+		}
+		var offScreen = document.querySelector(`.grid-container .Card_Back`);
+		await html2canvas(offScreen)
+			.then(function(canvas) {
+				url =  canvas.toDataURL().replace(/^data:image\/(png|jpg);base64,/, "");
+				zip.file(`card_back.png`, url, {base64: true});
+			})
+		return zip;
+	};
+
+	var zip = new JSZip();
+	/* Generate a directory within the Zip file structure
+	var img = zip.folder("images");*/
+
+	fillURLs()
+	.then(function(whole_zip){
+		return whole_zip.generateAsync({type:"blob"}) // Generate the zip file asynchronously
+	}).then(function(content) {
+		saveAs(content, "THIS_IS_YOUR_ZIP.zip");
+	});
+}
 
 // #region  possibly not needed:
 function fillCardSelect() {

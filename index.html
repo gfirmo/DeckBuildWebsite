@@ -17,7 +17,7 @@
       Bonzaye Platoon
     </section>
     <label id="UPLOAD" class="header-item" for="myFile"> Upload a Decklist
-      <input type="file" id="myFile" name="filename" style="display:none" accept=".csv" onchange="this.parentNode.firstChild.data=this.files[0].name;">
+      <input type="file" id="myFile" name="filename" style="display:none" accept=".csv" onchange="this.parentNode.firstChild.data=this.files[0].name; readDList();">
     </label>
     <label id="PROCESS" class="header-item" for="process_btn" onmouseup="readDList()"> Process Decklist
       <input id="process_btn" type="submit" value="Process Decklist" style="display:none" >
@@ -124,7 +124,7 @@
   </main>
   <footer>
     <section id="button_container">
-      <button id="zip" onclick="zipStuff()">
+      <button id="zip" onclick="fastZip(2)">
         DOWNLOAD ZIP
       </button>
       <button id="flatten" onclick="flattenCards()">

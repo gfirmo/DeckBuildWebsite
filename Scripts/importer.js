@@ -2,35 +2,48 @@ fillVisualizer();
 
 var RunningCardList = {};
 
-
-async function zipStuff(){
-	async function fillURLs(){
-		for (const [id, qty] of Object.entries(RunningCardList)) {
-			var offScreen = document.querySelector(`.grid-container [data-card-id='${id}']`);
-			await html2canvas(offScreen)
-				.then(function(canvas) {
-					url = canvas.toDataURL().replace(/^data:image\/(png|jpg);base64,/, "")
-					zip.file(`${qty}X ${id}.png`, url, {base64: true});
-				})
-		}
-		var offScreen = document.querySelector(`.grid-container .Card_Back`);
-		await html2canvas(offScreen)
-			.then(function(canvas) {
-				url =  canvas.toDataURL().replace(/^data:image\/(png|jpg);base64,/, "")
-				zip.file(`card_back.png`, url, {base64: true});
-			})
-		return zip;
-	};
-
+function fastZip(cardScale){
 	var zip = new JSZip();
-	/* Generate a directory within the Zip file structure
-	var img = zip.folder("images");*/
+	var cardGrid = document.querySelector('.grid-container')
+	var gridRect = cardGrid.getBoundingClientRect();
 
-	fillURLs()
-	.then(function(whole_zip){
+	html2canvas(cardGrid, {scale: cardScale})
+	.then(function(sourceCanvas){
+		/* 2.5 x 3.5 @ 96dpi * (pixel ratio) */
+		var dc = document.createElement('canvas');
+		dc.width = 2.5*96*cardScale;
+		dc.height = 3.5*96*cardScale;
+		var destCtx = dc.getContext('2d');
+
+		function selectImageFromCanvas(selector){
+			let cardRect = cardGrid.querySelector(selector).getBoundingClientRect();
+			let relativeY = cardRect.top - gridRect.top;
+			let relativeX = cardRect.left - gridRect.left;
+
+			/* signature void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight); */
+			destCtx.drawImage(sourceCanvas, 
+								relativeX*cardScale, relativeY*cardScale, cardRect.width*cardScale, cardRect.height*cardScale, 
+								0, 0, dc.width, dc.height);
+			return dc.toDataURL().replace(/^data:image\/(png|jpg);base64,/, "");
+		}
+
+		for (const [id, qty] of Object.entries(RunningCardList)) {
+			url = selectImageFromCanvas(`[data-card-id='${id}']`);
+			zip.file(`${qty}X ${id}.png`, url, {base64: true});
+		}
+		url = selectImageFromCanvas(`.Card_Back`);
+		zip.file(`card_back.png`, url, {base64: true});
+		return zip;
+
+	}).then(function(whole_zip){
 		return whole_zip.generateAsync({type:"blob"}) // Generate the zip file asynchronously
 	}).then(function(content) {
-		saveAs(content, "THIS_IS_YOUR_ZIP.zip");
+		let upLabel = document.querySelector('#UPLOAD').textContent;
+		if (upLabel.search('.csv') > -1){
+			saveAs(content, `${upLabel.split('.csv')[0]}.zip`);
+		} else {
+			saveAs(content, "THIS_IS_YOUR_FAST_ZIP.zip");
+		}
 	});
 }
 

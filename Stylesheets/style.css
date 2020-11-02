@@ -201,8 +201,4 @@ header {
 	.Battlefield_Template {
 		transform:rotate(-90deg) translate(-48px,-48px);
 	}
-	/*
-	.Card_Back {
-		grid-column: 6;
-	}*/
 }
