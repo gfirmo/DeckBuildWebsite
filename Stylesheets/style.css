@@ -165,7 +165,7 @@ header {
 	bottom: 0;
 }
 
-#flatten, #stack{
+#flatten, #stack, #zip{
 	margin: 10px;
 }
 

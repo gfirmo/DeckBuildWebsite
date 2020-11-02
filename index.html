@@ -14,7 +14,7 @@
 <body>
   <header>
     <section id="TITLE">
-      Mythos Rising           Cmd P is for Tabletop Simulator exporting. Printing is unavailable.
+      Mythos Rising Cmd P is for Tabletop Simulator exporting Printing is unavailable
     </section>
     <label id="UPLOAD" class="header-item" for="myFile"> Upload a Decklist
       <input type="file" id="myFile" name="filename" style="display:none" accept=".csv" onchange="this.parentNode.firstChild.data=this.files[0].name;">
@@ -124,6 +124,9 @@
   </main>
   <footer>
     <section id="button_container">
+      <button id="zip" onclick="zipStuff()">
+        DOWNLOAD ZIP
+      </button>
       <button id="flatten" onclick="flattenCards()">
         FLATTEN
       </button>
@@ -133,7 +136,10 @@
     </section>
   </footer>
   <script src='Scripts/d3/d3.js'></script>
-  <script src='Scripts/importer.js'></script>
+  <script src='Scripts/jszip.js'></script>
+  <script src='Scripts/FileSaver.js'></script>
+  <script src='Scripts/html2canvas.js'></script>
   <script src='Scripts/helpers.js'></script>
+  <script src='Scripts/importer.js'></script>
 </body>
 </html>

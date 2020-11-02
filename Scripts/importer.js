@@ -2,6 +2,38 @@ fillVisualizer();
 
 var RunningCardList = {};
 
+
+async function zipStuff(){
+	async function fillURLs(){
+		for (const [id, qty] of Object.entries(RunningCardList)) {
+			var offScreen = document.querySelector(`.grid-container [data-card-id='${id}']`);
+			await html2canvas(offScreen)
+				.then(function(canvas) {
+					url = canvas.toDataURL().replace(/^data:image\/(png|jpg);base64,/, "")
+					zip.file(`${qty}X ${id}.png`, url, {base64: true});
+				})
+		}
+		var offScreen = document.querySelector(`.grid-container .Card_Back`);
+		await html2canvas(offScreen)
+			.then(function(canvas) {
+				url =  canvas.toDataURL().replace(/^data:image\/(png|jpg);base64,/, "")
+				zip.file(`card_back.png`, url, {base64: true});
+			})
+		return zip;
+	};
+
+	var zip = new JSZip();
+	/* Generate a directory within the Zip file structure
+	var img = zip.folder("images");*/
+
+	fillURLs()
+	.then(function(whole_zip){
+		return whole_zip.generateAsync({type:"blob"}) // Generate the zip file asynchronously
+	}).then(function(content) {
+		saveAs(content, "THIS_IS_YOUR_ZIP.zip");
+	});
+}
+
 async function stackCards(){
 	document.querySelector(".grid-container").innerHTML = `<div class="card Card_Back">
 	<img style="width:100%" src="Images/Card_Back.png" alt="Back">

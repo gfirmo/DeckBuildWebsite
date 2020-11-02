@@ -9,20 +9,41 @@
 
 
 /* JULES TODO
-- card formatting (input handling)
+
+- TTS improvements
+	- battlefields are broken
+	- download zip as name
+	- .png "__X ${name of card}"
+	- double check .png name format
+	- time reduction (down from 1.7s/card)
+		> OR (progress / loading bar)
+	- better resolution
+
+- Formatting (card input handling)
 	> italic within paren
 	> name shrink
-- add only one of card
+
+- Add only one of card
 	> Wonders
-    > battlefields
-- compare import to Name and error if different
-- filtering for stacks
-- search by name
-- spam clicking "stack" causes duplicates
-- PRINT BUTTON
+	> battlefields
+	
+- Compare import to Name and error if different
+
+- Grid Modifications:
+	- filtering for stacks
+	- search by name
+
+- Bugs
+	- spam clicking "stack" causes duplicates
+
+- Added Features
+	- PRINT BUTTON
 
 - background / palette rework
+
+- Automatically processes (after upload)
 */
+
 
 
 // #region  possibly not needed:
@@ -39,6 +60,28 @@ function getCSVCardHouse(card) {
 	var cost = (card.Cost).split(""); //I should check periodically against side effects
 	return cost.pop();
 }
+
+/*
+.then(function(body) {;
+
+	var zip = new JSZip();
+
+	// Add an top-level, arbitrary text file with contents
+	zip.file("Hello.txt", "Hello World\n");
+
+	// Generate a directory within the Zip file structure
+	var img = zip.folder("images");
+
+	// Add a file to the directory, in this case an image with data URI as contents
+	img.file("smile.jpg", body, {base64: true});
+
+	// Generate the zip file asynchronously
+	zip.generateAsync({type:"blob"})
+	.then(function(content) {
+		// Force down of the Zip file
+		saveAs(content, "THIS_IS_YOUR_ZIP.zip");
+	});
+})*/
 
 // #endregion
 
