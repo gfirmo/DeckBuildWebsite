@@ -29,10 +29,10 @@ function fastZip(cardScale){
 
 		for (const [id, qty] of Object.entries(RunningCardList)) {
 			url = selectImageFromCanvas(`[data-card-id='${id}']`);
-			zip.file(`${qty}X ${id}.png`, url, {base64: true});
+			zip.file(`0${qty}x ${id}.png`, url, {base64: true});
 		}
 		url = selectImageFromCanvas(`.Card_Back`);
-		zip.file(`card_back.png`, url, {base64: true});
+		zip.file(`00 Back.png`, url, {base64: true});
 		return zip;
 
 	}).then(function(whole_zip){
