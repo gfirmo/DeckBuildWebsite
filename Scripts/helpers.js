@@ -135,8 +135,8 @@ function htmlBattlefield(card) {
 	return `<div class="card Battlefield_Template">
 				<img style="width:100%" src="Images/Battlefield_template.png" alt="Battlefield">
 				<a class="name">${card.Name}</a>
-				<a class="captured_text">${parseEffectText(card.Effect)}</a>
-				<a class="wild_text">${card.Effect.replace(/\n/g, "<br>")}</a>
+				<a class="captured_text">${parseEffectText(card.Notes)}</a>
+				<a class="wild_text">${parseEffectText(card.Effect)}</a>
 			</div>`;
 }
 //#endregion

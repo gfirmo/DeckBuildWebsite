@@ -15,12 +15,12 @@
 
 - TTS improvements
 	- battlefields are broken
-	- .png "__X ${name of card}"
-	- double check .png name format
+	- .png "0_x ${name of card}"
 
 - Formatting (card input handling)
 	> italic within paren
 	> name shrink
+	> don't bold battlefields (or artifacts) words preceeding first ":"
 
 - Add only one of card
 	> Wonders
