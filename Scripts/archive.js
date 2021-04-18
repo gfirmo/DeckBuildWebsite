@@ -17,11 +17,6 @@
 	- battlefields are broken
 	- .png "0_x ${name of card}"
 
-- Formatting (card input handling)
-	> italic within paren
-	> name shrink
-	> don't bold battlefields (or artifacts) words preceeding first ":"
-
 - Add only one of card
 	> Wonders
 	> battlefields
@@ -39,6 +34,11 @@
 	- PRINT BUTTON
 
 - background / palette rework
+
+- Formatting (card input handling)
+	> italic within paren
+	> name shrink
+	> don't bold battlefields (or artifacts) words preceeding first ":"
 */
 
 
